@@ -1,5 +1,3 @@
-
-
 ;; Base16 Railscasts (https://github.com/chriskempson/base16)
 ;; Scheme: Ryan Bates (http://railscasts.com)
 

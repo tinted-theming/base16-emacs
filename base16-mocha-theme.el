@@ -1,5 +1,3 @@
-
-
 ;; Base16 Mocha (https://github.com/chriskempson/base16)
 ;; Scheme: Chris Kempson (http://chriskempson.com)
 
