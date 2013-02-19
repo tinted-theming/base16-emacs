@@ -1,28 +1,28 @@
-;; Base16 Railscasts (https://github.com/chriskempson/base16)
-;; Scheme: Ryan Bates (http://railscasts.com)
+;; Base16 Ocean (https://github.com/chriskempson/base16)
+;; Scheme: Chris Kempson (http://chriskempson.com)
 
-;;; base16-railscasts-theme.el
+;;; base16-ocean-theme.el
 
 ;;; Code:
 
-(deftheme base16-railscasts)
+(deftheme base16-ocean)
 
-(let ((background "#272935")
-      (current-line "#5a647e")
-      (selection "#d4cfc9")
-      (foreground "#f4f1ed")
-      (comment "#d4cfc9")
-      (cursor "#f4f1ed")
-      (red "#da4939")
-      (orange "#cc7833")
-      (yellow "#ffc66d")
-      (green "#a5c261")
-      (aqua "#519f50")
-      (blue "#6d9cbe")
-      (purple "#b6b3eb"))
+(let ((background "#343d46")
+      (current-line "#65737e")
+      (selection "#a7adba")
+      (foreground "#dfe1e8")
+      (comment "#a7adba")
+      (cursor "#dfe1e8")
+      (red "#bf616a")
+      (orange "#d08770")
+      (yellow "#ebcb8b")
+      (green "#a3be8c")
+      (aqua "#96b5b4")
+      (blue "#8fa1b3")
+      (purple "#b48ead"))
 
   (custom-theme-set-faces 
-   'base16-railscasts
+   'base16-ocean
 
    ;; Built-in stuff (Emacs 23)
    `(default ((t (:background ,background :foreground ,foreground))))
@@ -71,7 +71,7 @@
    `(rainbow-delimiters-depth-9-face ((t (:foreground ,foreground)))))
 
   (custom-theme-set-variables
-   'base16-railscasts
+   'base16-ocean
 
    `(ansi-color-names-vector
      ;; black, red, green, yellow, blue, magenta, cyan, white
@@ -80,6 +80,6 @@
      ;; black, red, green, yellow, blue, magenta, cyan, white
      [unspecified ,background ,red ,green ,yellow ,blue ,purple ,blue ,foreground])))
 
-(provide-theme 'base16-railscasts)
+(provide-theme 'base16-ocean)
 
-;;; base16-railscasts-theme.el ends here
+;;; base16-ocean-theme.el ends here

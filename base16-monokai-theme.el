@@ -1,5 +1,3 @@
-
-
 ;; Base16 Monokai (https://github.com/chriskempson/base16)
 ;; Scheme: Wimer Hazenberg (http://www.monokai.nl)
 
