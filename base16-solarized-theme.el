@@ -1,5 +1,3 @@
-
-
 ;; Base16 Solarized (https://github.com/chriskempson/base16)
 ;; Scheme: Ethan Schoonover (http://ethanschoonover.com/solarized)
 
