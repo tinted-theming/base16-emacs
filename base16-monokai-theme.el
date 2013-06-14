@@ -21,7 +21,7 @@
       (blue "#66d9ef")
       (purple "#ae81ff"))
 
-  (custom-theme-set-faces 
+  (custom-theme-set-faces
    'base16-monokai
 
    ;; Built-in stuff (Emacs 23)
@@ -30,6 +30,16 @@
    `(minibuffer-prompt ((t (:foreground ,blue))))
    `(mode-line ((t (:background ,current-line :foreground ,foreground))))
    `(region ((t (:background ,selection))))
+
+   ;; Term faces
+   `(term-color-black ((t (:foreground ,background))))
+   `(term-color-red ((t (:foreground ,red))))
+   `(term-color-green ((t (:foreground ,green))))
+   `(term-color-yellow ((t (:foreground ,yellow))))
+   `(term-color-blue ((t (:foreground ,blue))))
+   `(term-color-purple ((t (:foreground ,purple))))
+   `(term-color-cyan ((t (:foreground ,blue))))
+   `(term-color-white ((t (:foreground ,foreground))))
 
    ;; Font-lock stuff
    `(font-lock-comment-face ((t (:foreground ,comment))))
@@ -76,9 +86,10 @@
    `(ansi-color-names-vector
      ;; black, red, green, yellow, blue, magenta, cyan, white
      [,background ,red ,green ,yellow ,blue ,purple ,blue ,foreground])
-   `(ansi-term-color-vector
-     ;; black, red, green, yellow, blue, magenta, cyan, white
-     [unspecified ,background ,red ,green ,yellow ,blue ,purple ,blue ,foreground])))
+   `(when (not (facep (aref ansi-term-color-vector 0)))
+      (ansi-term-color-vector
+       ;; black, red, green, yellow, blue, magenta, cyan, white
+       [unspecified ,background ,red ,green ,yellow ,blue ,purple ,blue ,foreground]))))
 
 (provide-theme 'base16-monokai)
 
