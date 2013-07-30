@@ -45,6 +45,9 @@
    ;; hl-line-mode
    `(hl-line ((t (:background ,current-line))))
 
+   ;; col-highlight-mode
+   `(col-highlight ((t (:background ,current-line))))
+
    ;; linum-mode
    `(linum ((t (:background ,current-line :foreground ,foreground))))
 

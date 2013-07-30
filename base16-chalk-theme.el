@@ -21,7 +21,7 @@
       (blue "#6fc2ef")
       (purple "#e1a3ee"))
 
-  (custom-theme-set-faces 
+  (custom-theme-set-faces
    'base16-chalk
 
    ;; Built-in stuff (Emacs 23)
@@ -44,6 +44,9 @@
 
    ;; hl-line-mode
    `(hl-line ((t (:background ,current-line))))
+
+   ;; col-highlight-mode
+   `(col-highlight ((t (:background ,current-line))))
 
    ;; linum-mode
    `(linum ((t (:background ,current-line :foreground ,foreground))))
