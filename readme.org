@@ -1,0 +1,13 @@
+[[http://melpa.org/#/base16-theme][file:http://melpa.org/packages/base16-theme-badge.svg]]
+
+* Base16 themes for Emacs
+
+[[https://github.com/chriskempson/base16][Base16]] provides carefully chosen syntax highlighting and a default set of
+sixteen colors suitable for a wide range of applications. Base16 is both a color
+scheme and a template. To roll your own see [[https://github.com/chriskempson/base16-builder][base16-builder]].
+
+This repository provides the [[http://melpa.org/#/base16-theme][MELPA]] package for Emacs, for convenience. I will do
+my best to keep it in sync with the builder. If I fall behind, feel free to open
+an issue or pull request.
+
+*Please file any bugs in the templates [[https://github.com/chriskempson/base16-builder/issues][in the builder]].*
