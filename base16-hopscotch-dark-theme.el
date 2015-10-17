@@ -78,6 +78,16 @@
    `(isearch-lazy-highlight-face ((t (:foreground ,base0C :background ,base01 :inverse-video t))))
    `(isearch-fail ((t (:background ,base01 :inherit font-lock-warning-face :inverse-video t))))
 
+   ;; Popups
+   `(popup-face ((t (:foreground ,base05 :background ,base02))))
+   `(popup-isearch-match ((t (:foreground ,base00 :background ,base0B))))
+   `(popup-scroll-bar-background-face ((t (:background ,base03))))
+   `(popup-scroll-bar-foreground-face ((t (:background ,base05))))
+   `(popup-summary-face ((t (:foreground ,base04))))
+   `(popup-tip-face ((t (:foreground ,base00 :background ,base0A))))
+   `(popup-menu-mouse-face ((t (:foreground ,base00 :background ,base0D))))
+   `(popup-menu-selection-face ((t (:foreground ,base00 :background ,base0C))))
+
    ;; Flymake
    `(flymake-warnline ((t (:underline ,base09 :background ,base01))))
    `(flymake-errline ((t (:underline ,base08 :background ,base01))))
@@ -223,20 +233,6 @@
    `(term-color-blue ((t (:foreground ,base0D :background ,base0D))))
    `(term-color-magenta ((t (:foreground ,base0E :background ,base0E))))
 
-   ;; Magit (a patch is pending in magit to make these standard upstream)
-   `(magit-branch ((t (:foreground ,base0B))))
-   `(magit-header ((t (:inherit nil :weight bold))))
-   `(magit-item-highlight ((t (:inherit highlight :background nil))))
-   `(magit-log-graph ((t (:foreground ,base04))))
-   `(magit-log-sha1 ((t (:foreground ,base0E))))
-   `(magit-log-head-label-bisect-bad ((t (:foreground ,base08))))
-   `(magit-log-head-label-bisect-good ((t (:foreground ,base0B))))
-   `(magit-log-head-label-default ((t (:foreground ,base0A :box nil :weight bold))))
-   `(magit-log-head-label-local ((t (:foreground ,base0D))))
-   `(magit-log-head-label-remote ((t (:foreground ,base0B))))
-   `(magit-log-head-label-tags ((t (:foreground ,base0C :box nil :weight bold))))
-   `(magit-section-title ((t (:inherit diff-hunk-header))))
-
    `(link ((t (:foreground nil :underline t))))
    `(widget-button ((t (:underline t))))
    `(widget-field ((t (:background ,base03 :box (:line-width 1 :color ,base06)))))
@@ -257,6 +253,13 @@
 
    `(regex-tool-matched-face ((t (:foreground nil :background nil :inherit match))))
 
+   ;; Cscope
+   `(cscope-file-face ((t (:foreground ,base0B))))
+   `(cscope-function-face ((t (:foreground ,base0D))))
+   `(cscope-line-number-face ((t (:foreground ,base0A))))
+   `(cscope-mouse-face ((t (:background ,base01 :foreground ,base04))))
+   `(cscope-separator-face ((t (:foreground ,base08 :overline t :underline t :weight bold))))
+
    ;; mark-multiple
    `(mm/master-face ((t (:inherit region :foreground nil :background nil))))
    `(mm/mirror-face ((t (:inherit region :foreground nil :background nil))))
@@ -268,7 +271,7 @@
    `(org-agenda-dimmed-todo-face ((t (:foreground ,base04))))
    `(org-block ((t (:foreground ,base09))))
    `(org-code ((t (:foreground ,base0A))))
-   `(org-column ((t (:background ,base03))))
+   `(org-column ((t (:background ,base01))))
    `(org-column-title ((t (:inherit org-column :weight bold :underline t))))
    `(org-date ((t (:foreground ,base0E :underline t))))
    `(org-document-info ((t (:foreground ,base0C))))
@@ -436,10 +439,40 @@
    `(erc-prompt-face ((t (:foreground ,base0D))))
    `(erc-timestamp-face ((t (:foreground ,base0C))))
 
+   ;; helm
+   `(helm-M-x-key ((t (:foreground ,base0C))))
+   `(helm-action ((t (:foreground ,base05))))
+   `(helm-buffer-directory ((t (:foreground ,base04 :background nil :weight bold))))
+   `(helm-buffer-file ((t (:foreground ,base0C))))
+   `(helm-buffer-not-saved ((t (:foreground ,base08))))
+   `(helm-buffer-process ((t (:foreground ,base03))))
+   `(helm-buffer-saved-out ((t (:foreground ,base0F))))
+   `(helm-buffer-size ((t (:foreground ,base09))))
+   `(helm-candidate-number ((t (:foreground ,base00 :background ,base09))))
+   `(helm-ff-directory ((t (:foreground ,base04 :background nil :weight bold))))
+   `(helm-ff-executable ((t (:foreground ,base0B))))
+   `(helm-ff-file ((t (:foreground ,base0C))))
+   `(helm-ff-invalid-symlink ((t (:foreground ,base00 :background ,base08))))
+   `(helm-ff-prefix ((t (:foreground nil :background nil))))
+   `(helm-ff-symlink ((t (:foreground ,base00 :background ,base0C))))
+   `(helm-grep-cmd-line ((t (:foreground ,base0B))))
+   `(helm-grep-file ((t (:foreground ,base0C))))
+   `(helm-grep-finish ((t (:foreground ,base00 :background ,base09))))
+   `(helm-grep-lineno ((t (:foreground ,base03))))
+   `(helm-grep-match ((t (:foreground ,base0A))))
+   `(helm-grep-running ((t (:foreground ,base09))))
+   `(helm-header ((t (:foreground ,base0A :background ,base00 :underline nil))))
+   `(helm-match ((t (:foreground ,base0A))))
+   `(helm-moccur-buffer ((t (:foreground ,base0C))))
+   `(helm-selection ((t (:foreground nil :background ,base02 :underline nil))))
+   `(helm-selection-line ((t (:foreground nil :background ,base02))))
+   `(helm-separator ((t (:foreground ,base02))))
+   `(helm-source-header ((t (:foreground ,base05 :background ,base01 :weight bold))))
+   `(helm-visible-mark ((t (:foreground ,base00 :background ,base0B))))
+
    `(custom-variable-tag ((t (:foreground ,base0D))))
    `(custom-group-tag ((t (:foreground ,base0D))))
    `(custom-state ((t (:foreground ,base0B)))))
-   
 
   (custom-theme-set-variables
    'base16-hopscotch-dark
