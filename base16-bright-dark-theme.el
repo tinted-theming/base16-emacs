@@ -77,6 +77,18 @@
    `(isearch ((t (:foreground ,base0A :background ,base01 :inverse-video t))))
    `(isearch-lazy-highlight-face ((t (:foreground ,base0C :background ,base01 :inverse-video t))))
    `(isearch-fail ((t (:background ,base01 :inherit font-lock-warning-face :inverse-video t))))
+   `(evil-search-highlight-persist-highlight-face ((t (:background ,base01 :inherit font-lock-warning-face :inverse-video t))))
+
+
+   ;; Popups
+   `(popup-face ((t (:foreground ,base05 :background ,base02))))
+   `(popup-isearch-match ((t (:foreground ,base00 :background ,base0B))))
+   `(popup-scroll-bar-background-face ((t (:background ,base03))))
+   `(popup-scroll-bar-foreground-face ((t (:background ,base05))))
+   `(popup-summary-face ((t (:foreground ,base04))))
+   `(popup-tip-face ((t (:foreground ,base00 :background ,base0A))))
+   `(popup-menu-mouse-face ((t (:foreground ,base00 :background ,base0D))))
+   `(popup-menu-selection-face ((t (:foreground ,base00 :background ,base0C))))
 
    ;; Popups
    `(popup-face ((t (:foreground ,base05 :background ,base02))))
