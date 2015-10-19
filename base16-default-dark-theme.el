@@ -160,6 +160,9 @@
    `(show-paren-match ((t (:background ,base0D :foreground ,base03))))
    `(show-paren-mismatch ((t (:background ,base09 :foreground ,base03))))
 
+   ;; Pair matching (show-smartparens-mode)
+   `(sp-show-pair-match-face ((t (:background ,base01 :foreground ,base05))))
+
    ;; Parenthesis matching (mic-paren)
    `(paren-face-match ((t (:foreground nil :background nil :inherit show-paren-match))))
    `(paren-face-mismatch ((t (:foreground nil :background nil :inherit show-paren-mismatch))))
