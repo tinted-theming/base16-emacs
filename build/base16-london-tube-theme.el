@@ -179,6 +179,10 @@
    `(diff-file-header ((t (:background ,base02))))
    `(diff-hunk-header ((t (:background ,base01 :foreground ,base0E))))
 
+   `(diff-hl-change ((t (:foreground ,base0A))))
+   `(diff-hl-delete ((t (:foreground ,base08))))
+   `(diff-hl-insert ((t (:foreground ,base0B))))
+
    `(ediff-even-diff-A ((t (:foreground nil :background nil :inverse-video t))))
    `(ediff-even-diff-B ((t (:foreground nil :background nil :inverse-video t))))
    `(ediff-odd-diff-A  ((t (:foreground ,base04 :background nil :inverse-video t))))
