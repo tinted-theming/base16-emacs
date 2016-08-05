@@ -10,6 +10,8 @@
   "Define a base16 colorscheme given a THEME-NAME and a list of THEME-COLORS."
   `(let (,@theme-colors)
 
+     (deftheme ,theme-name)
+
      (custom-theme-set-faces
       (quote ,theme-name)
 
@@ -433,16 +435,14 @@
       `(custom-group-tag ((t (:foreground ,base0D))))
       `(custom-state ((t (:foreground ,base0B)))))
 
-
      (custom-theme-set-variables
-      (quote ,theme-name
-
-             `(ansi-color-names-vector
-               ;; black, base08, base0B, base0A, base0D, magenta, cyan, white
-               [,base00 ,base08 ,base0B ,base0A ,base0D ,base0E ,base0D ,base05])
-             `(ansi-term-color-vector
-               ;; black, base08, base0B, base0A, base0D, magenta, cyan, white
-               [unspecified ,base00 ,base08 ,base0B ,base0A ,base0D ,base0E ,base0D ,base05])))
+      (quote ,theme-name)
+      `(ansi-color-names-vector
+        ;; black, base08, base0B, base0A, base0D, magenta, cyan, white
+        [,base00 ,base08 ,base0B ,base0A ,base0D ,base0E ,base0D ,base05])
+      `(ansi-term-color-vector
+        ;; black, base08, base0B, base0A, base0D, magenta, cyan, white
+        [unspecified ,base00 ,base08 ,base0B ,base0A ,base0D ,base0E ,base0D ,base05]))
 
      (provide-theme (quote ,theme-name))))
 
