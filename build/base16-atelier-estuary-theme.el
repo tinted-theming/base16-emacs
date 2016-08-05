@@ -1,13 +1,11 @@
 ;; base16-atelier-estuary-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: Bram de Haan (http://atelierbramdehaan.nl)
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-atelier-estuary-theme.el
+;;; Authors:
+;; Scheme: Bram de Haan (http://atelierbramdehaan.nl)
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

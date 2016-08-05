@@ -1,13 +1,11 @@
 ;; base16-darktooth-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: Jason Milkins (https://github.com/jasonm23)
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-darktooth-theme.el
+;;; Authors:
+;; Scheme: Jason Milkins (https://github.com/jasonm23)
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

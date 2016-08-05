@@ -1,13 +1,11 @@
 ;; base16-oceanicnext-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: https://github.com/voronianski/oceanic-next-color-scheme
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-oceanicnext-theme.el
+;;; Authors:
+;; Scheme: https://github.com/voronianski/oceanic-next-color-scheme
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

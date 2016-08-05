@@ -1,13 +1,11 @@
 ;; base16-pico-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: PICO-8 (http://www.lexaloffle.com/pico-8.php)
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-pico-theme.el
+;;; Authors:
+;; Scheme: PICO-8 (http://www.lexaloffle.com/pico-8.php)
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

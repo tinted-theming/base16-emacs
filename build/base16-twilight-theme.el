@@ -1,13 +1,11 @@
 ;; base16-twilight-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: David Hart (http://hart-dev.com)
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-twilight-theme.el
+;;; Authors:
+;; Scheme: David Hart (http://hart-dev.com)
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

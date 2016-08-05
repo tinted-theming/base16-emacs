@@ -1,13 +1,11 @@
 ;; base16-monokai-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: Wimer Hazenberg (http://www.monokai.nl)
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-monokai-theme.el
+;;; Authors:
+;; Scheme: Wimer Hazenberg (http://www.monokai.nl)
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

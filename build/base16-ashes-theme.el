@@ -1,13 +1,11 @@
 ;; base16-ashes-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: Jannik Siebert (https://github.com/janniks)
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-ashes-theme.el
+;;; Authors:
+;; Scheme: Jannik Siebert (https://github.com/janniks)
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

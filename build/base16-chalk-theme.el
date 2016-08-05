@@ -1,13 +1,11 @@
 ;; base16-chalk-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: Chris Kempson (http://chriskempson.com)
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-chalk-theme.el
+;;; Authors:
+;; Scheme: Chris Kempson (http://chriskempson.com)
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

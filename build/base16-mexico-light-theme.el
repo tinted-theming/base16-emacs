@@ -1,13 +1,11 @@
 ;; base16-mexico-light-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: Sheldon Johnson
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-mexico-light-theme.el
+;;; Authors:
+;; Scheme: Sheldon Johnson
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

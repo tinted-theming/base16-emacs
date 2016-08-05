@@ -1,15 +1,22 @@
 ;; base16-theme -- Common functionality
 
 ;;; Commentary:
+;; This file just provides `base16-theme-define' and adds some code
+;; for autoloading which will add the proper directory to the theme
+;; path.
+;;
+;; The theme itself is defined as a part of the macro, so any face
+;; changes should go there.
 
 ;;; Authors:
+;; Neil Bhakta
+;; Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 
 (defmacro base16-theme-define (theme-name &rest theme-colors)
   "Define a base16 colorscheme given a THEME-NAME and a list of THEME-COLORS."
   `(let (,@theme-colors)
-
      (deftheme ,theme-name)
 
      (custom-theme-set-faces

@@ -1,13 +1,11 @@
 ;; base16-macintosh-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: Rebecca Bettencourt (http://www.kreativekorp.com)
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-macintosh-theme.el
+;;; Authors:
+;; Scheme: Rebecca Bettencourt (http://www.kreativekorp.com)
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

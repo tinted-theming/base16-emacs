@@ -1,13 +1,11 @@
 ;; base16-spacemacs-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: Nasser Alshammari (https://github.com/nashamri/spacemacs-theme)
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-spacemacs-theme.el
+;;; Authors:
+;; Scheme: Nasser Alshammari (https://github.com/nashamri/spacemacs-theme)
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

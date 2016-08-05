@@ -1,13 +1,11 @@
 ;; base16-solar-flare-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: Chuck Harmston (https://chuck.harmston.ch)
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-solar-flare-theme.el
+;;; Authors:
+;; Scheme: Chuck Harmston (https://chuck.harmston.ch)
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

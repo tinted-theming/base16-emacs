@@ -1,13 +1,11 @@
 ;; base16-isotope-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: Jan T. Sott
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-isotope-theme.el
+;;; Authors:
+;; Scheme: Jan T. Sott
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

@@ -1,13 +1,11 @@
 ;; base16-ir-black-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: Timothée Poisot (http://timotheepoisot.fr)
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-ir-black-theme.el
+;;; Authors:
+;; Scheme: Timothée Poisot (http://timotheepoisot.fr)
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

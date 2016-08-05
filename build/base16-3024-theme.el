@@ -1,13 +1,11 @@
 ;; base16-3024-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: Jan T. Sott (http://github.com/idleberg)
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-3024-theme.el
+;;; Authors:
+;; Scheme: Jan T. Sott (http://github.com/idleberg)
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

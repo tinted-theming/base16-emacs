@@ -1,13 +1,11 @@
 ;; base16-summerfruit-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: Christopher Corley (http://cscorley.github.io/)
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-summerfruit-theme.el
+;;; Authors:
+;; Scheme: Christopher Corley (http://cscorley.github.io/)
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

@@ -1,13 +1,11 @@
 ;; base16-grayscale-light-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: Alexandre Gavioli (https://github.com/Alexx2/)
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-grayscale-light-theme.el
+;;; Authors:
+;; Scheme: Alexandre Gavioli (https://github.com/Alexx2/)
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 

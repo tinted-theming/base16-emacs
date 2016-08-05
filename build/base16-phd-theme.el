@@ -1,13 +1,11 @@
 ;; base16-phd-theme.el -- A base16 colorscheme
-;;
+
 ;;; Commentary:
 ;; Base16: (https://github.com/chriskempson/base16)
-;; Scheme Author: Hennig Hasemann (http://leetless.de/vim.html)
-;; Template Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
 
-;;; base16-phd-theme.el
+;;; Authors:
+;; Scheme: Hennig Hasemann (http://leetless.de/vim.html)
+;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
 
