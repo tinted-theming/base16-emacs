@@ -61,7 +61,7 @@
       `(font-lock-regexp-grouping-construct ((t (:foreground ,base0E))))
       `(font-lock-string-face ((t (:foreground ,base0B))))
       `(font-lock-type-face ((t (:foreground ,base0A))))
-      `(font-lock-variable-name-face ((t (:foreground ,base0C))))
+      `(font-lock-variable-name-face ((t (:foreground ,base08))))
       `(font-lock-warning-face ((t (:foreground ,base08))))
 
       ;; linum-mode
