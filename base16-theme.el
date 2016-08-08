@@ -88,8 +88,9 @@
       `(company-tooltip ((t (:inherit default :background ,base01))))
       `(company-scrollbar-bg ((t (:background ,base07))))
       `(company-scrollbar-fg ((t (:background ,base04))))
-      `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+      `(company-tooltip-selection ((t (:inherit font-lock-function-name-face :background ,base02))))
       `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
+      `(company-preview-common ((t (:inherit secondary-selection))))
 
       ;; Flymake
       `(flymake-warnline ((t (:underline ,base09 :background ,base01))))
