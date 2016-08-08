@@ -84,6 +84,13 @@
       `(popup-menu-mouse-face ((t (:foreground ,base00 :background ,base0D))))
       `(popup-menu-selection-face ((t (:foreground ,base00 :background ,base0C))))
 
+      ;; company-mode
+      `(company-tooltip ((t (:inherit default :background ,base01))))
+      `(company-scrollbar-bg ((t (:background ,base07))))
+      `(company-scrollbar-fg ((t (:background ,base04))))
+      `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
+      `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
+
       ;; Flymake
       `(flymake-warnline ((t (:underline ,base09 :background ,base01))))
       `(flymake-errline ((t (:underline ,base08 :background ,base01))))
