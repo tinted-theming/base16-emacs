@@ -13,3 +13,12 @@ by using one of the builders listed on the main Base16 page.
 If you notice anything that looks strange or if this repo is missing
 any scheme updates, please feel free to open an issue or submit a pull
 request.
+
+* Credits
+
+Current maintainer: [[https://github.com/belak][belak]]
+
+Previous maintainers:
+
+- [[https://github.com/neil477][neil477]]
+- [[https://github.com/mkaito][mkaito]]
