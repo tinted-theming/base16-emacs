@@ -92,6 +92,17 @@
       `(company-tooltip-common ((t (:inherit font-lock-constant-face))))
       `(company-preview-common ((t (:inherit secondary-selection))))
 
+      ;; ivy-mode
+      `(ivy-current-match ((t (:foreground ,base09 :background ,base01))))
+      `(ivy-minibuffer-match-face-1 ((t (:foreground ,base0E))))
+      `(ivy-minibuffer-match-face-2 ((t (:foreground ,base0D))))
+      `(ivy-minibuffer-match-face-3 ((t (:foreground ,base0C))))
+      `(ivy-minibuffer-match-face-4 ((t (:foreground ,base0B))))
+      `(ivy-confirm-face ((t (:foreground ,base0B))))
+      `(ivy-match-required-face ((t (:foreground ,base08))))
+      `(ivy-virtual ((t (:foreground ,base04))))
+      `(ivy-action ((t (:foreground ,base0D))))
+
       ;; Flymake
       `(flymake-warnline ((t (:underline ,base09 :background ,base01))))
       `(flymake-errline ((t (:underline ,base08 :background ,base01))))
