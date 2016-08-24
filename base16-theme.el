@@ -15,6 +15,27 @@
 (defmacro base16-theme-define (theme-name &rest theme-colors)
   "Define a base16 colorscheme given a THEME-NAME and a list of THEME-COLORS."
   `(let (,@theme-colors)
+     ;; These mappings are based on the xresources themes. If you're
+     ;; using something else, you may want to look for an alternate
+     ;; theme for use in the terminal.
+     (unless (display-graphic-p)
+       (setq base00 "black"
+             base01 "brightgreen"
+             base02 "brightyellow"
+             base03 "brightblack"
+             base04 "brightblue"
+             base05 "white"
+             base06 "brightmagenta"
+             base07 "brightwhite"
+             base08 "red"
+             base09 "brightred"
+             base0A "yellow"
+             base0B "green"
+             base0C "cyan"
+             base0D "blue"
+             base0E "magenta"
+             base0F "brightcyan"))
+
      (deftheme ,theme-name)
 
      (custom-theme-set-faces
