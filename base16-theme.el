@@ -1,12 +1,10 @@
 ;; base16-theme -- Common functionality
 
 ;;; Commentary:
-;; This file just provides `base16-theme-define' and adds some code
-;; for autoloading which will add the proper directory to the theme
-;; path.
-;;
-;; The theme itself is defined as a part of the macro, so any face
-;; changes should go there.
+;; base16-theme is a collection of themes built around the base16
+;; concept (https://github.com/chriskempson/base16).  All themes are
+;; generated from the official set of color schemes and the templates
+;; included in this repo.
 
 ;;; Authors:
 ;; Neil Bhakta

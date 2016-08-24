@@ -20,5 +20,5 @@ Current maintainer: [[https://github.com/belak][belak]]
 
 Previous maintainers:
 
-- [[https://github.com/neil477][neil477]]
 - [[https://github.com/mkaito][mkaito]]
+- [[https://github.com/neil477][neil477]]
