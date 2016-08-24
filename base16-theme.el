@@ -18,7 +18,7 @@
      ;; These mappings are based on the xresources themes. If you're
      ;; using something else, you may want to look for an alternate
      ;; theme for use in the terminal.
-     (unless (display-graphic-p)
+     (unless (>= (display-color-cells) 256)
        (setq base00 "black"
              base01 "brightgreen"
              base02 "brightyellow"
