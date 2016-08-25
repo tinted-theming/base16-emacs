@@ -1,14 +1,16 @@
-;; base16-theme -- Common functionality
+;; base16-theme.el -- base16 themes for emacs
+
+;; Author: Kaleb Elwert <belak@coded.io>
+;;         Neil Bhakta
+;; Maintainer: Kaleb Elwert <belak@coded.io>
+;; Version: 0.1
+;; Homepage: https://github.com/belak/base16-emacs
 
 ;;; Commentary:
 ;; base16-theme is a collection of themes built around the base16
 ;; concept (https://github.com/chriskempson/base16).  All themes are
 ;; generated from the official set of color schemes and the templates
-;; included in this repo.
-
-;;; Authors:
-;; Neil Bhakta
-;; Kaleb Elwert <belak@coded.io>
+;; which are included in this repo.
 
 ;;; Code:
 
