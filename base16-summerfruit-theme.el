@@ -30,23 +30,14 @@
     :base0F "#cc6633")
   "All colors for Base16 Summerfruit are defined here.")
 
-(base16-theme-define base16-summerfruit
-                     (base00 "#151515")
-                     (base01 "#202020")
-                     (base02 "#303030")
-                     (base03 "#505050")
-                     (base04 "#B0B0B0")
-                     (base05 "#D0D0D0")
-                     (base06 "#E0E0E0")
-                     (base07 "#FFFFFF")
-                     (base08 "#FF0086")
-                     (base09 "#FD8900")
-                     (base0A "#ABA800")
-                     (base0B "#00C918")
-                     (base0C "#1faaaa")
-                     (base0D "#3777E6")
-                     (base0E "#AD00A1")
-                     (base0F "#cc6633"))
+;; Define the theme
+(deftheme base16-summerfruit)
+
+;; Add all the faces to the theme
+(base16-theme-define 'base16-summerfruit base16-summerfruit-colors)
+
+;; Mark the theme as provided
+(provide-theme 'base16-summerfruit)
 
 (provide 'base16-summerfruit-theme)
 
