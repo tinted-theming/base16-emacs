@@ -50,7 +50,7 @@ an alternate theme for use in the terminal.")
         (cond
          ((and (memq key '(:box)) (listp value))
           (setq output (append output (list key (base16-transform-spec value colors)))))
-         ((and (memq key '(:foreground :background)) color)
+         (color
           (setq output (append output (list key color))))
          (t
           (setq output (append output (list key value))))))
