@@ -12,7 +12,7 @@
 (require 'base16-theme)
 
 (defvar base16-mocha-colors
-  '(:base00 "#3B3228"
+  '(:base00 "#3b3228"
     :base01 "#534636"
     :base02 "#645240"
     :base03 "#7e705a"

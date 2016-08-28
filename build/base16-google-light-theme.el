@@ -20,14 +20,14 @@
     :base05 "#373b41"
     :base06 "#282a2e"
     :base07 "#1d1f21"
-    :base08 "#CC342B"
-    :base09 "#F96A38"
-    :base0A "#FBA922"
+    :base08 "#cc342b"
+    :base09 "#f96a38"
+    :base0A "#fba922"
     :base0B "#198844"
-    :base0C "#3971ED"
-    :base0D "#3971ED"
-    :base0E "#A36AC7"
-    :base0F "#3971ED")
+    :base0C "#3971ed"
+    :base0D "#3971ed"
+    :base0E "#a36ac7"
+    :base0F "#3971ed")
   "All colors for Base16 Google Light are defined here.")
 
 ;; Define the theme
