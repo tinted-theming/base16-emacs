@@ -153,6 +153,20 @@ an alternate theme for use in the terminal.")
      (company-tooltip-selection                    :background base02 :inherit font-lock-function-name-face)
      (company-preview-common                       :inherit secondary-selection)
 
+     ;; eshell
+     (eshell-ls-archive                            :foreground base08)
+     (eshell-ls-backup                             :foreground base0F)
+     (eshell-ls-clutter                            :foreground base09)
+     (eshell-ls-directory                          :foreground base0D)
+     (eshell-ls-executable                         :foreground base0B)
+     (eshell-ls-missing                            :foreground base08)
+     (eshell-ls-product                            :foreground base0F)
+     (eshell-ls-readonly                           :foreground base06)
+     (eshell-ls-special                            :foreground base0E)
+     (eshell-ls-symlink                            :foreground base0C)
+     (eshell-ls-unreadable                         :foreground base04)
+     (eshell-prompt                                :foreground base05)
+
      ;; ivy-mode
      (ivy-current-match                            :foreground base09 :background base01)
      (ivy-minibuffer-match-face-1                  :foreground base0E)
