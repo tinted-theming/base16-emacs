@@ -1,3 +1,4 @@
+[[https://stable.melpa.org/#/base16-theme][file:https://stable.melpa.org/packages/base16-theme-badge.svg]]
 [[http://melpa.org/#/base16-theme][file:http://melpa.org/packages/base16-theme-badge.svg]]
 
 * Base16 themes for Emacs
