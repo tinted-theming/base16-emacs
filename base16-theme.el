@@ -173,7 +173,7 @@ an alternate theme for use in the terminal.")
      (clojure-test-error-face                      :background nil :inherit flymake-errline)
      (clojure-test-success-face                    :foreground nil :background nil :underline base0B)
 
-     ;; For Brian Carper's extended clojure syntax table
+     ;; clojure-mode
      (clojure-keyword                              :foreground base0A)
      (clojure-parens                               :foreground base06)
      (clojure-braces                               :foreground base0B)
