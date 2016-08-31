@@ -48,7 +48,7 @@ an alternate theme for use in the terminal.")
 
         ;; Append the transformed element
         (cond
-         ((and (memq key '(:box)) (listp value))
+         ((and (memq key '(:box :underline)) (listp value))
           (setq output (append output (list key (base16-transform-spec value colors)))))
          (color
           (setq output (append output (list key color))))
@@ -164,9 +164,18 @@ an alternate theme for use in the terminal.")
      (ivy-virtual                                  :foreground base04)
      (ivy-action                                   :foreground base0D)
 
+     ;; Flycheck
+     (flycheck-error                               :underline (:style wave :color base08))
+     (flycheck-info                                :underline (:style wave :color base0B))
+     (flycheck-warning                             :underline (:style wave :color base09))
+
      ;; Flymake
      (flymake-warnline                             :background base01 :underline base09)
      (flymake-errline                              :background base01 :underline base08)
+
+     ;; Flyspell
+     (flyspell-duplicate                           :underline (:style wave :color base09))
+     (flyspell-incorrect                           :underline (:style wave :color base08))
 
      ;; Clojure errors
      (clojure-test-failure-face                    :background nil :inherit flymake-warnline)
