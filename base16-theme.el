@@ -3,7 +3,7 @@
 ;; Author: Kaleb Elwert <belak@coded.io>
 ;;         Neil Bhakta
 ;; Maintainer: Kaleb Elwert <belak@coded.io>
-;; Version: 0.1
+;; Version: 1.0.1
 ;; Homepage: https://github.com/belak/base16-emacs
 
 ;;; Commentary:
