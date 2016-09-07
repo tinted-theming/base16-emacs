@@ -275,13 +275,13 @@ an alternate theme for use in the terminal.")
      (csv-separator-face                           :foreground base09)
 
      (diff-added                                   :foreground base0B)
-     (diff-changed                                 :foreground base0A)
+     (diff-changed                                 :foreground base0E)
      (diff-removed                                 :foreground base08)
      (diff-header                                  :background base01)
      (diff-file-header                             :background base02)
      (diff-hunk-header                             :foreground base0E :background base01)
 
-     (diff-hl-change                               :foreground base0A)
+     (diff-hl-change                               :foreground base0E)
      (diff-hl-delete                               :foreground base08)
      (diff-hl-insert                               :foreground base0B)
 
