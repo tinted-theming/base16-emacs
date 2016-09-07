@@ -15,6 +15,23 @@ If you notice anything that looks strange or if this repo is missing
 any scheme updates, please feel free to open an issue or submit a pull
 request.
 
+** evil-mode
+
+=evil-mode= doesn't provide a way for themes to set the cursor color,
+so if you're interested in matching the base16 spaceline indicator,
+you can use the following snippet:
+
+#+begin_src emacs-lisp
+  ;; Set the cursor color based on the evil state
+  (defvar my/base16-colors base16-default-dark-colors)
+  (setq evil-emacs-state-cursor   `(,(plist-get my/base16-colors :base0D) box)
+        evil-insert-state-cursor  `(,(plist-get my/base16-colors :base0D) bar)
+        evil-motion-state-cursor  `(,(plist-get my/base16-colors :base0E) box)
+        evil-normal-state-cursor  `(,(plist-get my/base16-colors :base0B) box)
+        evil-replace-state-cursor `(,(plist-get my/base16-colors :base08) bar)
+        evil-visual-state-cursor  `(,(plist-get my/base16-colors :base09) box))
+#+end_src
+
 * Credits
 
 Current maintainer: [[https://github.com/belak][belak]]
