@@ -222,6 +222,14 @@ an alternate theme for use in the terminal.")
      (rainbow-delimiters-depth-8-face              :foreground base03)
      (rainbow-delimiters-depth-9-face              :foreground base05)
 
+     ;; spaceline
+     (spaceline-evil-emacs                         :foreground base01 :background base0D)
+     (spaceline-evil-insert                        :foreground base01 :background base0D)
+     (spaceline-evil-motion                        :foreground base01 :background base0E)
+     (spaceline-evil-normal                        :foreground base01 :background base0B)
+     (spaceline-evil-replace                       :foreground base01 :background base08)
+     (spaceline-evil-visual                        :foreground base01 :background base09)
+
      ;; IDO
      (ido-subdir                                   :foreground base04)
      (ido-first-match                              :foreground base09 :weight bold)
