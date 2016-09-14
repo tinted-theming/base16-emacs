@@ -134,6 +134,7 @@ an alternate theme for use in the terminal.")
      (isearch-fail                                 :background base01 :inverse-video t :inherit font-lock-warning-face)
      (anzu-mode-line                               :foreground base0E)
      (evil-search-highlight-persist-highlight-face :background base01 :inverse-video t :inherit font-lock-warning-face)
+     (go-guru-hl-identifier-face                   :background base02)
 
      ;; Popups
      (popup-face                                   :foreground base05 :background base02)
