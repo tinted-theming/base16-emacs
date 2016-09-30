@@ -583,6 +583,12 @@ an alternate theme for use in the terminal.")
      (helm-source-header                           :foreground base05 :background base01 :weight bold)
      (helm-visible-mark                            :foreground base00 :background base0B)
 
+     ;; powerline
+     (powerline-active1                            :foreground base09 :background base00)
+     (powerline-active2                            :foreground base08 :background base01)
+     (powerline-inactive1                          :foreground base06 :background base01)
+     (powerline-inactive2                          :foreground base07 :background base02)
+
      (custom-variable-tag                          :foreground base0D)
      (custom-group-tag                             :foreground base0D)
      (custom-state                                 :foreground base0B)))
