@@ -4,7 +4,7 @@
 ;; Base16: (https://github.com/chriskempson/base16)
 
 ;;; Authors:
-;; Scheme: David Hart (http://hart-dev.com)
+;; Scheme: David Hart (https://github.com/hartbit)
 ;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
