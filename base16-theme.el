@@ -254,8 +254,8 @@ an alternate theme for use in the terminal.")
      (whitespace-trailing                          :foreground base0A :background base08)
 
      ;; Parenthesis matching (built-in)
-     (show-paren-match                             :foreground base03 :background base0D)
-     (show-paren-mismatch                          :foreground base03 :background base09)
+     (show-paren-match                             :foreground base01 :background base0D)
+     (show-paren-mismatch                          :foreground base01 :background base09)
 
      ;; Parenthesis matching (mic-paren)
      (paren-face-match                             :foreground nil :background nil :inherit show-paren-match)
