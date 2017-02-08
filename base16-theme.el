@@ -337,6 +337,7 @@ an alternate theme for use in the terminal.")
      (diredp-write-priv                            :foreground base0A :background nil)
 
      ;; term and ansi-term
+     (term                                         :foreground base05 :background base00)
      (term-color-black                             :foreground base02 :background base00)
      (term-color-white                             :foreground base05 :background base07)
      (term-color-red                               :foreground base08 :background base08)
