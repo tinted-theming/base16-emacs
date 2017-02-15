@@ -17,9 +17,12 @@ request.
 
 ** Previews
 
-Theme previews can be found [[https://belak.github.io/base16-emacs/][here]]. The generator can be found on the
-gh-pages branch, so if you have ideas for improvements, they can go
-there.
+Theme previews can be found [[https://belak.github.io/base16-emacs/][here]].
+
+It is recommended to generate screenshots by adding the gh-pages branch as a
+subtree (=git worktree add -B gh-pages gh-pages origin/gh-pages=) then
+using the normal generation tools (simply run =screenshot.sh= from
+the screenshots dir).
 
 ** evil-mode
 
@@ -37,13 +40,6 @@ you can use the following snippet:
         evil-replace-state-cursor `(,(plist-get my/base16-colors :base08) bar)
         evil-visual-state-cursor  `(,(plist-get my/base16-colors :base09) box))
 #+end_src
-
-** Screenshots
-
-It is recommended to generate screenshots by adding the gh-pages branch as a
-subtree (=git worktree add -B gh-pages gh-pages origin/gh-pages
-=) then using the normal generation tools (simply run =screenshot.sh= from
-the screenshots dir).
 
 * Credits
 
