@@ -55,5 +55,4 @@
 
 (kill-emacs)
 
-(provide 'screenshot)
 ;;; screenshot.el ends here
