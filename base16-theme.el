@@ -127,6 +127,10 @@ an alternate theme for use in the terminal.")
      ;; linum-mode
      (linum                                        :foreground base03 :background base01)
 
+     ;; line highlight
+     (hl-line                                      :background base01)
+     (col-highlight                                :background base01)
+
      ;; Search
      (match                                        :foreground base0D :background base01 :inverse-video t)
      (isearch                                      :foreground base0A :background base01 :inverse-video t)
