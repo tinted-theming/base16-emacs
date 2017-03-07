@@ -82,31 +82,43 @@ an alternate theme for use in the terminal.")
    theme-name
    theme-colors
 
-   '(;; Built in stuff (Emacs 23)
+   '(
+;;; Built-in
+;;;; basic colors
      (border                                       :background base03)
-     (border-glyph)
      (cursor                                       :background base08)
      (default                                      :foreground base05 :background base00)
      (fringe                                       :background base02)
      (gui-element                                  :background base01)
+     (header-line                                  :foreground base0E :background nil :inherit mode-line)
      (highlight                                    :background base01)
-     (link                                         :foreground base0D)
-     (link-visited                                 :foreground base0E)
+     (link                                         :foreground base0D :underline t)
+     (link-visited                                 :foreground base0E :underline t)
      (minibuffer-prompt                            :foreground base0D)
-     (mode-line                                    :foreground base04 :background base02 :box nil)
-     (mode-line-buffer-id                          :foreground base0B :background nil)
-     (mode-line-emphasis                           :foreground base06 :slant italic)
-     (mode-line-highlight                          :foreground base0E :box nil :weight bold)
-     (mode-line-inactive                           :foreground base03 :background base01 :box nil)
      (region                                       :background base02)
      (secondary-selection                          :background base03)
+     (trailing-whitespace                          :foreground base0A :background base0C)
+     (widget-button                                :underline t)
+     (widget-field                                 :background base03 :box (:line-width 1 :color base06))
+
      (error                                        :foreground base08 :weight bold)
      (warning                                      :foreground base09 :weight bold)
      (success                                      :foreground base0B :weight bold)
 
-     (header-line                                  :foreground base0E :background nil :inherit mode-line)
+;;;; compilation
+     (compilation-column-number                    :foreground base0A)
+     (compilation-line-number                      :foreground base0A)
+     (compilation-message-face                     :foreground base0D)
+     (compilation-mode-line-exit                   :foreground base0B)
+     (compilation-mode-line-fail                   :foreground base08)
+     (compilation-mode-line-run                    :foreground base0D)
 
-     ;; Font-lock stuff
+;;;; custom
+     (custom-variable-tag                          :foreground base0D)
+     (custom-group-tag                             :foreground base0D)
+     (custom-state                                 :foreground base0B)
+
+;;;; font-lock
      (font-lock-builtin-face                       :foreground base0C)
      (font-lock-comment-delimiter-face             :foreground base02)
      (font-lock-comment-face                       :foreground base03)
@@ -124,198 +136,27 @@ an alternate theme for use in the terminal.")
      (font-lock-variable-name-face                 :foreground base08)
      (font-lock-warning-face                       :foreground base08)
 
-     ;; linum-mode
-     (linum                                        :foreground base03 :background base01)
+;;;; mode-line
+     (mode-line                                    :foreground base04 :background base02 :box nil)
+     (mode-line-buffer-id                          :foreground base0B :background nil)
+     (mode-line-emphasis                           :foreground base06 :slant italic)
+     (mode-line-highlight                          :foreground base0E :box nil :weight bold)
+     (mode-line-inactive                           :foreground base03 :background base01 :box nil)
 
-     ;; line highlight
-     (hl-line                                      :background base01)
-     (col-highlight                                :background base01)
+     ;;; TODO: Determine where this should go
 
-     ;; Search
+;;;; isearch
      (match                                        :foreground base0D :background base01 :inverse-video t)
      (isearch                                      :foreground base0A :background base01 :inverse-video t)
      (isearch-lazy-highlight-face                  :foreground base0C :background base01 :inverse-video t)
      (isearch-fail                                 :background base01 :inverse-video t :inherit font-lock-warning-face)
+
+;;; Third-party
+
+;;;; anzu-mode
      (anzu-mode-line                               :foreground base0E)
-     (evil-search-highlight-persist-highlight-face :background base01 :inverse-video t :inherit font-lock-warning-face)
-     (go-guru-hl-identifier-face                   :background base02)
 
-     ;; Popups
-     (popup-face                                   :foreground base05 :background base02)
-     (popup-isearch-match                          :foreground base00 :background base0B)
-     (popup-scroll-bar-background-face             :background base03)
-     (popup-scroll-bar-foreground-face             :background base05)
-     (popup-summary-face                           :foreground base04)
-     (popup-tip-face                               :foreground base00 :background base0A)
-     (popup-menu-mouse-face                        :foreground base00 :background base0D)
-     (popup-menu-selection-face                    :foreground base00 :background base0C)
-
-     ;; company-mode
-     (company-tooltip                              :background base01 :inherit default)
-     (company-scrollbar-bg                         :background base07)
-     (company-scrollbar-fg                         :background base04)
-     (company-tooltip-annotation                   :foreground base08)
-     (company-tooltip-common                       :inherit font-lock-constant-face)
-     (company-tooltip-selection                    :background base02 :inherit font-lock-function-name-face)
-     (company-preview-common                       :inherit secondary-selection)
-
-     ;; eshell
-     (eshell-ls-archive                            :foreground base08)
-     (eshell-ls-backup                             :foreground base0F)
-     (eshell-ls-clutter                            :foreground base09)
-     (eshell-ls-directory                          :foreground base0D)
-     (eshell-ls-executable                         :foreground base0B)
-     (eshell-ls-missing                            :foreground base08)
-     (eshell-ls-product                            :foreground base0F)
-     (eshell-ls-readonly                           :foreground base06)
-     (eshell-ls-special                            :foreground base0E)
-     (eshell-ls-symlink                            :foreground base0C)
-     (eshell-ls-unreadable                         :foreground base04)
-     (eshell-prompt                                :foreground base05)
-
-     ;; ivy-mode
-     (ivy-current-match                            :foreground base09 :background base01)
-     (ivy-minibuffer-match-face-1                  :foreground base0E)
-     (ivy-minibuffer-match-face-2                  :foreground base0D)
-     (ivy-minibuffer-match-face-3                  :foreground base0C)
-     (ivy-minibuffer-match-face-4                  :foreground base0B)
-     (ivy-confirm-face                             :foreground base0B)
-     (ivy-match-required-face                      :foreground base08)
-     (ivy-virtual                                  :foreground base04)
-     (ivy-action                                   :foreground base0D)
-
-     ;; Flycheck
-     (flycheck-error                               :underline (:style wave :color base08))
-     (flycheck-info                                :underline (:style wave :color base0B))
-     (flycheck-warning                             :underline (:style wave :color base09))
-
-     ;; Flymake
-     (flymake-warnline                             :background base01 :underline base09)
-     (flymake-errline                              :background base01 :underline base08)
-
-     ;; Flyspell
-     (flyspell-duplicate                           :underline (:style wave :color base09))
-     (flyspell-incorrect                           :underline (:style wave :color base08))
-
-     ;; Clojure errors
-     (clojure-test-failure-face                    :background nil :inherit flymake-warnline)
-     (clojure-test-error-face                      :background nil :inherit flymake-errline)
-     (clojure-test-success-face                    :foreground nil :background nil :underline base0B)
-
-     ;; clojure-mode
-     (clojure-keyword                              :foreground base0A)
-     (clojure-parens                               :foreground base06)
-     (clojure-braces                               :foreground base0B)
-     (clojure-brackets                             :foreground base0A)
-     (clojure-double-quote                         :foreground base0C :background nil)
-     (clojure-special                              :foreground base0D)
-     (clojure-java-call                            :foreground base0E)
-
-     ;; MMM-mode
-     (mmm-code-submode-face                        :background base03)
-     (mmm-comment-submode-face                     :inherit font-lock-comment-face)
-     (mmm-output-submode-face                      :background base03)
-
-     ;; rainbow-delimiters
-     (rainbow-delimiters-depth-1-face              :foreground base0E)
-     (rainbow-delimiters-depth-2-face              :foreground base0D)
-     (rainbow-delimiters-depth-3-face              :foreground base0C)
-     (rainbow-delimiters-depth-4-face              :foreground base0B)
-     (rainbow-delimiters-depth-5-face              :foreground base0A)
-     (rainbow-delimiters-depth-6-face              :foreground base09)
-     (rainbow-delimiters-depth-7-face              :foreground base08)
-     (rainbow-delimiters-depth-8-face              :foreground base03)
-     (rainbow-delimiters-depth-9-face              :foreground base05)
-
-     ;; spaceline
-     (spaceline-evil-emacs                         :foreground base01 :background base0D)
-     (spaceline-evil-insert                        :foreground base01 :background base0D)
-     (spaceline-evil-motion                        :foreground base01 :background base0E)
-     (spaceline-evil-normal                        :foreground base01 :background base0B)
-     (spaceline-evil-replace                       :foreground base01 :background base08)
-     (spaceline-evil-visual                        :foreground base01 :background base09)
-
-     ;; IDO
-     (ido-subdir                                   :foreground base04)
-     (ido-first-match                              :foreground base09 :weight bold)
-     (ido-only-match                               :foreground base08 :weight bold)
-     (ido-indicator                                :foreground base08 :background base01)
-     (ido-virtual                                  :foreground base04)
-
-     ;; which-function
-     (which-func                                   :foreground base0D :background nil :weight bold)
-
-     (trailing-whitespace                          :foreground base0A :background base0C)
-     (whitespace-empty                             :foreground base08 :background base0A)
-     (whitespace-hspace                            :foreground base04 :background base04)
-     (whitespace-indentation                       :foreground base08 :background base0A)
-     (whitespace-line                              :foreground base0F :background base01)
-     (whitespace-newline                           :foreground base04)
-     (whitespace-space                             :foreground base03 :background base01)
-     (whitespace-space-after-tab                   :foreground base08 :background base0A)
-     (whitespace-space-before-tab                  :foreground base08 :background base09)
-     (whitespace-tab                               :foreground base03 :background base01)
-     (whitespace-trailing                          :foreground base0A :background base08)
-
-     ;; Parenthesis matching (built-in)
-     (show-paren-match                             :foreground base01 :background base0D)
-     (show-paren-mismatch                          :foreground base01 :background base09)
-
-     ;; Parenthesis matching (mic-paren)
-     (paren-face-match                             :foreground nil :background nil :inherit show-paren-match)
-     (paren-face-mismatch                          :foreground nil :background nil :inherit show-paren-mismatch)
-     (paren-face-no-match                          :foreground nil :background nil :inherit show-paren-mismatch)
-
-     ;; Parenthesis dimming (parenface)
-     (paren-face                                   :foreground base04 :background nil)
-
-     (sh-heredoc                                   :foreground nil :weight normal :inherit font-lock-string-face)
-     (sh-quoted-exec                               :foreground nil :inherit font-lock-preprocessor-face)
-     (slime-highlight-edits-face                   :weight bold)
-     (slime-repl-input-face                        :weight normal :underline nil)
-     (slime-repl-prompt-face                       :foreground base0E :underline nil :weight bold)
-     (slime-repl-result-face                       :foreground base0B)
-     (slime-repl-output-face                       :foreground base0D :background base01)
-
-     (csv-separator-face                           :foreground base09)
-
-     (diff-added                                   :foreground base0B)
-     (diff-changed                                 :foreground base0E)
-     (diff-removed                                 :foreground base08)
-     (diff-header                                  :background base01)
-     (diff-file-header                             :background base02)
-     (diff-hunk-header                             :foreground base0E :background base01)
-
-     (diff-hl-change                               :foreground base0E)
-     (diff-hl-delete                               :foreground base08)
-     (diff-hl-insert                               :foreground base0B)
-     (git-gutter+-added                            :foreground base0B)
-     (git-gutter+-deleted                          :foreground base08)
-     (git-gutter+-modified                         :foreground base0E)
-     (git-gutter+-unchanged                        :foreground base0A :inverse-video t)
-     (git-gutter-fr:added                          :foreground base0B)
-     (git-gutter-fr:deleted                        :foreground base08)
-     (git-gutter-fr:modified                       :foreground base0E)
-     (git-gutter:added                             :foreground base0B)
-     (git-gutter:deleted                           :foreground base08)
-     (git-gutter:modified                          :foreground base0E)
-     (git-gutter:separator                         :foreground base0C)
-     (git-gutter:unchanged                         :foreground base0A :inverse-video t)
-
-     (ediff-even-diff-A                            :foreground nil :background nil :inverse-video t)
-     (ediff-even-diff-B                            :foreground nil :background nil :inverse-video t)
-     (ediff-odd-diff-A                             :foreground base04 :background nil :inverse-video t)
-     (ediff-odd-diff-B                             :foreground base04 :background nil :inverse-video t)
-
-     (eldoc-highlight-function-argument            :foreground base0B :weight bold)
-
-     ;; undo-tree
-     (undo-tree-visualizer-default-face            :foreground base06)
-     (undo-tree-visualizer-current-face            :foreground base0B :weight bold)
-     (undo-tree-visualizer-active-branch-face      :foreground base08)
-     (undo-tree-visualizer-register-face           :foreground base0A)
-
-     ;; auctex
+;;;; auctex
      (font-latex-bold-face                         :foreground base0B)
      (font-latex-doctex-documentation-face         :background base03)
      (font-latex-italic-face                       :foreground base0B)
@@ -331,7 +172,53 @@ an alternate theme for use in the terminal.")
      (font-latex-verbatim-face                     :foreground base09)
      (font-latex-warning-face                      :foreground base08)
 
-     ;; dired+
+;;;; clojure-mode
+     (clojure-keyword                              :foreground base0A)
+     (clojure-parens                               :foreground base06)
+     (clojure-braces                               :foreground base0B)
+     (clojure-brackets                             :foreground base0A)
+     (clojure-double-quote                         :foreground base0C :background nil)
+     (clojure-special                              :foreground base0D)
+     (clojure-java-call                            :foreground base0E)
+
+;;;; clojure-test-mode
+     (clojure-test-failure-face                    :background nil :inherit flymake-warnline)
+     (clojure-test-error-face                      :background nil :inherit flymake-errline)
+     (clojure-test-success-face                    :foreground nil :background nil :underline base0B)
+
+;;;; company-mode
+     (company-tooltip                              :background base01 :inherit default)
+     (company-scrollbar-bg                         :background base07)
+     (company-scrollbar-fg                         :background base04)
+     (company-tooltip-annotation                   :foreground base08)
+     (company-tooltip-common                       :inherit font-lock-constant-face)
+     (company-tooltip-selection                    :background base02 :inherit font-lock-function-name-face)
+     (company-preview-common                       :inherit secondary-selection)
+
+;;;; cscope-minor-mode
+     (cscope-file-face                             :foreground base0B)
+     (cscope-function-face                         :foreground base0D)
+     (cscope-line-number-face                      :foreground base0A)
+     (cscope-mouse-face                            :foreground base04 :background base01)
+     (cscope-separator-face                        :foreground base08 :overline t :underline t :weight bold)
+
+;;;; csv-mode
+     (csv-separator-face                           :foreground base09)
+
+;;;; diff-hl-mode
+     (diff-hl-change                               :foreground base0E)
+     (diff-hl-delete                               :foreground base08)
+     (diff-hl-insert                               :foreground base0B)
+
+;;;; diff-mode
+     (diff-added                                   :foreground base0B)
+     (diff-changed                                 :foreground base0E)
+     (diff-removed                                 :foreground base08)
+     (diff-header                                  :background base01)
+     (diff-file-header                             :background base02)
+     (diff-hunk-header                             :foreground base0E :background base01)
+
+;;;; dired+
      (diredp-compressed-file-suffix                :foreground base0D)
      (diredp-dir-heading                           :foreground nil :background nil :inherit heading)
      (diredp-dir-priv                              :foreground base0C :background nil)
@@ -352,153 +239,79 @@ an alternate theme for use in the terminal.")
      (diredp-symlink                               :foreground base0E)
      (diredp-write-priv                            :foreground base0A :background nil)
 
-     ;; term and ansi-term
-     (term                                         :foreground base05 :background base00)
-     (term-color-black                             :foreground base02 :background base00)
-     (term-color-white                             :foreground base05 :background base07)
-     (term-color-red                               :foreground base08 :background base08)
-     (term-color-yellow                            :foreground base0A :background base0A)
-     (term-color-green                             :foreground base0B :background base0B)
-     (term-color-cyan                              :foreground base0C :background base0C)
-     (term-color-blue                              :foreground base0D :background base0D)
-     (term-color-magenta                           :foreground base0E :background base0E)
+;;;; ediff-mode
+     (ediff-even-diff-A                            :foreground nil :background nil :inverse-video t)
+     (ediff-even-diff-B                            :foreground nil :background nil :inverse-video t)
+     (ediff-odd-diff-A                             :foreground base04 :background nil :inverse-video t)
+     (ediff-odd-diff-B                             :foreground base04 :background nil :inverse-video t)
 
-     (link                                         :foreground nil :underline t)
-     (widget-button                                :underline t)
-     (widget-field                                 :background base03 :box (:line-width 1 :color base06))
+;;;; eldoc-mode
+     (eldoc-highlight-function-argument            :foreground base0B :weight bold)
 
-     ;; Compilation (most faces politely inherit from 'success, 'error, 'warning etc.)
-     (compilation-column-number                    :foreground base0A)
-     (compilation-line-number                      :foreground base0A)
-     (compilation-message-face                     :foreground base0D)
-     (compilation-mode-line-exit                   :foreground base0B)
-     (compilation-mode-line-fail                   :foreground base08)
-     (compilation-mode-line-run                    :foreground base0D)
+;;;; erc
+     (erc-direct-msg-face                          :foreground base09)
+     (erc-error-face                               :foreground base08)
+     (erc-header-face                              :foreground base06 :background base04)
+     (erc-input-face                               :foreground base0B)
+     (erc-keyword-face                             :foreground base0A)
+     (erc-current-nick-face                        :foreground base0B)
+     (erc-my-nick-face                             :foreground base0B)
+     (erc-nick-default-face                        :foreground base0E :weight normal)
+     (erc-nick-msg-face                            :foreground base0A :weight normal)
+     (erc-notice-face                              :foreground base04)
+     (erc-pal-face                                 :foreground base09)
+     (erc-prompt-face                              :foreground base0D)
+     (erc-timestamp-face                           :foreground base0C)
 
-     ;; Grep
-     (grep-context-face                            :foreground base04)
-     (grep-error-face                              :foreground base08 :weight bold :underline t)
-     (grep-hit-face                                :foreground base0D)
-     (grep-match-face                              :foreground nil :background nil :inherit match)
+;;;; eshell
+     (eshell-ls-archive                            :foreground base08)
+     (eshell-ls-backup                             :foreground base0F)
+     (eshell-ls-clutter                            :foreground base09)
+     (eshell-ls-directory                          :foreground base0D)
+     (eshell-ls-executable                         :foreground base0B)
+     (eshell-ls-missing                            :foreground base08)
+     (eshell-ls-product                            :foreground base0F)
+     (eshell-ls-readonly                           :foreground base06)
+     (eshell-ls-special                            :foreground base0E)
+     (eshell-ls-symlink                            :foreground base0C)
+     (eshell-ls-unreadable                         :foreground base04)
+     (eshell-prompt                                :foreground base05)
 
-     (regex-tool-matched-face                      :foreground nil :background nil :inherit match)
+;;;; evil-mode
+     (evil-search-highlight-persist-highlight-face :background base01 :inverse-video t :inherit font-lock-warning-face)
 
-     ;; Cscope
-     (cscope-file-face                             :foreground base0B)
-     (cscope-function-face                         :foreground base0D)
-     (cscope-line-number-face                      :foreground base0A)
-     (cscope-mouse-face                            :foreground base04 :background base01)
-     (cscope-separator-face                        :foreground base08 :overline t :underline t :weight bold)
+;;;; flycheck-mode
+     (flycheck-error                               :underline (:style wave :color base08))
+     (flycheck-info                                :underline (:style wave :color base0B))
+     (flycheck-warning                             :underline (:style wave :color base09))
 
-     ;; mark-multiple
-     (mm/master-face                               :foreground nil :background nil :inherit region)
-     (mm/mirror-face                               :foreground nil :background nil :inherit region)
+;;;; flymake-mode
+     (flymake-warnline                             :background base01 :underline base09)
+     (flymake-errline                              :background base01 :underline base08)
 
-     ;; org-mode
-     (org-agenda-structure                         :foreground base0E)
-     (org-agenda-date                              :foreground base0D :underline nil)
-     (org-agenda-done                              :foreground base0B)
-     (org-agenda-dimmed-todo-face                  :foreground base04)
-     (org-block                                    :foreground base09)
-     (org-code                                     :foreground base0A)
-     (org-column                                   :background base01)
-     (org-column-title                             :weight bold :underline t :inherit org-column)
-     (org-date                                     :foreground base0E :underline t)
-     (org-document-info                            :foreground base0C)
-     (org-document-info-keyword                    :foreground base0B)
-     (org-document-title                           :foreground base09 :weight bold :height 1.44)
-     (org-done                                     :foreground base0B)
-     (org-ellipsis                                 :foreground base04)
-     (org-footnote                                 :foreground base0C)
-     (org-formula                                  :foreground base08)
-     (org-hide                                     :foreground base03)
-     (org-link                                     :foreground base0D)
-     (org-scheduled                                :foreground base0B)
-     (org-scheduled-previously                     :foreground base09)
-     (org-scheduled-today                          :foreground base0B)
-     (org-special-keyword                          :foreground base09)
-     (org-table                                    :foreground base0E)
-     (org-todo                                     :foreground base08)
-     (org-upcoming-deadline                        :foreground base09)
-     (org-warning                                  :foreground base08 :weight bold)
+;;;; flyspell-mode
+     (flyspell-duplicate                           :underline (:style wave :color base09))
+     (flyspell-incorrect                           :underline (:style wave :color base08))
 
-     (markdown-url-face                            :inherit link)
-     (markdown-link-face                           :foreground base0D :underline t)
+;;;; git-gutter-mode
+     (git-gutter:added                             :foreground base0B)
+     (git-gutter:deleted                           :foreground base08)
+     (git-gutter:modified                          :foreground base0E)
+     (git-gutter:separator                         :foreground base0C)
+     (git-gutter:unchanged                         :foreground base0A :inverse-video t)
 
-     (hl-sexp-face                                 :background base03)
-     (highlight-80+                                :background base03)
+;;;; git-gutter+-mode
+     (git-gutter+-added                            :foreground base0B)
+     (git-gutter+-deleted                          :foreground base08)
+     (git-gutter+-modified                         :foreground base0E)
+     (git-gutter+-unchanged                        :foreground base0A :inverse-video t)
 
-     ;; Python-specific overrides
-     (py-builtins-face                             :foreground base09 :weight normal)
+;;;; git-gutter-fringe
+     (git-gutter-fr:added                          :foreground base0B)
+     (git-gutter-fr:deleted                        :foreground base08)
+     (git-gutter-fr:modified                       :foreground base0E)
 
-     ;; js2-mode
-     (js2-warning-face                             :underline base09)
-     (js2-error-face                               :foreground nil :underline base08)
-     (js2-external-variable-face                   :foreground base0E)
-     (js2-function-param-face                      :foreground base0D)
-     (js2-instance-member-face                     :foreground base0D)
-     (js2-private-function-call-face               :foreground base08)
-
-     ;; js3-mode
-     (js3-warning-face                             :underline base09)
-     (js3-error-face                               :foreground nil :underline base08)
-     (js3-external-variable-face                   :foreground base0E)
-     (js3-function-param-face                      :foreground base0D)
-     (js3-jsdoc-tag-face                           :foreground base09)
-     (js3-jsdoc-type-face                          :foreground base0C)
-     (js3-jsdoc-value-face                         :foreground base0A)
-     (js3-jsdoc-html-tag-name-face                 :foreground base0D)
-     (js3-jsdoc-html-tag-delimiter-face            :foreground base0B)
-     (js3-instance-member-face                     :foreground base0D)
-     (js3-private-function-call-face               :foreground base08)
-
-     ;; nxml
-     (nxml-name-face                               :foreground unspecified :inherit font-lock-constant-face)
-     (nxml-attribute-local-name-face               :foreground unspecified :inherit font-lock-variable-name-face)
-     (nxml-ref-face                                :foreground unspecified :inherit font-lock-preprocessor-face)
-     (nxml-delimiter-face                          :foreground unspecified :inherit font-lock-keyword-face)
-     (nxml-delimited-data-face                     :foreground unspecified :inherit font-lock-string-face)
-     (rng-error-face                               :underline base08)
-
-     ;; RHTML
-     (erb-delim-face                               :background base03)
-     (erb-exec-face                                :background base03 :weight bold)
-     (erb-exec-delim-face                          :background base03)
-     (erb-out-face                                 :background base03 :weight bold)
-     (erb-out-delim-face                           :background base03)
-     (erb-comment-face                             :background base03 :weight bold :slant italic)
-     (erb-comment-delim-face                       :background base03)
-
-     ;; Message-mode
-     (message-header-other                         :foreground nil :background nil :weight normal)
-     (message-header-subject                       :foreground base0A :weight bold :inherit message-header-other)
-     (message-header-to                            :foreground base09 :weight bold :inherit message-header-other)
-     (message-header-cc                            :foreground nil :inherit message-header-to)
-     (message-header-name                          :foreground base0D :background nil)
-     (message-header-newsgroups                    :foreground base0C :background nil :slant normal)
-     (message-separator                            :foreground base0E)
-
-     ;; Jabber
-     (jabber-chat-prompt-local                     :foreground base0A)
-     (jabber-chat-prompt-foreign                   :foreground base09)
-     (jabber-chat-prompt-system                    :foreground base0A :weight bold)
-     (jabber-chat-text-local                       :foreground base0A)
-     (jabber-chat-text-foreign                     :foreground base09)
-     (jabber-chat-text-error                       :foreground base08)
-
-     (jabber-roster-user-online                    :foreground base0B)
-     (jabber-roster-user-xa                        :foreground base04)
-     (jabber-roster-user-dnd                       :foreground base0A)
-     (jabber-roster-user-away                      :foreground base09)
-     (jabber-roster-user-chatty                    :foreground base0E)
-     (jabber-roster-user-error                     :foreground base08)
-     (jabber-roster-user-offline                   :foreground base04)
-
-     (jabber-rare-time-face                        :foreground base04)
-     (jabber-activity-face                         :foreground base0E)
-     (jabber-activity-personal-face                :foreground base0C)
-
-     ;; Gnus
+;;;; gnus
      (gnus-cite-1                                  :foreground nil :inherit outline-1)
      (gnus-cite-2                                  :foreground nil :inherit outline-2)
      (gnus-cite-3                                  :foreground nil :inherit outline-3)
@@ -555,21 +368,16 @@ an alternate theme for use in the terminal.")
      (gnus-group-news-5-empty                      :foreground base04 :inherit gnus-group-news-5)
      (gnus-group-news-6-empty                      :foreground base04 :inherit gnus-group-news-6)
 
-     (erc-direct-msg-face                          :foreground base09)
-     (erc-error-face                               :foreground base08)
-     (erc-header-face                              :foreground base06 :background base04)
-     (erc-input-face                               :foreground base0B)
-     (erc-keyword-face                             :foreground base0A)
-     (erc-current-nick-face                        :foreground base0B)
-     (erc-my-nick-face                             :foreground base0B)
-     (erc-nick-default-face                        :foreground base0E :weight normal)
-     (erc-nick-msg-face                            :foreground base0A :weight normal)
-     (erc-notice-face                              :foreground base04)
-     (erc-pal-face                                 :foreground base09)
-     (erc-prompt-face                              :foreground base0D)
-     (erc-timestamp-face                           :foreground base0C)
+;;;; go-guru
+     (go-guru-hl-identifier-face                   :background base02)
 
-     ;; helm
+;;;; grep
+     (grep-context-face                            :foreground base04)
+     (grep-error-face                              :foreground base08 :weight bold :underline t)
+     (grep-hit-face                                :foreground base0D)
+     (grep-match-face                              :foreground nil :background nil :inherit match)
+
+;;;; helm
      (helm-M-x-key                                 :foreground base0C)
      (helm-action                                  :foreground base05)
      (helm-buffer-directory                        :foreground base04 :background nil :weight bold)
@@ -600,15 +408,240 @@ an alternate theme for use in the terminal.")
      (helm-source-header                           :foreground base05 :background base01 :weight bold)
      (helm-visible-mark                            :foreground base00 :background base0B)
 
-     ;; powerline
+;;;; highlight-80+-mode
+     (highlight-80+                                :background base03)
+
+;;;; hl-line-mode
+     (hl-line                                      :background base01)
+     (col-highlight                                :background base01)
+
+;;;; hl-sexp-mode
+     (hl-sexp-face                                 :background base03)
+
+;;;; ido-mode
+     (ido-subdir                                   :foreground base04)
+     (ido-first-match                              :foreground base09 :weight bold)
+     (ido-only-match                               :foreground base08 :weight bold)
+     (ido-indicator                                :foreground base08 :background base01)
+     (ido-virtual                                  :foreground base04)
+
+;;;; ivy-mode
+     (ivy-current-match                            :foreground base09 :background base01)
+     (ivy-minibuffer-match-face-1                  :foreground base0E)
+     (ivy-minibuffer-match-face-2                  :foreground base0D)
+     (ivy-minibuffer-match-face-3                  :foreground base0C)
+     (ivy-minibuffer-match-face-4                  :foreground base0B)
+     (ivy-confirm-face                             :foreground base0B)
+     (ivy-match-required-face                      :foreground base08)
+     (ivy-virtual                                  :foreground base04)
+     (ivy-action                                   :foreground base0D)
+
+;;;; jabber
+     (jabber-chat-prompt-local                     :foreground base0A)
+     (jabber-chat-prompt-foreign                   :foreground base09)
+     (jabber-chat-prompt-system                    :foreground base0A :weight bold)
+     (jabber-chat-text-local                       :foreground base0A)
+     (jabber-chat-text-foreign                     :foreground base09)
+     (jabber-chat-text-error                       :foreground base08)
+
+     (jabber-roster-user-online                    :foreground base0B)
+     (jabber-roster-user-xa                        :foreground base04)
+     (jabber-roster-user-dnd                       :foreground base0A)
+     (jabber-roster-user-away                      :foreground base09)
+     (jabber-roster-user-chatty                    :foreground base0E)
+     (jabber-roster-user-error                     :foreground base08)
+     (jabber-roster-user-offline                   :foreground base04)
+
+     (jabber-rare-time-face                        :foreground base04)
+     (jabber-activity-face                         :foreground base0E)
+     (jabber-activity-personal-face                :foreground base0C)
+
+;;;; js2-mode
+     (js2-warning-face                             :underline base09)
+     (js2-error-face                               :foreground nil :underline base08)
+     (js2-external-variable-face                   :foreground base0E)
+     (js2-function-param-face                      :foreground base0D)
+     (js2-instance-member-face                     :foreground base0D)
+     (js2-private-function-call-face               :foreground base08)
+
+;;;; js3-mode
+     (js3-warning-face                             :underline base09)
+     (js3-error-face                               :foreground nil :underline base08)
+     (js3-external-variable-face                   :foreground base0E)
+     (js3-function-param-face                      :foreground base0D)
+     (js3-jsdoc-tag-face                           :foreground base09)
+     (js3-jsdoc-type-face                          :foreground base0C)
+     (js3-jsdoc-value-face                         :foreground base0A)
+     (js3-jsdoc-html-tag-name-face                 :foreground base0D)
+     (js3-jsdoc-html-tag-delimiter-face            :foreground base0B)
+     (js3-instance-member-face                     :foreground base0D)
+     (js3-private-function-call-face               :foreground base08)
+
+;;;; linum-mode
+     (linum                                        :foreground base03 :background base01)
+
+;;;; mark-multiple
+     (mm/master-face                               :foreground nil :background nil :inherit region)
+     (mm/mirror-face                               :foreground nil :background nil :inherit region)
+
+;; markdown-mode
+     (markdown-url-face                            :inherit link)
+     (markdown-link-face                           :foreground base0D :underline t)
+
+;;;; message-mode
+     (message-header-other                         :foreground nil :background nil :weight normal)
+     (message-header-subject                       :foreground base0A :weight bold :inherit message-header-other)
+     (message-header-to                            :foreground base09 :weight bold :inherit message-header-other)
+     (message-header-cc                            :foreground nil :inherit message-header-to)
+     (message-header-name                          :foreground base0D :background nil)
+     (message-header-newsgroups                    :foreground base0C :background nil :slant normal)
+     (message-separator                            :foreground base0E)
+
+;;;; mic-paren
+     (paren-face-match                             :foreground nil :background nil :inherit show-paren-match)
+     (paren-face-mismatch                          :foreground nil :background nil :inherit show-paren-mismatch)
+     (paren-face-no-match                          :foreground nil :background nil :inherit show-paren-mismatch)
+
+;;;; mmm-mode
+     (mmm-code-submode-face                        :background base03)
+     (mmm-comment-submode-face                     :inherit font-lock-comment-face)
+     (mmm-output-submode-face                      :background base03)
+
+;;;; nxml-mode
+     (nxml-name-face                               :foreground unspecified :inherit font-lock-constant-face)
+     (nxml-attribute-local-name-face               :foreground unspecified :inherit font-lock-variable-name-face)
+     (nxml-ref-face                                :foreground unspecified :inherit font-lock-preprocessor-face)
+     (nxml-delimiter-face                          :foreground unspecified :inherit font-lock-keyword-face)
+     (nxml-delimited-data-face                     :foreground unspecified :inherit font-lock-string-face)
+     (rng-error-face                               :underline base08)
+
+;;;; org-mode
+     (org-agenda-structure                         :foreground base0E)
+     (org-agenda-date                              :foreground base0D :underline nil)
+     (org-agenda-done                              :foreground base0B)
+     (org-agenda-dimmed-todo-face                  :foreground base04)
+     (org-block                                    :foreground base09)
+     (org-code                                     :foreground base0A)
+     (org-column                                   :background base01)
+     (org-column-title                             :weight bold :underline t :inherit org-column)
+     (org-date                                     :foreground base0E :underline t)
+     (org-document-info                            :foreground base0C)
+     (org-document-info-keyword                    :foreground base0B)
+     (org-document-title                           :foreground base09 :weight bold :height 1.44)
+     (org-done                                     :foreground base0B)
+     (org-ellipsis                                 :foreground base04)
+     (org-footnote                                 :foreground base0C)
+     (org-formula                                  :foreground base08)
+     (org-hide                                     :foreground base03)
+     (org-link                                     :foreground base0D)
+     (org-scheduled                                :foreground base0B)
+     (org-scheduled-previously                     :foreground base09)
+     (org-scheduled-today                          :foreground base0B)
+     (org-special-keyword                          :foreground base09)
+     (org-table                                    :foreground base0E)
+     (org-todo                                     :foreground base08)
+     (org-upcoming-deadline                        :foreground base09)
+     (org-warning                                  :foreground base08 :weight bold)
+
+;;;; paren-face-mode
+     (paren-face                                   :foreground base04 :background nil)
+
+;;;; popup
+     (popup-face                                   :foreground base05 :background base02)
+     (popup-isearch-match                          :foreground base00 :background base0B)
+     (popup-scroll-bar-background-face             :background base03)
+     (popup-scroll-bar-foreground-face             :background base05)
+     (popup-summary-face                           :foreground base04)
+     (popup-tip-face                               :foreground base00 :background base0A)
+     (popup-menu-mouse-face                        :foreground base00 :background base0D)
+     (popup-menu-selection-face                    :foreground base00 :background base0C)
+
+;;;; powerline
      (powerline-active1                            :foreground base09 :background base00)
      (powerline-active2                            :foreground base08 :background base01)
      (powerline-inactive1                          :foreground base06 :background base01)
      (powerline-inactive2                          :foreground base07 :background base02)
 
-     (custom-variable-tag                          :foreground base0D)
-     (custom-group-tag                             :foreground base0D)
-     (custom-state                                 :foreground base0B)))
+;;;; python-mode
+     (py-builtins-face                             :foreground base09 :weight normal)
+
+;;;; rainbow-delimiters
+     (rainbow-delimiters-depth-1-face              :foreground base0E)
+     (rainbow-delimiters-depth-2-face              :foreground base0D)
+     (rainbow-delimiters-depth-3-face              :foreground base0C)
+     (rainbow-delimiters-depth-4-face              :foreground base0B)
+     (rainbow-delimiters-depth-5-face              :foreground base0A)
+     (rainbow-delimiters-depth-6-face              :foreground base09)
+     (rainbow-delimiters-depth-7-face              :foreground base08)
+     (rainbow-delimiters-depth-8-face              :foreground base03)
+     (rainbow-delimiters-depth-9-face              :foreground base05)
+
+;;;; regex-tool
+     (regex-tool-matched-face                      :foreground nil :background nil :inherit match)
+
+;;;; rhtml-mode
+     (erb-delim-face                               :background base03)
+     (erb-exec-face                                :background base03 :weight bold)
+     (erb-exec-delim-face                          :background base03)
+     (erb-out-face                                 :background base03 :weight bold)
+     (erb-out-delim-face                           :background base03)
+     (erb-comment-face                             :background base03 :weight bold :slant italic)
+     (erb-comment-delim-face                       :background base03)
+
+;;;; sh-mode
+     (sh-heredoc                                   :foreground nil :weight normal :inherit font-lock-string-face)
+     (sh-quoted-exec                               :foreground nil :inherit font-lock-preprocessor-face)
+
+;;;; show-paren-mode
+     (show-paren-match                             :foreground base01 :background base0D)
+     (show-paren-mismatch                          :foreground base01 :background base09)
+
+;;;; slime-mode
+     (slime-highlight-edits-face                   :weight bold)
+     (slime-repl-input-face                        :weight normal :underline nil)
+     (slime-repl-prompt-face                       :foreground base0E :underline nil :weight bold)
+     (slime-repl-result-face                       :foreground base0B)
+     (slime-repl-output-face                       :foreground base0D :background base01)
+
+;;;; spaceline
+     (spaceline-evil-emacs                         :foreground base01 :background base0D)
+     (spaceline-evil-insert                        :foreground base01 :background base0D)
+     (spaceline-evil-motion                        :foreground base01 :background base0E)
+     (spaceline-evil-normal                        :foreground base01 :background base0B)
+     (spaceline-evil-replace                       :foreground base01 :background base08)
+     (spaceline-evil-visual                        :foreground base01 :background base09)
+
+;;;; term and ansi-term
+     (term                                         :foreground base05 :background base00)
+     (term-color-black                             :foreground base02 :background base00)
+     (term-color-white                             :foreground base05 :background base07)
+     (term-color-red                               :foreground base08 :background base08)
+     (term-color-yellow                            :foreground base0A :background base0A)
+     (term-color-green                             :foreground base0B :background base0B)
+     (term-color-cyan                              :foreground base0C :background base0C)
+     (term-color-blue                              :foreground base0D :background base0D)
+     (term-color-magenta                           :foreground base0E :background base0E)
+
+;;;; undo-tree-mode
+     (undo-tree-visualizer-default-face            :foreground base06)
+     (undo-tree-visualizer-current-face            :foreground base0B :weight bold)
+     (undo-tree-visualizer-active-branch-face      :foreground base08)
+     (undo-tree-visualizer-register-face           :foreground base0A)
+
+;;;; which-func-mode
+     (which-func                                   :foreground base0D :background nil :weight bold)
+
+;;;; whitespace-mode
+     (whitespace-empty                             :foreground base08 :background base0A)
+     (whitespace-hspace                            :foreground base04 :background base04)
+     (whitespace-indentation                       :foreground base08 :background base0A)
+     (whitespace-line                              :foreground base0F :background base01)
+     (whitespace-newline                           :foreground base04)
+     (whitespace-space                             :foreground base03 :background base01)
+     (whitespace-space-after-tab                   :foreground base08 :background base0A)
+     (whitespace-space-before-tab                  :foreground base08 :background base09)
+     (whitespace-tab                               :foreground base03 :background base01)
+     (whitespace-trailing                          :foreground base0A :background base08)))
 
   ;; Anything leftover that doesn't fall neatly into a face goes here.
   (let ((base00 (plist-get theme-colors :base00))
