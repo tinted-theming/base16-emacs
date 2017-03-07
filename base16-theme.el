@@ -181,11 +181,6 @@ an alternate theme for use in the terminal.")
      (clojure-special                              :foreground base0D)
      (clojure-java-call                            :foreground base0E)
 
-;;;; clojure-test-mode
-     (clojure-test-failure-face                    :background nil :inherit flymake-warnline)
-     (clojure-test-error-face                      :background nil :inherit flymake-errline)
-     (clojure-test-success-face                    :foreground nil :background nil :underline base0B)
-
 ;;;; company-mode
      (company-tooltip                              :background base01 :inherit default)
      (company-scrollbar-bg                         :background base07)
