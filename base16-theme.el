@@ -173,13 +173,7 @@ an alternate theme for use in the terminal.")
      (font-latex-warning-face                      :foreground base08)
 
 ;;;; clojure-mode
-     (clojure-keyword                              :foreground base0A)
-     (clojure-parens                               :foreground base06)
-     (clojure-braces                               :foreground base0B)
-     (clojure-brackets                             :foreground base0A)
-     (clojure-double-quote                         :foreground base0C :background nil)
-     (clojure-special                              :foreground base0D)
-     (clojure-java-call                            :foreground base0E)
+     (clojure-keyword-face                         :foreground base0E)
 
 ;;;; company-mode
      (company-tooltip                              :background base01 :inherit default)
