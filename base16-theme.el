@@ -14,6 +14,13 @@
 
 ;;; Code:
 
+(defvar base16-theme-use-shell-colors nil
+  "Enable support for base16-shell.
+
+Because base16-shell mangles the color space, we need to use a
+different color translation.  This needs to be specified manually
+before the themes are loaded.")
+
 (defvar base16-shell-colors
   '(:base00 "black"
     :base01 "brightgreen"
@@ -31,11 +38,35 @@
     :base0D "blue"
     :base0E "magenta"
     :base0F "brightcyan")
-  "Base16 colors used when in a terminal.
+  "Base16 colors used when in a terminal and not using base16-shell.
 
 These mappings are based on the xresources themes.  If you're
 using a different terminal color scheme, you may want to look for
 an alternate theme for use in the terminal.")
+
+(defvar base16-shell-colors-256
+  '(:base00 "black"
+    :base01 "color-18"
+    :base02 "color-19"
+    :base03 "brightblack"
+    :base04 "color-20"
+    :base05 "white"
+    :base06 "color-21"
+    :base07 "brightwhite"
+    :base08 "red"
+    :base09 "color-16"
+    :base0A "yellow"
+    :base0B "green"
+    :base0C "cyan"
+    :base0D "blue"
+    :base0E "magenta"
+    :base0F "color-17")
+  "Base16 colors used when in a terminal and using base16-shell.
+
+These mappings are based on the xresources themes combined with
+the base16-shell code.  If you're using a different terminal
+color scheme, you may want to look for an alternate theme for use
+in the terminal.")
 
 (defun base16-transform-spec (spec colors)
   "Transform a theme `SPEC' into a face spec using `COLORS'."
@@ -63,11 +94,12 @@ an alternate theme for use in the terminal.")
 
 (defun base16-transform-face (spec colors)
   "Transform a face `SPEC' into an Emacs theme face definition using `COLORS'."
-  (let* ((face       (car spec))
-         (definition (cdr spec)))
+  (let* ((face         (car spec))
+         (definition   (cdr spec))
+         (shell-colors (if base16-theme-use-shell-colors base16-shell-colors-256 base16-shell-colors)))
 
-    (list face `((((min-colors 256)) ,(base16-transform-spec definition colors))
-                 (t                  ,(base16-transform-spec definition base16-shell-colors))))))
+    (list face `((((type graphic)) ,(base16-transform-spec definition colors))
+                 (t                ,(base16-transform-spec definition shell-colors))))))
 
 (defun base16-set-faces (theme-name colors faces)
   "Define the important part of `THEME-NAME' using `COLORS' to map the `FACES' to actual colors."
