@@ -66,8 +66,8 @@ an alternate theme for use in the terminal.")
   (let* ((face       (car spec))
          (definition (cdr spec)))
 
-    (list face `((((min-colors 256)) ,(base16-transform-spec definition colors))
-                 (t                  ,(base16-transform-spec definition base16-shell-colors))))))
+    (list face `((((type graphic)) ,(base16-transform-spec definition colors))
+                 (t                ,(base16-transform-spec definition base16-shell-colors))))))
 
 (defun base16-set-faces (theme-name colors faces)
   "Define the important part of `THEME-NAME' using `COLORS' to map the `FACES' to actual colors."
