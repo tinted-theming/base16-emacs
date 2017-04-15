@@ -441,6 +441,18 @@ in the terminal.")
      (ido-indicator                                :foreground base08 :background base01)
      (ido-virtual                                  :foreground base04)
 
+;;;; idris-mode
+     (idris-semantic-bound-face                    :inherit font-lock-variable-name-face)
+     (idris-semantic-data-face                     :inherit font-lock-string-face)
+     (idris-semantic-function-face                 :inherit font-lock-function-name-face)
+     (idris-semantic-namespace-face                nil)
+     (idris-semantic-postulate-face                :inherit font-lock-builtin-face)
+     (idris-semantic-type-face                     :inherit font-lock-type-face)
+     (idris-active-term-face                       :inherit highlight)
+     (idris-colon-face                             :inherit font-lock-keyword-face)
+     (idris-equals-face                            :inherit font-lock-keyword-face)
+     (idris-operator-face                          :inherit font-lock-keyword-face)
+
 ;;;; ivy-mode
      (ivy-current-match                            :foreground base09 :background base01)
      (ivy-minibuffer-match-face-1                  :foreground base0E)
