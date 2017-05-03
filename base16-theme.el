@@ -622,7 +622,7 @@ in the terminal.")
 
 ;;;; shm
      (shm-current-face                             :background base02)
-     (shm-quarantine-face                          :background base09)
+     (shm-quarantine-face                          :background base04)
 
 ;;;; show-paren-mode
      (show-paren-match                             :foreground base01 :background base0D)
