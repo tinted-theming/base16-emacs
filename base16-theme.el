@@ -512,7 +512,7 @@ in the terminal.")
      (mm/master-face                               :foreground nil :background nil :inherit region)
      (mm/mirror-face                               :foreground nil :background nil :inherit region)
 
-     ;; markdown-mode
+;;;; markdown-mode
      (markdown-url-face                            :inherit link)
      (markdown-link-face                           :foreground base0D :underline t)
 
