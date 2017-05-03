@@ -512,7 +512,7 @@ in the terminal.")
      (mm/master-face                               :foreground nil :background nil :inherit region)
      (mm/mirror-face                               :foreground nil :background nil :inherit region)
 
-;; markdown-mode
+;;;; markdown-mode
      (markdown-url-face                            :inherit link)
      (markdown-link-face                           :foreground base0D :underline t)
 
@@ -619,6 +619,10 @@ in the terminal.")
 ;;;; sh-mode
      (sh-heredoc                                   :foreground nil :weight normal :inherit font-lock-string-face)
      (sh-quoted-exec                               :foreground nil :inherit font-lock-preprocessor-face)
+
+;;;; shm
+     (shm-current-face                             :background base02)
+     (shm-quarantine-face                          :background base04)
 
 ;;;; show-paren-mode
      (show-paren-match                             :foreground base01 :background base0D)
