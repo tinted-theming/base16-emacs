@@ -640,8 +640,8 @@ in the terminal.")
      (spaceline-evil-visual                        :foreground base01 :background base09)
 
 ;;;; structured-haskell-mode
-     (shm-current-face                             :background base02)
-     (shm-quarantine-face                          :background base01)
+     (shm-current-face                             :inherit region)
+     (shm-quarantine-face                          :underline (:style wave :color base08))
 
 ;;;; term and ansi-term
      (term                                         :foreground base05 :background base00)
