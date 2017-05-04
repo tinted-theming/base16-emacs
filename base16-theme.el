@@ -620,10 +620,6 @@ in the terminal.")
      (sh-heredoc                                   :foreground nil :weight normal :inherit font-lock-string-face)
      (sh-quoted-exec                               :foreground nil :inherit font-lock-preprocessor-face)
 
-;;;; shm
-     (shm-current-face                             :inherit region)
-     (shm-quarantine-face                          :inherit highlight)
-
 ;;;; show-paren-mode
      (show-paren-match                             :foreground base01 :background base0D)
      (show-paren-mismatch                          :foreground base01 :background base09)
@@ -642,6 +638,10 @@ in the terminal.")
      (spaceline-evil-normal                        :foreground base01 :background base0B)
      (spaceline-evil-replace                       :foreground base01 :background base08)
      (spaceline-evil-visual                        :foreground base01 :background base09)
+
+;;;; structured-haskell-mode
+     (shm-current-face                             :background base02)
+     (shm-quarantine-face                          :background base01)
 
 ;;;; term and ansi-term
      (term                                         :foreground base05 :background base00)
