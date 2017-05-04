@@ -621,8 +621,8 @@ in the terminal.")
      (sh-quoted-exec                               :foreground nil :inherit font-lock-preprocessor-face)
 
 ;;;; shm
-     (shm-current-face                             :background base02)
-     (shm-quarantine-face                          :background base04)
+     (shm-current-face                             :inherit region)
+     (shm-quarantine-face                          :inherit highlight)
 
 ;;;; show-paren-mode
      (show-paren-match                             :foreground base01 :background base0D)
