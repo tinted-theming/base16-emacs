@@ -12,7 +12,7 @@
 (require 'base16-theme)
 
 (defvar base16-circus-colors
-  '(:base00 "#171717"
+  '(:base00 "#191919"
     :base01 "#202020"
     :base02 "#303030"
     :base03 "#5f5a60"
@@ -22,7 +22,7 @@
     :base07 "#ffffff"
     :base08 "#dc657d"
     :base09 "#4bb1a7"
-    :base0A "#d4b261"
+    :base0A "#c3ba63"
     :base0B "#84b97c"
     :base0C "#4bb1a7"
     :base0D "#639ee4"
