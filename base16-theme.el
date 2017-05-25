@@ -654,11 +654,18 @@ in the terminal.")
      (term-color-blue                              :foreground base0D :background base0D)
      (term-color-magenta                           :foreground base0E :background base0E)
 
+;;;; tuareg-mode
+     (tuareg-font-lock-governing-face              :weight bold :inherit font-lock-keyword-face)
+
 ;;;; undo-tree-mode
      (undo-tree-visualizer-default-face            :foreground base06)
      (undo-tree-visualizer-current-face            :foreground base0B :weight bold)
      (undo-tree-visualizer-active-branch-face      :foreground base08)
      (undo-tree-visualizer-register-face           :foreground base0A)
+
+;;;; utop-mode
+     (utop-prompt                                  :foreground base0E)
+     (utop-error                                   :underline (:style wave :color base08) :inherit error)
 
 ;;;; which-func-mode
      (which-func                                   :foreground base0D :background nil :weight bold)
