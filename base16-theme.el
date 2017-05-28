@@ -214,6 +214,11 @@ in the terminal.")
      (company-tooltip-selection                    :background base02 :inherit font-lock-function-name-face)
      (company-preview-common                       :inherit secondary-selection)
 
+;;;; cperl-mode
+     (cperl-array-face                             :weight bold :inherit font-lock-variable-name-face)
+     (cperl-hash-face                              :weight bold :slant italic :inherit font-lock-variable-name-face)
+     (cperl-nonoverridable-face                    :inherit font-lock-builtin-face)
+
 ;;;; cscope-minor-mode
      (cscope-file-face                             :foreground base0B)
      (cscope-function-face                         :foreground base0D)
