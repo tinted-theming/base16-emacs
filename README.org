@@ -15,6 +15,41 @@ If you notice anything that looks strange or if this repo is missing
 any scheme updates, please feel free to open an issue or submit a pull
 request.
 
+** Installation
+
+*** package.el
+
+base16-theme is available in both
+[[https://stable.melpa.org/#/base16-theme][MELPA stable]] and
+[[https://melpa.org/#/base16-theme][MELPA]].
+
+You can install it with the following command:
+
+#+begin_src text
+  M-x package-install base16-theme
+#+end_src
+
+To load one of the themes on emacs startup, add this to your init
+file (replacing base16-default-dark with the name of the theme you want):
+
+#+begin_src emacs-lisp
+  (load-theme 'base16-default-dark t)
+#+end_src
+
+*** use-package
+
+The use-package block is fairly similar to package.el.
+
+#+begin_src emacs-lisp
+  (use-package base16-theme
+    :ensure t
+    :config
+    (load-theme 'base16-default-dark t))
+#+end_src
+
+Note that use-package tries to defer packages if at all possible, so
+you may need to add =:demand= to the use-package block.
+
 ** Previews
 
 Theme previews can be found [[https://belak.github.io/base16-emacs/][here]].
@@ -40,6 +75,30 @@ you can use the following snippet:
         evil-replace-state-cursor `(,(plist-get my/base16-colors :base08) bar)
         evil-visual-state-cursor  `(,(plist-get my/base16-colors :base09) box))
 #+end_src
+
+** Development
+
+Above, there's a use-package block listed for general use, but if you
+want to run these themes out of the git repo, there's a bit more work
+which needs to be done. I use something similar to the following
+use-package block:
+
+#+begin_src emacs-lisp
+  (use-package base16-theme
+    :ensure nil
+    :load-path "site-lisp/base16-theme"
+    :init
+    (add-to-list 'custom-theme-load-path "~/.emacs.d/site-lisp/base16-theme/build")
+    :config
+    (load-theme 'base16-default-dark t))
+#+end_src
+
+This block assumes the repo is cloned to
+~/.emacs.d/site-lisp/base16-theme. That needs to be added to the load
+path (along with specifying =:ensure nil= if needed so use-package
+doesn't try to grab the package from melpa). Additionally, the build
+directory needs to be added to the =custom-theme-load-path= to ensure
+load-theme can find the themes.
 
 * Credits
 
