@@ -28,7 +28,7 @@
     :base0D "#516aec"
     :base0E "#7b59c0"
     :base0F "#cc33cc")
-  "All colors for Base16 Atelier Heath are defined here.")
+  "All colors for Base16 Atelier Heath Light are defined here.")
 
 ;; Define the theme
 (deftheme base16-atelier-heath-light)

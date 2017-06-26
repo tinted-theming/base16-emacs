@@ -28,7 +28,7 @@
     :base0D "#407ee7"
     :base0E "#6666ea"
     :base0F "#c33ff3")
-  "All colors for Base16 Atelier Forest are defined here.")
+  "All colors for Base16 Atelier Forest Light are defined here.")
 
 ;; Define the theme
 (deftheme base16-atelier-forest-light)

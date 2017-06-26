@@ -28,7 +28,7 @@
     :base0D "#478c90"
     :base0E "#55859b"
     :base0F "#867469")
-  "All colors for Base16 Atelier Savanna are defined here.")
+  "All colors for Base16 Atelier Savanna Light are defined here.")
 
 ;; Define the theme
 (deftheme base16-atelier-savanna-light)

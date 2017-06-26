@@ -28,7 +28,7 @@
     :base0D "#576ddb"
     :base0E "#955ae7"
     :base0F "#bf40bf")
-  "All colors for Base16 Atelier Cave are defined here.")
+  "All colors for Base16 Atelier Cave Light are defined here.")
 
 ;; Define the theme
 (deftheme base16-atelier-cave-light)

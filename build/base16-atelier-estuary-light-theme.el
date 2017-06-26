@@ -28,7 +28,7 @@
     :base0D "#36a166"
     :base0E "#5f9182"
     :base0F "#9d6c7c")
-  "All colors for Base16 Atelier Estuary are defined here.")
+  "All colors for Base16 Atelier Estuary Light are defined here.")
 
 ;; Define the theme
 (deftheme base16-atelier-estuary-light)

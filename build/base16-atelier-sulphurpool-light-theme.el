@@ -28,7 +28,7 @@
     :base0D "#3d8fd1"
     :base0E "#6679cc"
     :base0F "#9c637a")
-  "All colors for Base16 Atelier Sulphurpool are defined here.")
+  "All colors for Base16 Atelier Sulphurpool Light are defined here.")
 
 ;; Define the theme
 (deftheme base16-atelier-sulphurpool-light)

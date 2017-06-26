@@ -28,7 +28,7 @@
     :base0D "#257fad"
     :base0E "#6b6bb8"
     :base0F "#b72dd2")
-  "All colors for Base16 Atelier Lakeside are defined here.")
+  "All colors for Base16 Atelier Lakeside Light are defined here.")
 
 ;; Define the theme
 (deftheme base16-atelier-lakeside-light)

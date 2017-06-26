@@ -28,7 +28,7 @@
     :base0D "#7272ca"
     :base0E "#8464c4"
     :base0F "#bd5187")
-  "All colors for Base16 Atelier Plateau are defined here.")
+  "All colors for Base16 Atelier Plateau Light are defined here.")
 
 ;; Define the theme
 (deftheme base16-atelier-plateau-light)

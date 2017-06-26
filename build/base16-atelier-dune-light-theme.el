@@ -28,7 +28,7 @@
     :base0D "#6684e1"
     :base0E "#b854d4"
     :base0F "#d43552")
-  "All colors for Base16 Atelier Dune are defined here.")
+  "All colors for Base16 Atelier Dune Light are defined here.")
 
 ;; Define the theme
 (deftheme base16-atelier-dune-light)
