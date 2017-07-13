@@ -174,6 +174,10 @@ in the terminal.")
      (isearch-lazy-highlight-face                  :foreground base0C :background base01 :inverse-video t)
      (isearch-fail                                 :background base01 :inverse-video t :inherit font-lock-warning-face)
 
+;;;; line-numbers
+     (line-number                                  :foreground base03 :background base01)
+     (line-number-current-line                     :inverse-video t)
+
 ;;;; mode-line
      (mode-line                                    :foreground base04 :background base02 :box nil)
      (mode-line-buffer-id                          :foreground base0B :background nil)
