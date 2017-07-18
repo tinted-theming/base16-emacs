@@ -14,12 +14,19 @@
 
 ;;; Code:
 
-(defvar base16-theme-use-shell-colors nil
-  "Enable support for base16-shell.
+(defcustom base16-theme-256-color-source "terminal"
+  "Where to get the colors in a 256-color terminal.
 
-Because base16-shell mangles the color space, we need to use a
-different color translation.  This needs to be specified manually
-before the themes are loaded.")
+In a 256-color terminal, it's not clear where the colors should come from.
+There are 3 possible values: terminal (which was taken from the xresources
+theme), base16-shell (which was taken from a combination of base16-shell and
+the xresources theme) and colors (which will be converted from the actual
+html color codes to the closest color).
+
+Note that this needs to be set before themes are loaded or it will not work."
+  :type '(string)
+  :group 'base16
+  :options '("terminal" "base16-shell" "colors"))
 
 (defvar base16-shell-colors
   '(:base00 "black"
@@ -96,7 +103,11 @@ in the terminal.")
   "Transform a face `SPEC' into an Emacs theme face definition using `COLORS'."
   (let* ((face             (car spec))
          (definition       (cdr spec))
-         (shell-colors-256 (if base16-theme-use-shell-colors base16-shell-colors-256 base16-shell-colors)))
+         (shell-colors-256 (pcase base16-theme-256-color-source
+                             ("terminal"     base16-shell-colors)
+                             ("base16-shell" base16-shell-colors-256)
+                             ("colors"       colors)
+                             (_              base16-shell-colors))))
 
     ;; This is a list of fallbacks to make us select the sanest option possible.
     ;; If there's a graphical terminal, we use the actual colors. If it's not
