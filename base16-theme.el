@@ -94,12 +94,18 @@ in the terminal.")
 
 (defun base16-transform-face (spec colors)
   "Transform a face `SPEC' into an Emacs theme face definition using `COLORS'."
-  (let* ((face         (car spec))
-         (definition   (cdr spec))
-         (shell-colors (if base16-theme-use-shell-colors base16-shell-colors-256 base16-shell-colors)))
+  (let* ((face             (car spec))
+         (definition       (cdr spec))
+         (shell-colors-256 (if base16-theme-use-shell-colors base16-shell-colors-256 base16-shell-colors)))
 
-    (list face `((((type graphic)) ,(base16-transform-spec definition colors))
-                 (t                ,(base16-transform-spec definition shell-colors))))))
+    ;; This is a list of fallbacks to make us select the sanest option possible.
+    ;; If there's a graphical terminal, we use the actual colors. If it's not
+    ;; graphical, the terminal supports 256 colors, and the user enables it, we
+    ;; use the base16-shell colors. Otherwise, we fall back to the basic
+    ;; xresources colors.
+    (list face `((((type graphic))   ,(base16-transform-spec definition colors))
+                 (((min-colors 256)) ,(base16-transform-spec definition shell-colors-256))
+                 (t                  ,(base16-transform-spec definition base16-shell-colors))))))
 
 (defun base16-set-faces (theme-name colors faces)
   "Define the important part of `THEME-NAME' using `COLORS' to map the `FACES' to actual colors."
