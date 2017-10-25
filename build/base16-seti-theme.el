@@ -13,7 +13,7 @@
 
 (defvar base16-seti-colors
   '(:base00 "#151718"
-    :base01 "#8ec43d"
+    :base01 "#282a2b"
     :base02 "#3b758c"
     :base03 "#41535b"
     :base04 "#43a5d5"
