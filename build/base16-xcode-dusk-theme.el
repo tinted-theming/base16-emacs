@@ -15,19 +15,19 @@
   '(:base00 "#282b35"
     :base01 "#3d4048"
     :base02 "#53555d"
-    :base03 "#686a71"
+    :base03 "#52be5b"
     :base04 "#7e8086"
-    :base05 "#939599"
-    :base06 "#a9aaae"
-    :base07 "#bebfc2"
-    :base08 "#b21889"
+    :base05 "#ffffff"
+    :base06 "#ffffff"
+    :base07 "#ffffff"
+    :base08 "#94c76f"
     :base09 "#786dc5"
     :base0A "#438288"
     :base0B "#df0002"
-    :base0C "#00a0be"
-    :base0D "#790ead"
+    :base0C "#c77c48"
+    :base0D "#69878f"
     :base0E "#b21889"
-    :base0F "#c77c48")
+    :base0F "#04afc8")
   "All colors for Base16 XCode Dusk are defined here.")
 
 ;; Define the theme
