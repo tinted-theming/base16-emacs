@@ -463,6 +463,10 @@ in the terminal.")
 ;;;; hl-sexp-mode
      (hl-sexp-face                                 :background base03)
 
+;;;; hydra
+     (hydra-face-red                               :foreground base09)
+     (hydra-face-blue                              :foreground base0D)
+
 ;;;; ido-mode
      (ido-subdir                                   :foreground base04)
      (ido-first-match                              :foreground base09 :weight bold)
