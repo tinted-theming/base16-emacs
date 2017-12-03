@@ -693,6 +693,21 @@ in the terminal.")
      (utop-prompt                                  :foreground base0E)
      (utop-error                                   :underline (:style wave :color base08) :inherit error)
 
+;;;; w3m-mode
+     (w3m-anchor :underline nil :inherit link)
+     (w3m-anchor-visited :underline nil :inherit link-visited)
+     (w3m-form :underline t :foreground base09)
+     (w3m-image :background base03 :foreground base05)
+     (w3m-image-anchor :underline t :background base03 :foreground base05)
+     (w3m-header-line-location-content :background base00 :foreground base0D)
+     (w3m-header-line-location-title :background base00 :foreground base0D)
+     (w3m-tab-background :background base01 :foreground base05)
+     (w3m-tab-selected :background base00 :foreground base05)
+     (w3m-tab-selected-retrieving :background base00 :foreground base05)
+     (w3m-tab-unselected :background base01 :foreground base03)
+     (w3m-tab-unselected-unseen :background base01 :foreground base03)
+     (w3m-tab-unselected-retrieving :background base01 :foreground base03)
+
 ;;;; which-func-mode
      (which-func                                   :foreground base0D :background nil :weight bold)
 
