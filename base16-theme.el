@@ -453,6 +453,9 @@ in the terminal.")
      (helm-source-header                           :foreground base05 :background base01 :weight bold)
      (helm-visible-mark                            :foreground base00 :background base0B)
 
+;;;; highlight-indentation minor mode
+     (highlight-indentation-face                   :background base01)
+
 ;;;; hl-line-mode
      (hl-line                                      :background base01)
      (col-highlight                                :background base01)
