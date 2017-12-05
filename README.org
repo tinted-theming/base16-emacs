@@ -50,6 +50,15 @@ The use-package block is fairly similar to package.el.
 Note that use-package tries to defer packages if at all possible, so
 you may need to add =:demand= to the use-package block.
 
+** Customizing
+
+There are a number of options which can be used to customize the
+themes. Note that they need to be set before load-theme is called.
+
+=base16-distinct-fringe-backgeround= - Make the fringe background
+different from the normal background color. Also affects `linum-mode'
+background. Defaults to true.
+
 ** Previews
 
 Theme previews can be found [[https://belak.github.io/base16-emacs/][here]].

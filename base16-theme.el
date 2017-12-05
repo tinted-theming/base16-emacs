@@ -28,6 +28,12 @@ Note that this needs to be set before themes are loaded or it will not work."
   :group 'base16
   :options '("terminal" "base16-shell" "colors"))
 
+(defcustom base16-distinct-fringe-background t
+  "Make the fringe background different from the normal background color.
+Also affects `linum-mode' background."
+  :type 'boolean
+  :group 'base16)
+
 (defvar base16-shell-colors
   '(:base00 "black"
     :base01 "brightgreen"
@@ -80,11 +86,14 @@ in the terminal.")
 
 This function is mostly meant for transforming values based on
 settings and will be for very specific cases."
-  (cond
-   ((symbolp key)
-    (intern (concat ":" (symbol-name key))))
-   (t
-    nil)))
+  (if (symbolp key)
+      (cond
+       ((string= (symbol-name key) "fringe-bg")
+        (if base16-distinct-fringe-background
+            :base01 :base00))
+       (t
+        (intern (concat ":" (symbol-name key)))))
+    nil))
 
 (defun base16-transform-spec (spec colors)
   "Transform a theme `SPEC' into a face spec using `COLORS'."
@@ -148,7 +157,7 @@ settings and will be for very specific cases."
      (border                                       :background base03)
      (cursor                                       :background base08)
      (default                                      :foreground base05 :background base00)
-     (fringe                                       :background base02)
+     (fringe                                       :background fringe-bg)
      (gui-element                                  :background base01)
      (header-line                                  :foreground base0E :background nil :inherit mode-line)
      (highlight                                    :background base01)
@@ -203,7 +212,7 @@ settings and will be for very specific cases."
      (isearch-fail                                 :background base01 :inverse-video t :inherit font-lock-warning-face)
 
 ;;;; line-numbers
-     (line-number                                  :foreground base03 :background base01)
+     (line-number                                  :foreground base03 :background fringe-bg)
      (line-number-current-line                     :inverse-video t)
 
 ;;;; mode-line
@@ -550,7 +559,7 @@ settings and will be for very specific cases."
      (js3-private-function-call-face               :foreground base08)
 
 ;;;; linum-mode
-     (linum                                        :foreground base03 :background base01)
+     (linum                                        :foreground base03 :background fringe-bg)
 
 ;;;; magit
      (magit-blame-culprit                          :background base01)
