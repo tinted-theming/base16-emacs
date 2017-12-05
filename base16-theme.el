@@ -75,13 +75,24 @@ the base16-shell code.  If you're using a different terminal
 color scheme, you may want to look for an alternate theme for use
 in the terminal.")
 
+(defun base16-transform-color-key (key)
+  "Transform a given color `KEY' into a theme color.
+
+This function is mostly meant for transforming values based on
+settings and will be for very specific cases."
+  (cond
+   ((symbolp key)
+    (intern (concat ":" (symbol-name key))))
+   (t
+    nil)))
+
 (defun base16-transform-spec (spec colors)
   "Transform a theme `SPEC' into a face spec using `COLORS'."
   (let ((output))
     (while spec
       (let* ((key       (car  spec))
              (value     (cadr spec))
-             (color-key (if (symbolp value) (intern (concat ":" (symbol-name value))) nil))
+             (color-key (base16-transform-color-key value))
              (color     (plist-get colors color-key)))
 
         ;; Append the transformed element
