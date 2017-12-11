@@ -711,6 +711,16 @@ settings and will be for very specific cases."
      (spaceline-evil-replace                       :foreground base01 :background base08)
      (spaceline-evil-visual                        :foreground base01 :background base09)
 
+;;;; spacemacs
+     (spacemacs-emacs-face                        :foreground base01 :background base0D)
+     (spacemacs-hybrid-face                       :foreground base01 :background base0D)
+     (spacemacs-insert-face                       :foreground base01 :background base0C)
+     (spacemacs-motion-face                       :foreground base01 :background base0E)
+     (spacemacs-lisp-face                         :foreground base01 :background base0E)
+     (spacemacs-normal-face                       :foreground base01 :background base0B)
+     (spacemacs-replace-face                      :foreground base01 :background base08)
+     (spacemacs-visual-face                       :foreground base01 :background base09)
+
 ;;;; structured-haskell-mode
      (shm-current-face                             :inherit region)
      (shm-quarantine-face                          :underline (:style wave :color base08))
