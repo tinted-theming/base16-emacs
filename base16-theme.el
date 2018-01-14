@@ -34,6 +34,12 @@ Also affects `linum-mode' background."
   :type 'boolean
   :group 'base16)
 
+(defcustom base16-highlight-mode-line nil
+  "Make the active mode line stand out more by drawing a thin
+border around it."
+  :type 'boolean
+  :group 'base16)
+
 (defvar base16-shell-colors
   '(:base00 "black"
     :base01 "brightgreen"
@@ -95,12 +101,28 @@ settings and will be for very specific cases."
         (intern (concat ":" (symbol-name key)))))
     nil))
 
+(defun base16-apply-settings (value)
+  "Apply user settings to definition.
+
+This provides a primitive macro expansion by replacing specific
+symbols in the definitiions below with values appropriate to the
+user's customized variables."
+  (if (not (symbolp value))
+	  value
+	(cond
+	 ((string= (symbol-name value) "base16-settings-mode-line-box")
+	  (if base16-highlight-mode-line
+		  '(:line-width 1 :color base04) 
+		nil))
+	 (t
+	  value))))
+  
 (defun base16-transform-spec (spec colors)
   "Transform a theme `SPEC' into a face spec using `COLORS'."
   (let ((output))
     (while spec
       (let* ((key       (car  spec))
-             (value     (cadr spec))
+             (value     (base16-apply-settings (cadr spec)))
              (color-key (base16-transform-color-key value))
              (color     (plist-get colors color-key)))
 
@@ -216,7 +238,7 @@ settings and will be for very specific cases."
      (line-number-current-line                     :inverse-video t)
 
 ;;;; mode-line
-     (mode-line                                    :foreground base04 :background base02 :box nil)
+     (mode-line                                    :foreground base04 :background base02 :box base16-settings-mode-line-box)
      (mode-line-buffer-id                          :foreground base0B :background nil)
      (mode-line-emphasis                           :foreground base06 :slant italic)
      (mode-line-highlight                          :foreground base0E :box nil :weight bold)
