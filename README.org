@@ -59,6 +59,11 @@ themes. Note that they need to be set before load-theme is called.
 different from the normal background color. Also affects `linum-mode'
 background. Defaults to true.
 
+=base16-highlight-mode-line= - Make the active mode line stand out
+more. There are two choices for applying the emphasis: "box" draws a
+thin border around the active mode line; and "contrast" uses the
+default face's foreground which should result in more contrast.
+Defaults to off (no special emphasis)."
 ** Previews
 
 Theme previews can be found [[https://belak.github.io/base16-emacs/][here]].

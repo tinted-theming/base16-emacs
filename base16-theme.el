@@ -35,9 +35,16 @@ Also affects `linum-mode' background."
   :group 'base16)
 
 (defcustom base16-highlight-mode-line nil
-  "Make the active mode line stand out more by drawing a thin
-border around it."
-  :type 'boolean
+  "Make the active mode line stand out more.
+
+There are two choices for applying the emphasis:
+  box:      Draws a thin border around the active 
+            mode line.
+  contrast: Use the \"default\" face's foreground
+            which should result in more contrast."
+  :type '(choice (const :tag "Off" nil)
+                 (const :tag "Draw box around" box)
+                 (const :tag "Contrast" contrast))
   :group 'base16)
 
 (defvar base16-shell-colors
@@ -103,9 +110,14 @@ return the actual color value. Otherwise return the value unchanged."
 		  (plist-get colors :base00)))
 
 	   ((string= (symbol-name key) "base16-settings-mode-line-box")
-		(if base16-highlight-mode-line
+		(if (eq base16-highlight-mode-line 'box)
 			(list :line-width 1 :color (plist-get colors :base04))
 		  nil))
+
+	   ((string= (symbol-name key) "base16-settings-mode-line-fg")
+		(if (eq base16-highlight-mode-line 'contrast)
+			(plist-get colors :base05)
+		  (plist-get colors :base04)))
 
 	   (t
 		(let ((maybe-color (plist-get colors (intern (concat ":" (symbol-name key))))))
@@ -232,7 +244,7 @@ return the actual color value. Otherwise return the value unchanged."
      (line-number-current-line                     :inverse-video t)
 
 ;;;; mode-line
-     (mode-line                                    :foreground base04 :background base02 :box base16-settings-mode-line-box)
+     (mode-line                                    :foreground base16-settings-mode-line-fg :background base02 :box base16-settings-mode-line-box)
      (mode-line-buffer-id                          :foreground base0B :background nil)
      (mode-line-emphasis                           :foreground base06 :slant italic)
      (mode-line-highlight                          :foreground base0E :box nil :weight bold)
