@@ -87,51 +87,45 @@ the base16-shell code.  If you're using a different terminal
 color scheme, you may want to look for an alternate theme for use
 in the terminal.")
 
-(defun base16-transform-color-key (key)
+(defun base16-transform-color-key (key colors)
   "Transform a given color `KEY' into a theme color.
 
-This function is mostly meant for transforming values based on
-settings and will be for very specific cases."
+This function is meant for transforming symbols to valid colors.
+If the value refers to a setting then return whatever is appropriate.
+If not a setting but is found in the valid list of colors then
+return the actual color value. Otherwise return the value unchanged."
   (if (symbolp key)
       (cond
-       ((string= (symbol-name key) "fringe-bg")
+
+       ((string= (symbol-name key) "base16-settings-fringe-bg")
         (if base16-distinct-fringe-background
-            :base01 :base00))
-       (t
-        (intern (concat ":" (symbol-name key)))))
-    nil))
+            (plist-get colors :base01)
+		  (plist-get colors :base00)))
 
-(defun base16-apply-settings (value)
-  "Apply user settings to definition.
+	   ((string= (symbol-name key) "base16-settings-mode-line-box")
+		(if base16-highlight-mode-line
+			(list :line-width 1 :color (plist-get colors :base04))
+		  nil))
 
-This provides a primitive macro expansion by replacing specific
-symbols in the definitiions below with values appropriate to the
-user's customized variables."
-  (if (not (symbolp value))
-	  value
-	(cond
-	 ((string= (symbol-name value) "base16-settings-mode-line-box")
-	  (if base16-highlight-mode-line
-		  '(:line-width 1 :color base04) 
-		nil))
-	 (t
-	  value))))
+	   (t
+		(let ((maybe-color (plist-get colors (intern (concat ":" (symbol-name key))))))
+		  (if maybe-color
+			  maybe-color
+			key))))
+    key))
+
   
 (defun base16-transform-spec (spec colors)
   "Transform a theme `SPEC' into a face spec using `COLORS'."
   (let ((output))
     (while spec
-      (let* ((key       (car  spec))
-             (value     (base16-apply-settings (cadr spec)))
-             (color-key (base16-transform-color-key value))
-             (color     (plist-get colors color-key)))
+      (let* ((key (car spec))
+             (value (base16-transform-color-key (cadr spec) colors)))
 
         ;; Append the transformed element
         (cond
          ((and (memq key '(:box :underline)) (listp value))
           (setq output (append output (list key (base16-transform-spec value colors)))))
-         (color
-          (setq output (append output (list key color))))
          (t
           (setq output (append output (list key value))))))
 
@@ -179,7 +173,7 @@ user's customized variables."
      (border                                       :background base03)
      (cursor                                       :background base08)
      (default                                      :foreground base05 :background base00)
-     (fringe                                       :background fringe-bg)
+     (fringe                                       :background base16-settings-fringe-bg)
      (gui-element                                  :background base01)
      (header-line                                  :foreground base0E :background nil :inherit mode-line)
      (highlight                                    :background base01)
@@ -234,7 +228,7 @@ user's customized variables."
      (isearch-fail                                 :background base01 :inverse-video t :inherit font-lock-warning-face)
 
 ;;;; line-numbers
-     (line-number                                  :foreground base03 :background fringe-bg)
+     (line-number                                  :foreground base03 :background base16-settings-fringe-bg)
      (line-number-current-line                     :inverse-video t)
 
 ;;;; mode-line
@@ -581,7 +575,7 @@ user's customized variables."
      (js3-private-function-call-face               :foreground base08)
 
 ;;;; linum-mode
-     (linum                                        :foreground base03 :background fringe-bg)
+     (linum                                        :foreground base03 :background base16-settings-fringe-bg)
 
 ;;;; magit
      (magit-blame-culprit                          :background base01)
