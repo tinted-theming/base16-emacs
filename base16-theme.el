@@ -201,6 +201,7 @@ return the actual color value. Otherwise return the value unchanged."
      (error                                        :foreground base08 :weight bold)
      (warning                                      :foreground base09 :weight bold)
      (success                                      :foreground base0B :weight bold)
+     (shadow                                       :foreground base03)
 
 ;;;; compilation
      (compilation-column-number                    :foreground base0A)
