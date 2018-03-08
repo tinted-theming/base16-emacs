@@ -38,7 +38,7 @@ Also affects `linum-mode' background."
   "Make the active mode line stand out more.
 
 There are two choices for applying the emphasis:
-  box:      Draws a thin border around the active 
+  box:      Draws a thin border around the active
             mode line.
   contrast: Use the \"default\" face's foreground
             which should result in more contrast."
@@ -95,12 +95,12 @@ color scheme, you may want to look for an alternate theme for use
 in the terminal.")
 
 (defun base16-transform-color-key (key colors)
-  "Transform a given color `KEY' into a theme color.
+  "Transform a given color `KEY' into a theme color using `COLORS'.
 
 This function is meant for transforming symbols to valid colors.
 If the value refers to a setting then return whatever is appropriate.
 If not a setting but is found in the valid list of colors then
-return the actual color value. Otherwise return the value unchanged."
+return the actual color value.  Otherwise return the value unchanged."
   (if (symbolp key)
       (cond
 
@@ -126,7 +126,7 @@ return the actual color value. Otherwise return the value unchanged."
 			key))))
     key))
 
-  
+
 (defun base16-transform-spec (spec colors)
   "Transform a theme `SPEC' into a face spec using `COLORS'."
   (let ((output))

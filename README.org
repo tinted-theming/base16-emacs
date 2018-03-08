@@ -64,6 +64,29 @@ more. There are two choices for applying the emphasis: "box" draws a
 thin border around the active mode line; and "contrast" uses the
 default face's foreground which should result in more contrast.
 Defaults to off (no special emphasis)."
+
+** Terminal Colors
+
+When running emacs in a 256 color terminal, by default we assume
+you're using a base16 compatible terminal theme and use the colors
+from that. However, if you're using base16-shell or having trouble
+getting emacs to display with the correct colors it's possible to
+override this using the =base16-theme-256-color-source= variable.
+
+There are 3 possible values for this:
+
+- =terminal=: The default value - use the colors from a base16
+  compatible terminal theme.
+- =base16-shell=: Use the extended palate from base16-shell. This is
+  useful for users of base16-shell.
+- =colors=: Use emacs to convert from the html color code to the
+  closest color in the 256 color palate. This can sometimes fix issues
+  with the other two modes, but if you're using your own shell theme
+  for the original 16 colors it can sometimes look strange.
+
+Similar to other config values, make sure this is set before calling
+=load-theme=.
+
 ** Previews
 
 Theme previews can be found [[https://belak.github.io/base16-emacs/][here]].
@@ -94,8 +117,7 @@ you can use the following snippet:
 
 Above, there's a use-package block listed for general use, but if you
 want to run these themes out of the git repo, there's a bit more work
-which needs to be done. I use something similar to the following
-use-package block:
+which needs to be done. I use something similar to the following:
 
 #+begin_src emacs-lisp
   (use-package base16-theme
