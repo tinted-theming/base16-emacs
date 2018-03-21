@@ -12,22 +12,22 @@
 (require 'base16-theme)
 
 (defvar base16-icy-colors
-  '(:base00 "#222222"
-    :base01 "#424242"
-    :base02 "#616161"
-    :base03 "#757575"
-    :base04 "#9e9e9e"
-    :base05 "#bdbdbd"
-    :base06 "#e0e0e0"
-    :base07 "#eeeeee"
-    :base08 "#0097a7"
-    :base09 "#00acc1"
-    :base0A "#00bcd4"
-    :base0B "#26c6da"
-    :base0C "#4dd0e1"
-    :base0D "#80deea"
-    :base0E "#b3ebf2"
-    :base0F "#e0f7fa")
+  '(:base00 "#021012"
+    :base01 "#031619"
+    :base02 "#041f23"
+    :base03 "#052e34"
+    :base04 "#064048"
+    :base05 "#095b67"
+    :base06 "#0c7c8c"
+    :base07 "#109cb0"
+    :base08 "#16c1d9"
+    :base09 "#b3ebf2"
+    :base0A "#80deea"
+    :base0B "#4dd0e1"
+    :base0C "#26c6da"
+    :base0D "#00bcd4"
+    :base0E "#00acc1"
+    :base0F "#0097a7")
   "All colors for Base16 Icy Dark are defined here.")
 
 ;; Define the theme
