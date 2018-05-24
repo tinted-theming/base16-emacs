@@ -4,7 +4,7 @@
 ;; Base16: (https://github.com/chriskempson/base16)
 
 ;;; Authors:
-;; Scheme: Ethan Schoonover (http://ethanschoonover.com/solarized)
+;; Scheme: Ethan Schoonover (modified by aramisgithub)
 ;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
