@@ -195,6 +195,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (region                                       :background base02)
      (secondary-selection                          :background base03)
      (trailing-whitespace                          :foreground base0A :background base0C)
+     (vertical-border                              :foreground base02)
      (widget-button                                :underline t)
      (widget-field                                 :background base03 :box (:line-width 1 :color base06))
 
