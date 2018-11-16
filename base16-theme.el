@@ -375,6 +375,10 @@ return the actual color value.  Otherwise return the value unchanged."
 ;;;; evil-mode
      (evil-search-highlight-persist-highlight-face :background base01 :inverse-video t :inherit font-lock-warning-face)
 
+;;;; fic-mode
+     (fic-author-face                              :foreground base09 :underline t)
+     (fic-face                                     :foreground base08 :weight bold)
+
 ;;;; flycheck-mode
      (flycheck-error                               :underline (:style wave :color base08))
      (flycheck-info                                :underline (:style wave :color base0B))
