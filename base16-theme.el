@@ -283,7 +283,12 @@ return the actual color value.  Otherwise return the value unchanged."
      (company-tooltip-annotation                   :foreground base08)
      (company-tooltip-common                       :inherit font-lock-constant-face)
      (company-tooltip-selection                    :background base02 :inherit font-lock-function-name-face)
+     (company-tooltip-search                       :inherit match)
+     (company-tooltip-search-selection             :inherit match)
      (company-preview-common                       :inherit secondary-selection)
+     (company-preview                              :foreground base04)
+     (company-preview-search                       :inherit match)
+     (company-echo-common                          :inherit secondary-selection)
 
 ;;;; cperl-mode
      (cperl-array-face                             :weight bold :inherit font-lock-variable-name-face)
