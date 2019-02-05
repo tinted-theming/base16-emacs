@@ -273,6 +273,14 @@ return the actual color value.  Otherwise return the value unchanged."
      (font-latex-verbatim-face                     :foreground base09)
      (font-latex-warning-face                      :foreground base08)
 
+;;;; circe-mode
+     (circe-fool-face                              :foreground base03)
+     (circe-my-message-face                        :foreground base0B)
+     (circe-highlight-nick-face                    :foreground base0A)
+     (circe-originator-face                        :foreground base0E)
+     (circe-prompt-face                            :foreground base0D)
+     (circe-server-face                            :foreground base04)
+
 ;;;; clojure-mode
      (clojure-keyword-face                         :foreground base0E)
 
@@ -599,6 +607,11 @@ return the actual color value.  Otherwise return the value unchanged."
 
 ;;;; linum-mode
      (linum                                        :foreground base03 :background base16-settings-fringe-bg)
+
+;;;; lui-mode
+     (lui-button-face                              :foreground base0D)
+     (lui-highlight-face                           :background base01)
+     (lui-time-stamp-face                          :foreground base0C)
 
 ;;;; magit
      (magit-blame-culprit                          :background base01)
