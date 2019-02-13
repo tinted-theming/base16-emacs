@@ -273,6 +273,10 @@ return the actual color value.  Otherwise return the value unchanged."
      (font-latex-verbatim-face                     :foreground base09)
      (font-latex-warning-face                      :foreground base08)
 
+     (TeX-error-description-error                  :inherit error)
+     (TeX-error-description-tex-said               :inherit font-lock-function-name-face)
+     (TeX-error-description-warning                :inherit warning)
+
 ;;;; clojure-mode
      (clojure-keyword-face                         :foreground base0E)
 
