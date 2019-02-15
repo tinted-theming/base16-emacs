@@ -284,6 +284,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (circe-originator-face                        :foreground base0E)
      (circe-prompt-face                            :foreground base0D)
      (circe-server-face                            :foreground base04)
+
 ;;;; clojure-mode
      (clojure-keyword-face                         :foreground base0E)
 
