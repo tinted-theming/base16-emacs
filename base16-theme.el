@@ -273,6 +273,10 @@ return the actual color value.  Otherwise return the value unchanged."
      (font-latex-verbatim-face                     :foreground base09)
      (font-latex-warning-face                      :foreground base08)
 
+     (TeX-error-description-error                  :inherit error)
+     (TeX-error-description-tex-said               :inherit font-lock-function-name-face)
+     (TeX-error-description-warning                :inherit warning)
+
 ;;;; circe-mode
      (circe-fool-face                              :foreground base03)
      (circe-my-message-face                        :foreground base0B)
@@ -280,7 +284,6 @@ return the actual color value.  Otherwise return the value unchanged."
      (circe-originator-face                        :foreground base0E)
      (circe-prompt-face                            :foreground base0D)
      (circe-server-face                            :foreground base04)
-
 ;;;; clojure-mode
      (clojure-keyword-face                         :foreground base0E)
 
