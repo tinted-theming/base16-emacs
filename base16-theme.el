@@ -14,7 +14,7 @@
 
 ;;; Code:
 
-(defcustom base16-theme-256-color-source "terminal"
+(defcustom base16-theme-256-color-source 'terminal
   "Where to get the colors in a 256-color terminal.
 
 In a 256-color terminal, it's not clear where the colors should come from.
@@ -24,9 +24,10 @@ the xresources theme) and colors (which will be converted from the actual
 html color codes to the closest color).
 
 Note that this needs to be set before themes are loaded or it will not work."
-  :type '(string)
-  :group 'base16
-  :options '("terminal" "base16-shell" "colors"))
+  :type '(radio (const :tag "Terminal" terminal)
+                (const :tag "Base16 shell" base16-shell)
+                (const :tag "Colors" colors))
+  :group 'base16)
 
 (defcustom base16-distinct-fringe-background t
   "Make the fringe background different from the normal background color.
@@ -42,9 +43,9 @@ There are two choices for applying the emphasis:
             mode line.
   contrast: Use the \"default\" face's foreground
             which should result in more contrast."
-  :type '(choice (const :tag "Off" nil)
-                 (const :tag "Draw box around" box)
-                 (const :tag "Contrast" contrast))
+  :type '(radio (const :tag "Off" nil)
+                (const :tag "Draw box around" box)
+                (const :tag "Contrast" contrast))
   :group 'base16)
 
 (defvar base16-shell-colors
@@ -152,8 +153,11 @@ return the actual color value.  Otherwise return the value unchanged."
   (let* ((face             (car spec))
          (definition       (cdr spec))
          (shell-colors-256 (pcase base16-theme-256-color-source
+                             ('terminal      base16-shell-colors)
                              ("terminal"     base16-shell-colors)
+                             ('base16-shell  base16-shell-colors-256)
                              ("base16-shell" base16-shell-colors-256)
+                             ('colors        colors)
                              ("colors"       colors)
                              (_              base16-shell-colors))))
 
