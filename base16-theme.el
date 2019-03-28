@@ -242,7 +242,8 @@ return the actual color value.  Otherwise return the value unchanged."
 ;;;; isearch
      (match                                        :foreground base0D :background base01 :inverse-video t)
      (isearch                                      :foreground base0A :background base01 :inverse-video t)
-     (isearch-lazy-highlight-face                  :foreground base0C :background base01 :inverse-video t)
+     (lazy-highlight                               :foreground base0C :background base01 :inverse-video t)
+     (isearch-lazy-highlight-face                  :inherit lazy-highlight) ;; was replaced with 'lazy-highlight in emacs 22
      (isearch-fail                                 :background base01 :inverse-video t :inherit font-lock-warning-face)
 
 ;;;; line-numbers
