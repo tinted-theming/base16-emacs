@@ -524,6 +524,9 @@ return the actual color value.  Otherwise return the value unchanged."
 ;;;; highlight-indentation minor mode
      (highlight-indentation-face                   :background base01)
 
+;;;; highlight-thing mode
+     (highlight-thing                              :inherit highlight)
+
 ;;;; hl-line-mode
      (hl-line                                      :background base01)
      (col-highlight                                :background base01)
