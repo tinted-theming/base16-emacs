@@ -773,6 +773,17 @@ return the actual color value.  Otherwise return the value unchanged."
      (slime-repl-result-face                       :foreground base0B)
      (slime-repl-output-face                       :foreground base0D :background base01)
 
+;;;; smart-mode-line
+     (sml/charging                                 :inherit sml/global :foreground base0B)
+     (sml/discharging                              :inherit sml/global :foreground base08)
+     (sml/filename                                 :inherit sml/global :foreground base0A :weight bold)
+     (sml/global                                   :foreground base16-settings-mode-line-fg)
+     (sml/modes                                    :inherit sml/global :foreground base07)
+     (sml/modified                                 :inherit sml/not-modified :foreground base08 :weight bold)
+     (sml/outside-modified                         :inherit sml/not-modified :background base08)
+     (sml/prefix                                   :inherit sml/global :foreground base09)
+     (sml/read-only                                :inherit sml/not-modified :foreground base0C)
+
 ;;;; spaceline
      (spaceline-evil-emacs                         :foreground base01 :background base0D)
      (spaceline-evil-insert                        :foreground base01 :background base0D)
