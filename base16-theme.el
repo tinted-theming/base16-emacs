@@ -349,10 +349,12 @@ return the actual color value.  Otherwise return the value unchanged."
      (diredp-write-priv                            :foreground base0A :background nil)
 
 ;;;; ediff-mode
-     (ediff-even-diff-A                            :foreground nil :background nil :inverse-video t)
-     (ediff-even-diff-B                            :foreground nil :background nil :inverse-video t)
-     (ediff-odd-diff-A                             :foreground base04 :background nil :inverse-video t)
-     (ediff-odd-diff-B                             :foreground base04 :background nil :inverse-video t)
+     (ediff-even-diff-A                            :inverse-video t)
+     (ediff-even-diff-B                            :inverse-video t)
+     (ediff-even-diff-C                            :inverse-video t)
+     (ediff-odd-diff-A                             :foreground base04 :inverse-video t)
+     (ediff-odd-diff-B                             :foreground base04 :inverse-video t)
+     (ediff-odd-diff-C                             :foreground base04 :inverse-video t)
 
 ;;;; eldoc-mode
      (eldoc-highlight-function-argument            :foreground base0B :weight bold)
