@@ -282,6 +282,14 @@ return the actual color value.  Otherwise return the value unchanged."
      (TeX-error-description-tex-said               :inherit font-lock-function-name-face)
      (TeX-error-description-warning                :inherit warning)
 
+;;;; avy
+     (avy-lead-face-0                              :foreground base00 :background base0C)
+     (avy-lead-face-1                              :foreground base00 :background base05)
+     (avy-lead-face-2                              :foreground base00 :background base0E)
+     (avy-lead-face                                :foreground base00 :background base09)
+     (avy-background-face                          :foreground base01)
+     (avy-goto-char-timer-face                     :inherit highlight)
+
 ;;;; clojure-mode
      (clojure-keyword-face                         :foreground base0E)
 
