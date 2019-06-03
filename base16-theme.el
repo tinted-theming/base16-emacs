@@ -706,7 +706,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (org-document-info                            :foreground base0C)
      (org-document-info-keyword                    :foreground base0B)
      (org-document-title                           :foreground base09 :weight bold :height 1.44)
-     (org-done                                     :foreground base0B)
+     (org-done                                     :foreground base0B :background base01)
      (org-ellipsis                                 :foreground base04)
      (org-footnote                                 :foreground base0C)
      (org-formula                                  :foreground base08)
@@ -717,7 +717,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (org-scheduled-today                          :foreground base0B)
      (org-special-keyword                          :foreground base09)
      (org-table                                    :foreground base0E)
-     (org-todo                                     :foreground base08)
+     (org-todo                                     :foreground base08 :background base01)
      (org-upcoming-deadline                        :foreground base09)
      (org-warning                                  :foreground base08 :weight bold)
 
