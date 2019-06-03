@@ -287,7 +287,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (avy-lead-face-1                              :foreground base00 :background base05)
      (avy-lead-face-2                              :foreground base00 :background base0E)
      (avy-lead-face                                :foreground base00 :background base09)
-     (avy-background-face                          :foreground base01)
+     (avy-background-face                          :foreground base03)
      (avy-goto-char-timer-face                     :inherit highlight)
 
 ;;;; clojure-mode
