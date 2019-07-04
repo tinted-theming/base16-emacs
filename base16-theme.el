@@ -283,12 +283,12 @@ return the actual color value.  Otherwise return the value unchanged."
      (TeX-error-description-warning                :inherit warning)
 
 ;;;; circe-mode
-     (circe-fool-face                              :foreground base03)
+     (circe-fool-face                              :foreground base02)
      (circe-my-message-face                        :foreground base0B)
      (circe-highlight-nick-face                    :foreground base0A)
      (circe-originator-face                        :foreground base0E)
      (circe-prompt-face                            :foreground base0D)
-     (circe-server-face                            :foreground base04)
+     (circe-server-face                            :foreground base03)
 
 ;;;; avy
      (avy-lead-face-0                              :foreground base00 :background base0C)
