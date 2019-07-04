@@ -14,7 +14,7 @@
 
 ;;; Code:
 
-(defcustom base16-theme-256-color-source "terminal"
+(defcustom base16-theme-256-color-source 'terminal
   "Where to get the colors in a 256-color terminal.
 
 In a 256-color terminal, it's not clear where the colors should come from.
@@ -24,9 +24,10 @@ the xresources theme) and colors (which will be converted from the actual
 html color codes to the closest color).
 
 Note that this needs to be set before themes are loaded or it will not work."
-  :type '(string)
-  :group 'base16
-  :options '("terminal" "base16-shell" "colors"))
+  :type '(radio (const :tag "Terminal" terminal)
+                (const :tag "Base16 shell" base16-shell)
+                (const :tag "Colors" colors))
+  :group 'base16)
 
 (defcustom base16-distinct-fringe-background t
   "Make the fringe background different from the normal background color.
@@ -42,9 +43,9 @@ There are two choices for applying the emphasis:
             mode line.
   contrast: Use the \"default\" face's foreground
             which should result in more contrast."
-  :type '(choice (const :tag "Off" nil)
-                 (const :tag "Draw box around" box)
-                 (const :tag "Contrast" contrast))
+  :type '(radio (const :tag "Off" nil)
+                (const :tag "Draw box around" box)
+                (const :tag "Contrast" contrast))
   :group 'base16)
 
 (defvar base16-shell-colors
@@ -152,8 +153,11 @@ return the actual color value.  Otherwise return the value unchanged."
   (let* ((face             (car spec))
          (definition       (cdr spec))
          (shell-colors-256 (pcase base16-theme-256-color-source
+                             ('terminal      base16-shell-colors)
                              ("terminal"     base16-shell-colors)
+                             ('base16-shell  base16-shell-colors-256)
                              ("base16-shell" base16-shell-colors-256)
+                             ('colors        colors)
                              ("colors"       colors)
                              (_              base16-shell-colors))))
 
@@ -192,8 +196,8 @@ return the actual color value.  Otherwise return the value unchanged."
      (link                                         :foreground base0D :underline t)
      (link-visited                                 :foreground base0E :underline t)
      (minibuffer-prompt                            :foreground base0D)
-     (region                                       :background base02)
-     (secondary-selection                          :background base03)
+     (region                                       :background base02 :distant-foreground base05)
+     (secondary-selection                          :background base03 :distant-foreground base05)
      (trailing-whitespace                          :foreground base0A :background base0C)
      (vertical-border                              :foreground base02)
      (widget-button                                :underline t)
@@ -238,7 +242,8 @@ return the actual color value.  Otherwise return the value unchanged."
 ;;;; isearch
      (match                                        :foreground base0D :background base01 :inverse-video t)
      (isearch                                      :foreground base0A :background base01 :inverse-video t)
-     (isearch-lazy-highlight-face                  :foreground base0C :background base01 :inverse-video t)
+     (lazy-highlight                               :foreground base0C :background base01 :inverse-video t)
+     (isearch-lazy-highlight-face                  :inherit lazy-highlight) ;; was replaced with 'lazy-highlight in emacs 22
      (isearch-fail                                 :background base01 :inverse-video t :inherit font-lock-warning-face)
 
 ;;;; line-numbers
@@ -284,6 +289,14 @@ return the actual color value.  Otherwise return the value unchanged."
      (circe-originator-face                        :foreground base0E)
      (circe-prompt-face                            :foreground base0D)
      (circe-server-face                            :foreground base04)
+
+;;;; avy
+     (avy-lead-face-0                              :foreground base00 :background base0C)
+     (avy-lead-face-1                              :foreground base00 :background base05)
+     (avy-lead-face-2                              :foreground base00 :background base0E)
+     (avy-lead-face                                :foreground base00 :background base09)
+     (avy-background-face                          :foreground base03)
+     (avy-goto-char-timer-face                     :inherit highlight)
 
 ;;;; clojure-mode
      (clojure-keyword-face                         :foreground base0E)
@@ -527,6 +540,9 @@ return the actual color value.  Otherwise return the value unchanged."
 ;;;; highlight-indentation minor mode
      (highlight-indentation-face                   :background base01)
 
+;;;; highlight-thing mode
+     (highlight-thing                              :inherit highlight)
+
 ;;;; hl-line-mode
      (hl-line                                      :background base01)
      (col-highlight                                :background base01)
@@ -703,7 +719,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (org-document-info                            :foreground base0C)
      (org-document-info-keyword                    :foreground base0B)
      (org-document-title                           :foreground base09 :weight bold :height 1.44)
-     (org-done                                     :foreground base0B)
+     (org-done                                     :foreground base0B :background base01)
      (org-ellipsis                                 :foreground base04)
      (org-footnote                                 :foreground base0C)
      (org-formula                                  :foreground base08)
@@ -714,7 +730,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (org-scheduled-today                          :foreground base0B)
      (org-special-keyword                          :foreground base09)
      (org-table                                    :foreground base0E)
-     (org-todo                                     :foreground base08)
+     (org-todo                                     :foreground base08 :background base01)
      (org-upcoming-deadline                        :foreground base09)
      (org-warning                                  :foreground base08 :weight bold)
 
@@ -777,6 +793,17 @@ return the actual color value.  Otherwise return the value unchanged."
      (slime-repl-prompt-face                       :foreground base0E :underline nil :weight bold)
      (slime-repl-result-face                       :foreground base0B)
      (slime-repl-output-face                       :foreground base0D :background base01)
+
+;;;; smart-mode-line
+     (sml/charging                                 :inherit sml/global :foreground base0B)
+     (sml/discharging                              :inherit sml/global :foreground base08)
+     (sml/filename                                 :inherit sml/global :foreground base0A :weight bold)
+     (sml/global                                   :foreground base16-settings-mode-line-fg)
+     (sml/modes                                    :inherit sml/global :foreground base07)
+     (sml/modified                                 :inherit sml/not-modified :foreground base08 :weight bold)
+     (sml/outside-modified                         :inherit sml/not-modified :background base08)
+     (sml/prefix                                   :inherit sml/global :foreground base09)
+     (sml/read-only                                :inherit sml/not-modified :foreground base0C)
 
 ;;;; spaceline
      (spaceline-evil-emacs                         :foreground base01 :background base0D)
