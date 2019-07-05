@@ -282,6 +282,14 @@ return the actual color value.  Otherwise return the value unchanged."
      (TeX-error-description-tex-said               :inherit font-lock-function-name-face)
      (TeX-error-description-warning                :inherit warning)
 
+;;;; circe-mode
+     (circe-fool-face                              :foreground base02)
+     (circe-my-message-face                        :foreground base0B)
+     (circe-highlight-nick-face                    :foreground base0A)
+     (circe-originator-face                        :foreground base0E)
+     (circe-prompt-face                            :foreground base0D)
+     (circe-server-face                            :foreground base03)
+
 ;;;; avy
      (avy-lead-face-0                              :foreground base00 :background base0C)
      (avy-lead-face-1                              :foreground base00 :background base05)
@@ -619,6 +627,11 @@ return the actual color value.  Otherwise return the value unchanged."
 
 ;;;; linum-mode
      (linum                                        :foreground base03 :background base16-settings-fringe-bg)
+
+;;;; lui-mode
+     (lui-button-face                              :foreground base0D)
+     (lui-highlight-face                           :background base01)
+     (lui-time-stamp-face                          :foreground base0C)
 
 ;;;; magit
      (magit-blame-culprit                          :background base01)
