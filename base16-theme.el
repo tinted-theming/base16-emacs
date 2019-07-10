@@ -282,6 +282,21 @@ return the actual color value.  Otherwise return the value unchanged."
      (TeX-error-description-tex-said               :inherit font-lock-function-name-face)
      (TeX-error-description-warning                :inherit warning)
 
+;;;; centaur-tabs
+     (centaur-tabs-default    :background base01 :foreground base01)
+     (centaur-tabs-selected   :background base00 :foreground base06)
+     (centaur-tabs-unselected :background base01 :foreground base05)
+     (centaur-tabs-selected-modified   :background base00 :foreground base0D)
+     (centaur-tabs-unselected-modified :background base01 :foreground base0D)
+     (centaur-tabs-active-bar-face
+      :background base0D)
+     (centaur-tabs-modified-marker-selected
+      :inherit 'centaur-tabs-selected
+      :foreground base0D)
+     (centaur-tabs-modified-marker-unselected
+      :inherit 'centaur-tabs-unselected
+      :foreground base0D)
+
 ;;;; circe-mode
      (circe-fool-face                              :foreground base02)
      (circe-my-message-face                        :foreground base0B)
@@ -363,6 +378,11 @@ return the actual color value.  Otherwise return the value unchanged."
      (diredp-read-priv                             :foreground base0B :background nil)
      (diredp-symlink                               :foreground base0E)
      (diredp-write-priv                            :foreground base0A :background nil)
+
+;;;; doom-modeline
+     (doom-modeline-eldoc-bar :background base0B)
+     (doom-modeline-inactive-bar :background nil) ; transparent
+     (doom-modeline-bar :background base0D)
 
 ;;;; ediff-mode
      (ediff-even-diff-A                            :foreground nil :background nil :inverse-video t)
