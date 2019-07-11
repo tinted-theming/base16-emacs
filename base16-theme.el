@@ -177,6 +177,20 @@ return the actual color value.  Otherwise return the value unchanged."
                      (base16-transform-face face colors))
                  faces)))
 
+(defun base16-hex-to-rgb (hexcolor)
+  "Convert HEXCOLOR to rgb format in a 0 to 1 scale."
+  `(,(/ (string-to-number (substring hexcolor 1 3) 16) 255.0)
+    ,(/ (string-to-number (substring hexcolor 3 5) 16) 255.0)
+    ,(/ (string-to-number (substring hexcolor 5 7) 16) 255.0)))
+
+(defun base16-darken-color (hexcolor factor)
+  "Darken HEXCOLOR by FACTOR."
+  (let ((rgb-color (base16-hex-to-rgb hexcolor)))
+    (color-rgb-to-hex (* (nth 0 rgb-color) factor)
+		      (* (nth 1 rgb-color) factor)
+		      (* (nth 2 rgb-color) factor)
+		      2)))
+
 (defun base16-theme-define (theme-name theme-colors)
   "Define the faces for a base16 colorscheme given a `THEME-NAME' and a plist of `THEME-COLORS'."
   (base16-set-faces
@@ -820,6 +834,11 @@ return the actual color value.  Otherwise return the value unchanged."
      (sml/prefix                                   :inherit sml/global :foreground base09)
      (sml/read-only                                :inherit sml/not-modified :foreground base0C)
 
+;;;; solaire-mode
+     (solaire-default-face                         :inherit 'default :background (base16-darken-color base00 0.45))
+     (solaire-hl-line-face                         :inherit 'hl-line :background base00)
+     (solaire-org-hide-face                        :foreground (base16-darken-color ,base00 0.45))
+     
 ;;;; spaceline
      (spaceline-evil-emacs                         :foreground base01 :background base0D)
      (spaceline-evil-insert                        :foreground base01 :background base0D)
