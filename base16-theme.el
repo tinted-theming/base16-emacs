@@ -4,6 +4,7 @@
 ;;         Neil Bhakta
 ;; Maintainer: Kaleb Elwert <belak@coded.io>
 ;; Version: 1.1
+;; Package-Requires: ((emacs "24.1"))
 ;; Homepage: https://github.com/belak/base16-emacs
 
 ;;; Commentary:
