@@ -14,6 +14,8 @@
 
 ;;; Code:
 
+(require 'color)
+
 (defcustom base16-theme-256-color-source 'terminal
   "Where to get the colors in a 256-color terminal.
 
@@ -102,31 +104,39 @@ This function is meant for transforming symbols to valid colors.
 If the value refers to a setting then return whatever is appropriate.
 If not a setting but is found in the valid list of colors then
 return the actual color value.  Otherwise return the value unchanged."
-  (if (symbolp key)
-      (cond
+  (cond ((symbolp key)
+         (cond
+          ((string= (symbol-name key) "base16-settings-fringe-bg")
+           (if base16-distinct-fringe-background
+               (plist-get colors :base01)
+             (plist-get colors :base00)))
 
-       ((string= (symbol-name key) "base16-settings-fringe-bg")
-        (if base16-distinct-fringe-background
-            (plist-get colors :base01)
-		  (plist-get colors :base00)))
+          ((string= (symbol-name key) "base16-settings-mode-line-box")
+           (if (eq base16-highlight-mode-line 'box)
+               (list :line-width 1 :color (plist-get colors :base04))
+             nil))
 
-	   ((string= (symbol-name key) "base16-settings-mode-line-box")
-		(if (eq base16-highlight-mode-line 'box)
-			(list :line-width 1 :color (plist-get colors :base04))
-		  nil))
+          ((string= (symbol-name key) "base16-settings-mode-line-fg")
+           (if (eq base16-highlight-mode-line 'contrast)
+               (plist-get colors :base05)
+             (plist-get colors :base04)))
 
-	   ((string= (symbol-name key) "base16-settings-mode-line-fg")
-		(if (eq base16-highlight-mode-line 'contrast)
-			(plist-get colors :base05)
-		  (plist-get colors :base04)))
+          (t
+           (let ((maybe-color (plist-get colors (intern (concat ":" (symbol-name key))))))
+             (if maybe-color
+                 maybe-color
+               key)))))
 
-	   (t
-		(let ((maybe-color (plist-get colors (intern (concat ":" (symbol-name key))))))
-		  (if maybe-color
-			  maybe-color
-			key))))
-    key))
+        ;; If it's a list, there's a chance it's a call to one of our magical
+        ;; functions. In general, these will only work well in the gui version
+        ;; of the themes.
+        ((and (listp key) (symbolp (car key)))
+         (cond ((string= (symbol-name (car key)) ":darken")
+                (base16-darken-color (base16-transform-color-key (cadr key) colors) (caddr key)))
+               (t key)))
 
+        ;; Fall back to passing through the key
+        (t key)))
 
 (defun base16-transform-spec (spec colors)
   "Transform a theme `SPEC' into a face spec using `COLORS'."
