@@ -30,11 +30,30 @@
     :base0F "#333333")
   "All colors for Base16 Github are defined here.")
 
+(defvar base16-github-colors-rgb
+  '(:base00 (255 255 255)
+    :base01 (245 245 245)
+    :base02 (200 200 250)
+    :base03 (150 152 150)
+    :base04 (232 232 232)
+    :base05 (51 51 51)
+    :base06 (255 255 255)
+    :base07 (255 255 255)
+    :base08 (237 106 67)
+    :base09 (0 134 179)
+    :base0A (121 93 163)
+    :base0B (24 54 145)
+    :base0C (24 54 145)
+    :base0D (121 93 163)
+    :base0E (167 29 93)
+    :base0F (51 51 51))
+  "All colors for Base16 Github are defined here.")
+
 ;; Define the theme
 (deftheme base16-github)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-github base16-github-colors)
+(base16-theme-define 'base16-github base16-github-colors base16-github-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-github)

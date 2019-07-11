@@ -30,11 +30,30 @@
     :base0F "#ffffff")
   "All colors for Base16 Brogrammer are defined here.")
 
+(defvar base16-brogrammer-colors-rgb
+  '(:base00 (31 31 31)
+    :base01 (248 17 24)
+    :base02 (45 197 94)
+    :base03 (236 186 15)
+    :base04 (42 132 210)
+    :base05 (78 90 183)
+    :base06 (16 129 214)
+    :base07 (214 219 229)
+    :base08 (214 219 229)
+    :base09 (222 53 46)
+    :base0A (29 211 97)
+    :base0B (243 189 9)
+    :base0C (16 129 214)
+    :base0D (83 80 185)
+    :base0E (15 125 219)
+    :base0F (255 255 255))
+  "All colors for Base16 Brogrammer are defined here.")
+
 ;; Define the theme
 (deftheme base16-brogrammer)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-brogrammer base16-brogrammer-colors)
+(base16-theme-define 'base16-brogrammer base16-brogrammer-colors base16-brogrammer-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-brogrammer)

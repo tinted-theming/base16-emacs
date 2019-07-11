@@ -30,11 +30,30 @@
     :base0F "#d65d0e")
   "All colors for Base16 Gruvbox dark, pale are defined here.")
 
+(defvar base16-gruvbox-dark-pale-colors-rgb
+  '(:base00 (38 38 38)
+    :base01 (58 58 58)
+    :base02 (78 78 78)
+    :base03 (138 138 138)
+    :base04 (148 148 148)
+    :base05 (218 185 151)
+    :base06 (213 196 161)
+    :base07 (235 219 178)
+    :base08 (215 95 95)
+    :base09 (255 135 0)
+    :base0A (255 175 0)
+    :base0B (175 175 0)
+    :base0C (133 173 133)
+    :base0D (131 173 173)
+    :base0E (212 133 173)
+    :base0F (214 93 14))
+  "All colors for Base16 Gruvbox dark, pale are defined here.")
+
 ;; Define the theme
 (deftheme base16-gruvbox-dark-pale)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-gruvbox-dark-pale base16-gruvbox-dark-pale-colors)
+(base16-theme-define 'base16-gruvbox-dark-pale base16-gruvbox-dark-pale-colors base16-gruvbox-dark-pale-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-gruvbox-dark-pale)

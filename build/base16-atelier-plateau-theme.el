@@ -30,11 +30,30 @@
     :base0F "#bd5187")
   "All colors for Base16 Atelier Plateau are defined here.")
 
+(defvar base16-atelier-plateau-colors-rgb
+  '(:base00 (27 24 24)
+    :base01 (41 36 36)
+    :base02 (88 80 80)
+    :base03 (101 93 93)
+    :base04 (126 119 119)
+    :base05 (138 133 133)
+    :base06 (231 223 223)
+    :base07 (244 236 236)
+    :base08 (202 73 73)
+    :base09 (180 90 60)
+    :base0A (160 110 59)
+    :base0B (75 139 139)
+    :base0C (84 133 182)
+    :base0D (114 114 202)
+    :base0E (132 100 196)
+    :base0F (189 81 135))
+  "All colors for Base16 Atelier Plateau are defined here.")
+
 ;; Define the theme
 (deftheme base16-atelier-plateau)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-atelier-plateau base16-atelier-plateau-colors)
+(base16-theme-define 'base16-atelier-plateau base16-atelier-plateau-colors base16-atelier-plateau-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-atelier-plateau)

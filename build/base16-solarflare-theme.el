@@ -30,11 +30,30 @@
     :base0F "#d73c9a")
   "All colors for Base16 Solar Flare are defined here.")
 
+(defvar base16-solarflare-colors-rgb
+  '(:base00 (24 38 47)
+    :base01 (34 46 56)
+    :base02 (88 104 117)
+    :base03 (102 117 129)
+    :base04 (133 147 158)
+    :base05 (166 175 184)
+    :base06 (232 233 237)
+    :base07 (245 247 250)
+    :base08 (239 82 83)
+    :base09 (230 107 43)
+    :base0A (228 181 28)
+    :base0B (124 200 68)
+    :base0C (82 203 176)
+    :base0D (51 181 225)
+    :base0E (163 99 213)
+    :base0F (215 60 154))
+  "All colors for Base16 Solar Flare are defined here.")
+
 ;; Define the theme
 (deftheme base16-solarflare)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-solarflare base16-solarflare-colors)
+(base16-theme-define 'base16-solarflare base16-solarflare-colors base16-solarflare-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-solarflare)

@@ -30,11 +30,30 @@
     :base0F "#986841")
   "All colors for Base16 Porple are defined here.")
 
+(defvar base16-porple-colors-rgb
+  '(:base00 (41 44 54)
+    :base01 (51 51 68)
+    :base02 (71 65 96)
+    :base03 (101 86 138)
+    :base04 (184 184 184)
+    :base05 (216 216 216)
+    :base06 (232 232 232)
+    :base07 (248 248 248)
+    :base08 (248 69 71)
+    :base09 (210 142 93)
+    :base0A (239 161 107)
+    :base0B (149 199 111)
+    :base0C (100 135 143)
+    :base0D (132 133 206)
+    :base0E (183 73 137)
+    :base0F (152 104 65))
+  "All colors for Base16 Porple are defined here.")
+
 ;; Define the theme
 (deftheme base16-porple)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-porple base16-porple-colors)
+(base16-theme-define 'base16-porple base16-porple-colors base16-porple-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-porple)

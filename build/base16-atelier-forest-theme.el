@@ -30,11 +30,30 @@
     :base0F "#c33ff3")
   "All colors for Base16 Atelier Forest are defined here.")
 
+(defvar base16-atelier-forest-colors-rgb
+  '(:base00 (27 25 24)
+    :base01 (44 36 33)
+    :base02 (104 97 94)
+    :base03 (118 110 107)
+    :base04 (156 148 145)
+    :base05 (168 161 159)
+    :base06 (230 226 224)
+    :base07 (241 239 238)
+    :base08 (242 44 64)
+    :base09 (223 83 32)
+    :base0A (195 132 24)
+    :base0B (123 151 38)
+    :base0C (61 151 184)
+    :base0D (64 126 231)
+    :base0E (102 102 234)
+    :base0F (195 63 243))
+  "All colors for Base16 Atelier Forest are defined here.")
+
 ;; Define the theme
 (deftheme base16-atelier-forest)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-atelier-forest base16-atelier-forest-colors)
+(base16-theme-define 'base16-atelier-forest base16-atelier-forest-colors base16-atelier-forest-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-atelier-forest)

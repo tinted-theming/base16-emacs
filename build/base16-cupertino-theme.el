@@ -30,11 +30,30 @@
     :base0F "#826b28")
   "All colors for Base16 Cupertino are defined here.")
 
+(defvar base16-cupertino-colors-rgb
+  '(:base00 (255 255 255)
+    :base01 (192 192 192)
+    :base02 (192 192 192)
+    :base03 (128 128 128)
+    :base04 (128 128 128)
+    :base05 (64 64 64)
+    :base06 (64 64 64)
+    :base07 (94 94 94)
+    :base08 (196 26 21)
+    :base09 (235 133 0)
+    :base0A (130 107 40)
+    :base0B (0 116 0)
+    :base0C (49 132 149)
+    :base0D (0 0 255)
+    :base0E (169 13 145)
+    :base0F (130 107 40))
+  "All colors for Base16 Cupertino are defined here.")
+
 ;; Define the theme
 (deftheme base16-cupertino)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-cupertino base16-cupertino-colors)
+(base16-theme-define 'base16-cupertino base16-cupertino-colors base16-cupertino-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-cupertino)

@@ -30,11 +30,30 @@
     :base0F "#005f87")
   "All colors for Base16 PaperColor Light are defined here.")
 
+(defvar base16-papercolor-light-colors-rgb
+  '(:base00 (238 238 238)
+    :base01 (175 0 0)
+    :base02 (0 135 0)
+    :base03 (95 135 0)
+    :base04 (0 135 175)
+    :base05 (135 135 135)
+    :base06 (0 95 135)
+    :base07 (68 68 68)
+    :base08 (188 188 188)
+    :base09 (215 0 0)
+    :base0A (215 0 135)
+    :base0B (135 0 175)
+    :base0C (215 95 0)
+    :base0D (215 95 0)
+    :base0E (0 95 175)
+    :base0F (0 95 135))
+  "All colors for Base16 PaperColor Light are defined here.")
+
 ;; Define the theme
 (deftheme base16-papercolor-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-papercolor-light base16-papercolor-light-colors)
+(base16-theme-define 'base16-papercolor-light base16-papercolor-light-colors base16-papercolor-light-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-papercolor-light)

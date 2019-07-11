@@ -30,11 +30,30 @@
     :base0F "#867469")
   "All colors for Base16 Atelier Savanna Light are defined here.")
 
+(defvar base16-atelier-savanna-light-colors-rgb
+  '(:base00 (236 244 238)
+    :base01 (223 231 226)
+    :base02 (135 146 138)
+    :base03 (120 135 125)
+    :base04 (95 109 100)
+    :base05 (82 96 87)
+    :base06 (35 42 37)
+    :base07 (23 28 25)
+    :base08 (177 97 57)
+    :base09 (159 113 60)
+    :base0A (160 126 59)
+    :base0B (72 153 99)
+    :base0C (28 154 160)
+    :base0D (71 140 144)
+    :base0E (85 133 155)
+    :base0F (134 116 105))
+  "All colors for Base16 Atelier Savanna Light are defined here.")
+
 ;; Define the theme
 (deftheme base16-atelier-savanna-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-atelier-savanna-light base16-atelier-savanna-light-colors)
+(base16-theme-define 'base16-atelier-savanna-light base16-atelier-savanna-light-colors base16-atelier-savanna-light-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-atelier-savanna-light)

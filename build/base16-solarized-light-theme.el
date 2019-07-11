@@ -30,11 +30,30 @@
     :base0F "#d33682")
   "All colors for Base16 Solarized Light are defined here.")
 
+(defvar base16-solarized-light-colors-rgb
+  '(:base00 (253 246 227)
+    :base01 (238 232 213)
+    :base02 (147 161 161)
+    :base03 (131 148 150)
+    :base04 (101 123 131)
+    :base05 (88 110 117)
+    :base06 (7 54 66)
+    :base07 (0 43 54)
+    :base08 (220 50 47)
+    :base09 (203 75 22)
+    :base0A (181 137 0)
+    :base0B (133 153 0)
+    :base0C (42 161 152)
+    :base0D (38 139 210)
+    :base0E (108 113 196)
+    :base0F (211 54 130))
+  "All colors for Base16 Solarized Light are defined here.")
+
 ;; Define the theme
 (deftheme base16-solarized-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-solarized-light base16-solarized-light-colors)
+(base16-theme-define 'base16-solarized-light base16-solarized-light-colors base16-solarized-light-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-solarized-light)

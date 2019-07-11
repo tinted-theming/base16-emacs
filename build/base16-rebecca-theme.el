@@ -30,11 +30,30 @@
     :base0F "#ff79c6")
   "All colors for Base16 Rebecca are defined here.")
 
+(defvar base16-rebecca-colors-rgb
+  '(:base00 (41 42 68)
+    :base01 (102 51 153)
+    :base02 (56 58 98)
+    :base03 (102 102 153)
+    :base04 (160 160 197)
+    :base05 (241 239 248)
+    :base06 (204 204 255)
+    :base07 (83 73 93)
+    :base08 (160 160 197)
+    :base09 (239 228 161)
+    :base0A (174 129 255)
+    :base0B (109 254 223)
+    :base0C (142 174 224)
+    :base0D (45 224 167)
+    :base0E (122 165 255)
+    :base0F (255 121 198))
+  "All colors for Base16 Rebecca are defined here.")
+
 ;; Define the theme
 (deftheme base16-rebecca)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-rebecca base16-rebecca-colors)
+(base16-theme-define 'base16-rebecca base16-rebecca-colors base16-rebecca-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-rebecca)

@@ -30,11 +30,30 @@
     :base0F "#e96ba8")
   "All colors for Base16 Paraiso are defined here.")
 
+(defvar base16-paraiso-colors-rgb
+  '(:base00 (47 30 46)
+    :base01 (65 50 63)
+    :base02 (79 66 76)
+    :base03 (119 110 113)
+    :base04 (141 134 135)
+    :base05 (163 158 155)
+    :base06 (185 182 176)
+    :base07 (231 233 219)
+    :base08 (239 97 85)
+    :base09 (249 155 21)
+    :base0A (254 196 24)
+    :base0B (72 182 133)
+    :base0C (91 196 191)
+    :base0D (6 182 239)
+    :base0E (129 91 164)
+    :base0F (233 107 168))
+  "All colors for Base16 Paraiso are defined here.")
+
 ;; Define the theme
 (deftheme base16-paraiso)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-paraiso base16-paraiso-colors)
+(base16-theme-define 'base16-paraiso base16-paraiso-colors base16-paraiso-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-paraiso)

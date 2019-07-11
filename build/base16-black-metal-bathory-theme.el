@@ -30,11 +30,30 @@
     :base0F "#444444")
   "All colors for Base16 Black Metal (Bathory) are defined here.")
 
+(defvar base16-black-metal-bathory-colors-rgb
+  '(:base00 (0 0 0)
+    :base01 (18 18 18)
+    :base02 (34 34 34)
+    :base03 (51 51 51)
+    :base04 (153 153 153)
+    :base05 (193 193 193)
+    :base06 (153 153 153)
+    :base07 (193 193 193)
+    :base08 (95 135 135)
+    :base09 (170 170 170)
+    :base0A (231 138 83)
+    :base0B (251 203 151)
+    :base0C (170 170 170)
+    :base0D (136 136 136)
+    :base0E (153 153 153)
+    :base0F (68 68 68))
+  "All colors for Base16 Black Metal (Bathory) are defined here.")
+
 ;; Define the theme
 (deftheme base16-black-metal-bathory)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-black-metal-bathory base16-black-metal-bathory-colors)
+(base16-theme-define 'base16-black-metal-bathory base16-black-metal-bathory-colors base16-black-metal-bathory-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-black-metal-bathory)

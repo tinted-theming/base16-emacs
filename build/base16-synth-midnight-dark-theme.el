@@ -30,11 +30,30 @@
     :base0F "#9d4d0e")
   "All colors for Base16 Synth Midnight Dark are defined here.")
 
+(defvar base16-synth-midnight-dark-colors-rgb
+  '(:base00 (4 4 4)
+    :base01 (20 20 20)
+    :base02 (36 36 36)
+    :base03 (97 80 122)
+    :base04 (191 187 191)
+    :base05 (223 219 223)
+    :base06 (239 235 239)
+    :base07 (255 251 255)
+    :base08 (181 59 80)
+    :base09 (228 96 14)
+    :base0A (218 232 77)
+    :base0B (6 234 97)
+    :base0C (124 237 233)
+    :base0D (3 174 255)
+    :base0E (234 92 226)
+    :base0F (157 77 14))
+  "All colors for Base16 Synth Midnight Dark are defined here.")
+
 ;; Define the theme
 (deftheme base16-synth-midnight-dark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-synth-midnight-dark base16-synth-midnight-dark-colors)
+(base16-theme-define 'base16-synth-midnight-dark base16-synth-midnight-dark-colors base16-synth-midnight-dark-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-synth-midnight-dark)

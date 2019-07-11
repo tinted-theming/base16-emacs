@@ -30,11 +30,30 @@
     :base0F "#bf40bf")
   "All colors for Base16 Atelier Cave Light are defined here.")
 
+(defvar base16-atelier-cave-light-colors-rgb
+  '(:base00 (239 236 244)
+    :base01 (226 223 231)
+    :base02 (139 135 146)
+    :base03 (126 120 135)
+    :base04 (101 95 109)
+    :base05 (88 82 96)
+    :base06 (38 35 42)
+    :base07 (25 23 28)
+    :base08 (190 70 120)
+    :base09 (170 87 60)
+    :base0A (160 110 59)
+    :base0B (42 146 146)
+    :base0C (57 139 198)
+    :base0D (87 109 219)
+    :base0E (149 90 231)
+    :base0F (191 64 191))
+  "All colors for Base16 Atelier Cave Light are defined here.")
+
 ;; Define the theme
 (deftheme base16-atelier-cave-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-atelier-cave-light base16-atelier-cave-light-colors)
+(base16-theme-define 'base16-atelier-cave-light base16-atelier-cave-light-colors base16-atelier-cave-light-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-atelier-cave-light)

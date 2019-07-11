@@ -30,11 +30,30 @@
     :base0F "#d43552")
   "All colors for Base16 Atelier Dune are defined here.")
 
+(defvar base16-atelier-dune-colors-rgb
+  '(:base00 (32 32 29)
+    :base01 (41 40 36)
+    :base02 (110 107 94)
+    :base03 (125 122 104)
+    :base04 (153 149 128)
+    :base05 (166 162 140)
+    :base06 (232 228 207)
+    :base07 (254 251 236)
+    :base08 (215 55 55)
+    :base09 (182 86 17)
+    :base0A (174 149 19)
+    :base0B (96 172 57)
+    :base0C (31 173 131)
+    :base0D (102 132 225)
+    :base0E (184 84 212)
+    :base0F (212 53 82))
+  "All colors for Base16 Atelier Dune are defined here.")
+
 ;; Define the theme
 (deftheme base16-atelier-dune)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-atelier-dune base16-atelier-dune-colors)
+(base16-theme-define 'base16-atelier-dune base16-atelier-dune-colors base16-atelier-dune-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-atelier-dune)

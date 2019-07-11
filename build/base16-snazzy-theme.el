@@ -30,11 +30,30 @@
     :base0F "#b2643c")
   "All colors for Base16 Snazzy are defined here.")
 
+(defvar base16-snazzy-colors-rgb
+  '(:base00 (40 42 54)
+    :base01 (52 53 62)
+    :base02 (67 69 79)
+    :base03 (120 120 126)
+    :base04 (165 165 169)
+    :base05 (226 228 229)
+    :base06 (239 240 235)
+    :base07 (241 241 240)
+    :base08 (255 92 87)
+    :base09 (255 159 67)
+    :base0A (243 249 157)
+    :base0B (90 247 142)
+    :base0C (154 237 254)
+    :base0D (87 199 255)
+    :base0E (255 106 193)
+    :base0F (178 100 60))
+  "All colors for Base16 Snazzy are defined here.")
+
 ;; Define the theme
 (deftheme base16-snazzy)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-snazzy base16-snazzy-colors)
+(base16-theme-define 'base16-snazzy base16-snazzy-colors base16-snazzy-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-snazzy)

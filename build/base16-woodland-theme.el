@@ -30,11 +30,30 @@
     :base0F "#b49368")
   "All colors for Base16 Woodland are defined here.")
 
+(defvar base16-woodland-colors-rgb
+  '(:base00 (35 30 24)
+    :base01 (48 43 37)
+    :base02 (72 65 58)
+    :base03 (157 139 112)
+    :base04 (180 164 144)
+    :base05 (202 188 177)
+    :base06 (215 200 188)
+    :base07 (228 212 200)
+    :base08 (211 92 92)
+    :base09 (202 127 50)
+    :base0A (224 172 22)
+    :base0B (183 186 83)
+    :base0C (110 185 88)
+    :base0D (136 164 211)
+    :base0E (187 144 226)
+    :base0F (180 147 104))
+  "All colors for Base16 Woodland are defined here.")
+
 ;; Define the theme
 (deftheme base16-woodland)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-woodland base16-woodland-colors)
+(base16-theme-define 'base16-woodland base16-woodland-colors base16-woodland-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-woodland)

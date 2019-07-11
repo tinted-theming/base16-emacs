@@ -30,11 +30,30 @@
     :base0F "#3971ed")
   "All colors for Base16 Google Dark are defined here.")
 
+(defvar base16-google-dark-colors-rgb
+  '(:base00 (29 31 33)
+    :base01 (40 42 46)
+    :base02 (55 59 65)
+    :base03 (150 152 150)
+    :base04 (180 183 180)
+    :base05 (197 200 198)
+    :base06 (224 224 224)
+    :base07 (255 255 255)
+    :base08 (204 52 43)
+    :base09 (249 106 56)
+    :base0A (251 169 34)
+    :base0B (25 136 68)
+    :base0C (57 113 237)
+    :base0D (57 113 237)
+    :base0E (163 106 199)
+    :base0F (57 113 237))
+  "All colors for Base16 Google Dark are defined here.")
+
 ;; Define the theme
 (deftheme base16-google-dark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-google-dark base16-google-dark-colors)
+(base16-theme-define 'base16-google-dark base16-google-dark-colors base16-google-dark-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-google-dark)

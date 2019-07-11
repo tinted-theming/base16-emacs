@@ -30,11 +30,30 @@
     :base0F "#8b6c37")
   "All colors for Base16 iA Dark are defined here.")
 
+(defvar base16-ia-dark-colors-rgb
+  '(:base00 (26 26 26)
+    :base01 (34 34 34)
+    :base02 (29 65 77)
+    :base03 (118 118 118)
+    :base04 (184 184 184)
+    :base05 (204 204 204)
+    :base06 (232 232 232)
+    :base07 (248 248 248)
+    :base08 (216 133 104)
+    :base09 (216 104 104)
+    :base0A (185 147 83)
+    :base0B (131 164 113)
+    :base0C (124 156 174)
+    :base0D (142 204 221)
+    :base0E (185 142 178)
+    :base0F (139 108 55))
+  "All colors for Base16 iA Dark are defined here.")
+
 ;; Define the theme
 (deftheme base16-ia-dark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-ia-dark base16-ia-dark-colors)
+(base16-theme-define 'base16-ia-dark base16-ia-dark-colors base16-ia-dark-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-ia-dark)

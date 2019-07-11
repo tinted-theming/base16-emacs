@@ -95,7 +95,7 @@ the base16-shell code.  If you're using a different terminal
 color scheme, you may want to look for an alternate theme for use
 in the terminal.")
 
-(defun base16-transform-color-key (key colors)
+(defun base16-transform-color-key (key colors colors-rgb)
   "Transform a given color `KEY' into a theme color using `COLORS'.
 
 This function is meant for transforming symbols to valid colors.
@@ -128,17 +128,17 @@ return the actual color value.  Otherwise return the value unchanged."
     key))
 
 
-(defun base16-transform-spec (spec colors)
-  "Transform a theme `SPEC' into a face spec using `COLORS'."
+(defun base16-transform-spec (spec colors colors-rgb)
+  "Transform a theme `SPEC' into a face spec using `COLORS' and `COLORS-RGB'."
   (let ((output))
     (while spec
       (let* ((key (car spec))
-             (value (base16-transform-color-key (cadr spec) colors)))
+             (value (base16-transform-color-key (cadr spec) colors colors-rgb)))
 
         ;; Append the transformed element
         (cond
          ((and (memq key '(:box :underline)) (listp value))
-          (setq output (append output (list key (base16-transform-spec value colors)))))
+          (setq output (append output (list key (base16-transform-spec value colors colors-rgb)))))
          (t
           (setq output (append output (list key value))))))
 
@@ -148,8 +148,8 @@ return the actual color value.  Otherwise return the value unchanged."
     ;; Return the transformed spec
     output))
 
-(defun base16-transform-face (spec colors)
-  "Transform a face `SPEC' into an Emacs theme face definition using `COLORS'."
+(defun base16-transform-face (spec colors colors-rgb)
+  "Transform a face `SPEC' into an Emacs theme face definition using `COLORS' and `COLORS-RGB'."
   (let* ((face             (car spec))
          (definition       (cdr spec))
          (shell-colors-256 (pcase base16-theme-256-color-source
@@ -159,29 +159,34 @@ return the actual color value.  Otherwise return the value unchanged."
                              ("base16-shell" base16-shell-colors-256)
                              ('colors        colors)
                              ("colors"       colors)
-                             (_              base16-shell-colors))))
+                             (_              base16-shell-colors)))
+         (shell-colors-256-rgb (pcase base16-theme-256-color-source
+                                 ('colors  colors-rgb)
+                                 ("colors" colors-rgb)
+                                 (_        nil))))
 
     ;; This is a list of fallbacks to make us select the sanest option possible.
     ;; If there's a graphical terminal, we use the actual colors. If it's not
     ;; graphical, the terminal supports 256 colors, and the user enables it, we
     ;; use the base16-shell colors. Otherwise, we fall back to the basic
     ;; xresources colors.
-    (list face `((((type graphic))   ,(base16-transform-spec definition colors))
-                 (((min-colors 256)) ,(base16-transform-spec definition shell-colors-256))
-                 (t                  ,(base16-transform-spec definition base16-shell-colors))))))
+    (list face `((((type graphic))   ,(base16-transform-spec definition colors colors-rgb))
+                 (((min-colors 256)) ,(base16-transform-spec definition shell-colors-256 shell-colors-256-rgb))
+                 (t                  ,(base16-transform-spec definition base16-shell-colors nil))))))
 
-(defun base16-set-faces (theme-name colors faces)
-  "Define the important part of `THEME-NAME' using `COLORS' to map the `FACES' to actual colors."
+(defun base16-set-faces (theme-name colors colors-rgb faces)
+  "Define the important part of `THEME-NAME' using `COLORS' and `COLORS-RGB' to map the `FACES' to actual colors."
   (apply 'custom-theme-set-faces theme-name
          (mapcar #'(lambda (face)
-                     (base16-transform-face face colors))
+                     (base16-transform-face face colors colors-rgb))
                  faces)))
 
-(defun base16-theme-define (theme-name theme-colors)
-  "Define the faces for a base16 colorscheme given a `THEME-NAME' and a plist of `THEME-COLORS'."
+(defun base16-theme-define (theme-name theme-colors &optional theme-colors-rgb)
+  "Define the faces for a base16 colorscheme given a `THEME-NAME' and a plist of `THEME-COLORS' and `THEME-COLORS-RGB'."
   (base16-set-faces
    theme-name
    theme-colors
+   theme-colors-rgb
 
    '(
 ;;; Built-in

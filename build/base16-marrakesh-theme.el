@@ -30,11 +30,30 @@
     :base0F "#b3588e")
   "All colors for Base16 Marrakesh are defined here.")
 
+(defvar base16-marrakesh-colors-rgb
+  '(:base00 (32 22 2)
+    :base01 (48 46 0)
+    :base02 (95 91 23)
+    :base03 (108 104 35)
+    :base04 (134 129 59)
+    :base05 (148 142 72)
+    :base06 (204 195 122)
+    :base07 (250 240 165)
+    :base08 (195 83 89)
+    :base09 (179 97 68)
+    :base0A (168 131 57)
+    :base0B (24 151 78)
+    :base0C (117 167 56)
+    :base0D (71 124 161)
+    :base0E (136 104 179)
+    :base0F (179 88 142))
+  "All colors for Base16 Marrakesh are defined here.")
+
 ;; Define the theme
 (deftheme base16-marrakesh)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-marrakesh base16-marrakesh-colors)
+(base16-theme-define 'base16-marrakesh base16-marrakesh-colors base16-marrakesh-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-marrakesh)

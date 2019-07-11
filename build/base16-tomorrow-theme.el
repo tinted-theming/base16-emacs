@@ -30,11 +30,30 @@
     :base0F "#a3685a")
   "All colors for Base16 Tomorrow are defined here.")
 
+(defvar base16-tomorrow-colors-rgb
+  '(:base00 (255 255 255)
+    :base01 (224 224 224)
+    :base02 (214 214 214)
+    :base03 (142 144 140)
+    :base04 (150 152 150)
+    :base05 (77 77 76)
+    :base06 (40 42 46)
+    :base07 (29 31 33)
+    :base08 (200 40 41)
+    :base09 (245 135 31)
+    :base0A (234 183 0)
+    :base0B (113 140 0)
+    :base0C (62 153 159)
+    :base0D (66 113 174)
+    :base0E (137 89 168)
+    :base0F (163 104 90))
+  "All colors for Base16 Tomorrow are defined here.")
+
 ;; Define the theme
 (deftheme base16-tomorrow)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-tomorrow base16-tomorrow-colors)
+(base16-theme-define 'base16-tomorrow base16-tomorrow-colors base16-tomorrow-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-tomorrow)

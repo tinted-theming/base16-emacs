@@ -30,11 +30,30 @@
     :base0F "#c720ca")
   "All colors for Base16 Unikitty Dark are defined here.")
 
+(defvar base16-unikitty-dark-colors-rgb
+  '(:base00 (46 42 49)
+    :base01 (74 70 77)
+    :base02 (102 99 105)
+    :base03 (131 128 133)
+    :base04 (159 157 162)
+    :base05 (188 186 190)
+    :base06 (216 215 218)
+    :base07 (245 244 247)
+    :base08 (216 19 127)
+    :base09 (214 84 7)
+    :base0A (220 138 14)
+    :base0B (23 173 152)
+    :base0C (20 155 218)
+    :base0D (121 106 245)
+    :base0E (187 96 234)
+    :base0F (199 32 202))
+  "All colors for Base16 Unikitty Dark are defined here.")
+
 ;; Define the theme
 (deftheme base16-unikitty-dark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-unikitty-dark base16-unikitty-dark-colors)
+(base16-theme-define 'base16-unikitty-dark base16-unikitty-dark-colors base16-unikitty-dark-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-unikitty-dark)

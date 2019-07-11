@@ -30,11 +30,30 @@
     :base0F "#bc9458")
   "All colors for Base16 Railscasts are defined here.")
 
+(defvar base16-railscasts-colors-rgb
+  '(:base00 (43 43 43)
+    :base01 (39 41 53)
+    :base02 (58 64 85)
+    :base03 (90 100 126)
+    :base04 (212 207 201)
+    :base05 (230 225 220)
+    :base06 (244 241 237)
+    :base07 (249 247 243)
+    :base08 (218 73 57)
+    :base09 (204 120 51)
+    :base0A (255 198 109)
+    :base0B (165 194 97)
+    :base0C (81 159 80)
+    :base0D (109 156 190)
+    :base0E (182 179 235)
+    :base0F (188 148 88))
+  "All colors for Base16 Railscasts are defined here.")
+
 ;; Define the theme
 (deftheme base16-railscasts)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-railscasts base16-railscasts-colors)
+(base16-theme-define 'base16-railscasts base16-railscasts-colors base16-railscasts-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-railscasts)

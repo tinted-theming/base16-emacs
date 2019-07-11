@@ -30,11 +30,30 @@
     :base0F "#e53935")
   "All colors for Base16 Material Lighter are defined here.")
 
+(defvar base16-material-lighter-colors-rgb
+  '(:base00 (250 250 250)
+    :base01 (231 234 236)
+    :base02 (204 234 231)
+    :base03 (204 215 218)
+    :base04 (135 150 176)
+    :base05 (128 203 196)
+    :base06 (128 203 196)
+    :base07 (255 255 255)
+    :base08 (255 83 112)
+    :base09 (247 109 71)
+    :base0A (255 182 44)
+    :base0B (145 184 89)
+    :base0C (57 173 181)
+    :base0D (97 130 184)
+    :base0E (124 77 255)
+    :base0F (229 57 53))
+  "All colors for Base16 Material Lighter are defined here.")
+
 ;; Define the theme
 (deftheme base16-material-lighter)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-material-lighter base16-material-lighter-colors)
+(base16-theme-define 'base16-material-lighter base16-material-lighter-colors base16-material-lighter-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-material-lighter)

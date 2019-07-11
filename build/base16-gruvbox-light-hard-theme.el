@@ -30,11 +30,30 @@
     :base0F "#d65d0e")
   "All colors for Base16 Gruvbox light, hard are defined here.")
 
+(defvar base16-gruvbox-light-hard-colors-rgb
+  '(:base00 (249 245 215)
+    :base01 (235 219 178)
+    :base02 (213 196 161)
+    :base03 (189 174 147)
+    :base04 (102 92 84)
+    :base05 (80 73 69)
+    :base06 (60 56 54)
+    :base07 (40 40 40)
+    :base08 (157 0 6)
+    :base09 (175 58 3)
+    :base0A (181 118 20)
+    :base0B (121 116 14)
+    :base0C (66 123 88)
+    :base0D (7 102 120)
+    :base0E (143 63 113)
+    :base0F (214 93 14))
+  "All colors for Base16 Gruvbox light, hard are defined here.")
+
 ;; Define the theme
 (deftheme base16-gruvbox-light-hard)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-gruvbox-light-hard base16-gruvbox-light-hard-colors)
+(base16-theme-define 'base16-gruvbox-light-hard base16-gruvbox-light-hard-colors base16-gruvbox-light-hard-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-gruvbox-light-hard)

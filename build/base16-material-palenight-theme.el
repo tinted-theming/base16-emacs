@@ -30,11 +30,30 @@
     :base0F "#ff5370")
   "All colors for Base16 Material Palenight are defined here.")
 
+(defvar base16-material-palenight-colors-rgb
+  '(:base00 (41 45 62)
+    :base01 (68 66 103)
+    :base02 (50 55 77)
+    :base03 (103 110 149)
+    :base04 (135 150 176)
+    :base05 (149 157 203)
+    :base06 (149 157 203)
+    :base07 (255 255 255)
+    :base08 (240 113 120)
+    :base09 (247 140 108)
+    :base0A (255 203 107)
+    :base0B (195 232 141)
+    :base0C (137 221 255)
+    :base0D (130 170 255)
+    :base0E (199 146 234)
+    :base0F (255 83 112))
+  "All colors for Base16 Material Palenight are defined here.")
+
 ;; Define the theme
 (deftheme base16-material-palenight)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-material-palenight base16-material-palenight-colors)
+(base16-theme-define 'base16-material-palenight base16-material-palenight-colors base16-material-palenight-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-material-palenight)

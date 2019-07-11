@@ -30,11 +30,30 @@
     :base0F "#b03060")
   "All colors for Base16 Spacemacs are defined here.")
 
+(defvar base16-spacemacs-colors-rgb
+  '(:base00 (31 32 34)
+    :base01 (40 40 40)
+    :base02 (68 65 85)
+    :base03 (88 88 88)
+    :base04 (184 184 184)
+    :base05 (163 163 163)
+    :base06 (232 232 232)
+    :base07 (248 248 248)
+    :base08 (242 36 31)
+    :base09 (255 165 0)
+    :base0A (177 149 29)
+    :base0B (103 177 29)
+    :base0C (45 149 116)
+    :base0D (79 151 215)
+    :base0E (163 29 177)
+    :base0F (176 48 96))
+  "All colors for Base16 Spacemacs are defined here.")
+
 ;; Define the theme
 (deftheme base16-spacemacs)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-spacemacs base16-spacemacs-colors)
+(base16-theme-define 'base16-spacemacs base16-spacemacs-colors base16-spacemacs-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-spacemacs)

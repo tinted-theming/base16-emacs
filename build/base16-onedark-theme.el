@@ -30,11 +30,30 @@
     :base0F "#be5046")
   "All colors for Base16 OneDark are defined here.")
 
+(defvar base16-onedark-colors-rgb
+  '(:base00 (40 44 52)
+    :base01 (53 59 69)
+    :base02 (62 68 81)
+    :base03 (84 88 98)
+    :base04 (86 92 100)
+    :base05 (171 178 191)
+    :base06 (182 189 202)
+    :base07 (200 204 212)
+    :base08 (224 108 117)
+    :base09 (209 154 102)
+    :base0A (229 192 123)
+    :base0B (152 195 121)
+    :base0C (86 182 194)
+    :base0D (97 175 239)
+    :base0E (198 120 221)
+    :base0F (190 80 70))
+  "All colors for Base16 OneDark are defined here.")
+
 ;; Define the theme
 (deftheme base16-onedark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-onedark base16-onedark-colors)
+(base16-theme-define 'base16-onedark base16-onedark-colors base16-onedark-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-onedark)

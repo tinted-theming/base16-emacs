@@ -30,11 +30,30 @@
     :base0F "#bb9584")
   "All colors for Base16 Mocha are defined here.")
 
+(defvar base16-mocha-colors-rgb
+  '(:base00 (59 50 40)
+    :base01 (83 70 54)
+    :base02 (100 82 64)
+    :base03 (126 112 90)
+    :base04 (184 175 173)
+    :base05 (208 200 198)
+    :base06 (233 225 221)
+    :base07 (245 238 235)
+    :base08 (203 96 119)
+    :base09 (210 139 113)
+    :base0A (244 188 135)
+    :base0B (190 181 91)
+    :base0C (123 189 164)
+    :base0D (138 179 181)
+    :base0E (168 155 185)
+    :base0F (187 149 132))
+  "All colors for Base16 Mocha are defined here.")
+
 ;; Define the theme
 (deftheme base16-mocha)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-mocha base16-mocha-colors)
+(base16-theme-define 'base16-mocha base16-mocha-colors base16-mocha-colors-rgb)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-mocha)
