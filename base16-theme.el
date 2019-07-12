@@ -432,6 +432,8 @@ return the actual color value.  Otherwise return the value unchanged."
 ;;;; flymake-mode
      (flymake-warnline                             :background base01 :underline base09)
      (flymake-errline                              :background base01 :underline base08)
+     (flymake-warning                              :background base01 :underline base09)
+     (flymake-error                                :background base01 :underline base08)
 
 ;;;; flyspell-mode
      (flyspell-duplicate                           :underline (:style wave :color base09))
