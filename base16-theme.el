@@ -4,6 +4,7 @@
 ;;         Neil Bhakta
 ;; Maintainer: Kaleb Elwert <belak@coded.io>
 ;; Version: 1.1
+;; Package-Requires: ((emacs "24.1"))
 ;; Homepage: https://github.com/belak/base16-emacs
 
 ;;; Commentary:
@@ -14,15 +15,15 @@
 
 ;;; Code:
 
+(require 'color)
+
 (defcustom base16-theme-256-color-source 'terminal
   "Where to get the colors in a 256-color terminal.
-
 In a 256-color terminal, it's not clear where the colors should come from.
 There are 3 possible values: terminal (which was taken from the xresources
 theme), base16-shell (which was taken from a combination of base16-shell and
 the xresources theme) and colors (which will be converted from the actual
 html color codes to the closest color).
-
 Note that this needs to be set before themes are loaded or it will not work."
   :type '(radio (const :tag "Terminal" terminal)
                 (const :tag "Base16 shell" base16-shell)
@@ -37,7 +38,6 @@ Also affects `linum-mode' background."
 
 (defcustom base16-highlight-mode-line nil
   "Make the active mode line stand out more.
-
 There are two choices for applying the emphasis:
   box:      Draws a thin border around the active
             mode line.
@@ -66,7 +66,6 @@ There are two choices for applying the emphasis:
     :base0E "magenta"
     :base0F "brightcyan")
   "Base16 colors used when in a terminal and not using base16-shell.
-
 These mappings are based on the xresources themes.  If you're
 using a different terminal color scheme, you may want to look for
 an alternate theme for use in the terminal.")
@@ -89,7 +88,6 @@ an alternate theme for use in the terminal.")
     :base0E "magenta"
     :base0F "color-17")
   "Base16 colors used when in a terminal and using base16-shell.
-
 These mappings are based on the xresources themes combined with
 the base16-shell code.  If you're using a different terminal
 color scheme, you may want to look for an alternate theme for use
@@ -97,36 +95,43 @@ in the terminal.")
 
 (defun base16-transform-color-key (key colors)
   "Transform a given color `KEY' into a theme color using `COLORS'.
-
 This function is meant for transforming symbols to valid colors.
 If the value refers to a setting then return whatever is appropriate.
 If not a setting but is found in the valid list of colors then
 return the actual color value.  Otherwise return the value unchanged."
-  (if (symbolp key)
-      (cond
+  (cond ((symbolp key)
+         (cond
+          ((string= (symbol-name key) "base16-settings-fringe-bg")
+           (if base16-distinct-fringe-background
+               (plist-get colors :base01)
+             (plist-get colors :base00)))
 
-       ((string= (symbol-name key) "base16-settings-fringe-bg")
-        (if base16-distinct-fringe-background
-            (plist-get colors :base01)
-		  (plist-get colors :base00)))
+          ((string= (symbol-name key) "base16-settings-mode-line-box")
+           (if (eq base16-highlight-mode-line 'box)
+               (list :line-width 1 :color (plist-get colors :base04))
+             nil))
 
-	   ((string= (symbol-name key) "base16-settings-mode-line-box")
-		(if (eq base16-highlight-mode-line 'box)
-			(list :line-width 1 :color (plist-get colors :base04))
-		  nil))
+          ((string= (symbol-name key) "base16-settings-mode-line-fg")
+           (if (eq base16-highlight-mode-line 'contrast)
+               (plist-get colors :base05)
+             (plist-get colors :base04)))
 
-	   ((string= (symbol-name key) "base16-settings-mode-line-fg")
-		(if (eq base16-highlight-mode-line 'contrast)
-			(plist-get colors :base05)
-		  (plist-get colors :base04)))
+          (t
+           (let ((maybe-color (plist-get colors (intern (concat ":" (symbol-name key))))))
+             (if maybe-color
+                 maybe-color
+               key)))))
 
-	   (t
-		(let ((maybe-color (plist-get colors (intern (concat ":" (symbol-name key))))))
-		  (if maybe-color
-			  maybe-color
-			key))))
-    key))
+        ;; If it's a list, there's a chance it's a call to one of our magical
+        ;; functions. In general, these will only work well in the gui version
+        ;; of the themes.
+        ((and (listp key) (symbolp (car key)))
+         (cond ((string= (symbol-name (car key)) ":darken")
+                (base16-darken-color (base16-transform-color-key (cadr key) colors) (caddr key)))
+               (t key)))
 
+        ;; Fall back to passing through the key
+        (t key)))
 
 (defun base16-transform-spec (spec colors)
   "Transform a theme `SPEC' into a face spec using `COLORS'."
@@ -183,13 +188,16 @@ return the actual color value.  Otherwise return the value unchanged."
     ,(/ (string-to-number (substring hexcolor 3 5) 16) 255.0)
     ,(/ (string-to-number (substring hexcolor 5 7) 16) 255.0)))
 
+
 (defun base16-darken-color (hexcolor factor)
   "Darken HEXCOLOR by FACTOR."
-  (let ((rgb-color (base16-hex-to-rgb hexcolor)))
-    (color-rgb-to-hex (* (nth 0 rgb-color) factor)
-		      (* (nth 1 rgb-color) factor)
-		      (* (nth 2 rgb-color) factor)
-		      2)))
+  (if (string= (substring hexcolor 0 1) "#")
+      (let ((rgb-color (base16-hex-to-rgb hexcolor)))
+        (color-rgb-to-hex
+         (color-clamp (* (nth 0 rgb-color) factor))
+	 (color-clamp (* (nth 1 rgb-color) factor))
+	 (color-clamp (* (nth 2 rgb-color) factor))))
+    hexcolor))
 
 (defun base16-theme-define (theme-name theme-colors)
   "Define the faces for a base16 colorscheme given a `THEME-NAME' and a plist of `THEME-COLORS'."
@@ -265,7 +273,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (line-number-current-line                     :inverse-video t)
 
 ;;;; mode-line
-     (mode-line                                    :foreground base16-settings-mode-line-fg :background base02 :box base16-settings-mode-line-box)
+     (mode-line                                    :foreground base16-settings-mode-line-fg :background base01 :box base16-settings-mode-line-box)
      (mode-line-buffer-id                          :foreground base0B :background nil)
      (mode-line-emphasis                           :foreground base06 :slant italic)
      (mode-line-highlight                          :foreground base0E :box nil :weight bold)
@@ -297,11 +305,11 @@ return the actual color value.  Otherwise return the value unchanged."
      (TeX-error-description-warning                :inherit warning)
 
 ;;;; centaur-tabs
-     (centaur-tabs-default                         :background base01 :foreground base01)
+     (centaur-tabs-default                         :background (:darken base00 0.85) :foreground base01)
      (centaur-tabs-selected                        :background base00 :foreground base06)
-     (centaur-tabs-unselected                      :background base01 :foreground base05)
+     (centaur-tabs-unselected                      :background (:darken base00 0.85) :foreground base05)
      (centaur-tabs-selected-modified               :background base00 :foreground base0D)
-     (centaur-tabs-unselected-modified             :background base01 :foreground base0D)
+     (centaur-tabs-unselected-modified             :background (:darken base00 0.85) :foreground base0D)
      (centaur-tabs-active-bar-face                 :background base0D)
      (centaur-tabs-modified-marker-selected        :inherit 'centaur-tabs-selected :foreground base0D)
      (centaur-tabs-modified-marker-unselected      :inherit 'centaur-tabs-unselected :foreground base0D)
@@ -835,10 +843,10 @@ return the actual color value.  Otherwise return the value unchanged."
      (sml/read-only                                :inherit sml/not-modified :foreground base0C)
 
 ;;;; solaire-mode
-     (solaire-default-face                         :inherit 'default :background (base16-darken-color base00 0.45))
+     (solaire-default-face                         :inherit 'default :background (:darken base00 0.85))
      (solaire-hl-line-face                         :inherit 'hl-line :background base00)
-     (solaire-org-hide-face                        :foreground (base16-darken-color ,base00 0.45))
-     
+     (solaire-org-hide-face                        :foreground (:darken base00 0.85))
+
 ;;;; spaceline
      (spaceline-evil-emacs                         :foreground base01 :background base0D)
      (spaceline-evil-insert                        :foreground base01 :background base0D)
