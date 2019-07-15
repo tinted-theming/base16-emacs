@@ -843,8 +843,8 @@ return the actual color value.  Otherwise return the value unchanged."
      (sml/read-only                                :inherit sml/not-modified :foreground base0C)
 
 ;;;; solaire-mode
-     (solaire-default-face                         :inherit 'default :background (:darken base00 0.85))
-     (solaire-hl-line-face                         :inherit 'hl-line :background base00)
+     (solaire-default-face                         :inherit default :background (:darken base00 0.85))
+     (solaire-hl-line-face                         :inherit hl-line :background base00)
      (solaire-org-hide-face                        :foreground (:darken base00 0.85))
 
 ;;;; spaceline
