@@ -51,6 +51,12 @@ There are two choices for applying the emphasis:
                 (const :tag "Contrast" contrast))
   :group 'base16)
 
+(defvar base16-color-modifiers
+  '(:darken   color-darken-name
+    :lighten  color-lighten-name
+    :saturate color-saturate-name)
+  "Modifier functions which can be used in spec declarations.")
+
 (defvar base16-shell-colors
   '(:base00 "black"
     :base01 "brightgreen"
@@ -128,13 +134,15 @@ return the actual color value.  Otherwise return the value unchanged."
                  maybe-color
                key)))))
 
-        ;; If it's a list, there's a chance it's a call to one of our magical
-        ;; functions. In general, these will only work well in the gui version
-        ;; of the themes.
-        ((and (listp key) (symbolp (car key)))
-         (cond ((string= (symbol-name (car key)) ":darken")
-                (base16-darken-color (base16-transform-color-key (cadr key) colors) (caddr key)))
-               (t key)))
+        ;; If it's a list, there's a chance it's a call to one of our
+        ;; magical functions. In general, these will only work well in
+        ;; the gui version of the themes.
+        ((and (listp key) (plist-get base16-color-modifiers (car key)))
+         (apply
+          (plist-get base16-color-modifiers (car key))
+          (mapcar #'(lambda (x)
+                      (base16-transform-color-key x colors))
+                  (cdr key))))
 
         ;; Fall back to passing through the key
         (t key)))
@@ -188,21 +196,9 @@ return the actual color value.  Otherwise return the value unchanged."
                      (base16-transform-face face colors))
                  faces)))
 
-(defun base16-hex-to-rgb (hexcolor)
-  "Convert HEXCOLOR to rgb format in a 0 to 1 scale."
-  `(,(/ (string-to-number (substring hexcolor 1 3) 16) 255.0)
-    ,(/ (string-to-number (substring hexcolor 3 5) 16) 255.0)
-    ,(/ (string-to-number (substring hexcolor 5 7) 16) 255.0)))
-
-
-(defun base16-darken-color (hexcolor factor)
-  "Darken HEXCOLOR by FACTOR."
+(defun base16-modify-hex (modifier hexcolor &rest args)
   (if (string= (substring hexcolor 0 1) "#")
-      (let ((rgb-color (base16-hex-to-rgb hexcolor)))
-        (color-rgb-to-hex
-         (color-clamp (* (nth 0 rgb-color) factor))
-	 (color-clamp (* (nth 1 rgb-color) factor))
-	 (color-clamp (* (nth 2 rgb-color) factor))))
+        (apply modifier hexcolor args)
     hexcolor))
 
 (defun base16-theme-define (theme-name theme-colors)
