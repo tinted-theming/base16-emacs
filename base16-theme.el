@@ -138,7 +138,7 @@ return the actual color value.  Otherwise return the value unchanged."
         ;; magical functions. In general, these will only work well in
         ;; the gui version of the themes.
         ((and (listp key) (plist-get base16-color-modifiers (car key)))
-         (apply
+         (base16-modify-hex
           (plist-get base16-color-modifiers (car key))
           (mapcar #'(lambda (x)
                       (base16-transform-color-key x colors))
