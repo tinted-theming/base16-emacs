@@ -312,7 +312,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (clojure-keyword-face                         :foreground base0E)
 
 ;;;; company-mode
-     (company-tooltip                              :background base01 :inherit default)
+     (company-tooltip                              :inherit tooltip)
      (company-scrollbar-bg                         :background base07)
      (company-scrollbar-fg                         :background base04)
      (company-tooltip-annotation                   :foreground base08)
@@ -645,6 +645,10 @@ return the actual color value.  Otherwise return the value unchanged."
 ;;;; linum-mode
      (linum                                        :foreground base03 :background base16-settings-fringe-bg)
 
+;;;; lsp-ui-doc
+     (lsp-ui-doc-header                            :inherit org-document-title)
+     (lsp-ui-doc-background                        :background base01)
+     
 ;;;; lui-mode
      (lui-button-face                              :foreground base0D)
      (lui-highlight-face                           :background base01)
@@ -855,6 +859,9 @@ return the actual color value.  Otherwise return the value unchanged."
      (term-color-blue                              :foreground base0D :background base0D)
      (term-color-magenta                           :foreground base0E :background base0E)
 
+;;;; tooltip
+     (tooltip                                      :background base01 :inherit default)
+     
 ;;;; tuareg-mode
      (tuareg-font-lock-governing-face              :weight bold :inherit font-lock-keyword-face)
 
