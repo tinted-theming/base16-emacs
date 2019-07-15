@@ -645,6 +645,10 @@ return the actual color value.  Otherwise return the value unchanged."
 ;;;; linum-mode
      (linum                                        :foreground base03 :background base16-settings-fringe-bg)
 
+;;;; lsp-ui-doc
+     (lsp-ui-doc-header                            :inherit org-document-title)
+     (lsp-ui-doc-background                        :background base01)
+     
 ;;;; lui-mode
      (lui-button-face                              :foreground base0D)
      (lui-highlight-face                           :background base01)
