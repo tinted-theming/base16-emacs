@@ -13,9 +13,9 @@
 
 (defvar base16-helios-colors
   '(:base00 "#1d2021"
-    :base01 "#303335"
-    :base02 "#434749"
-    :base03 "#565b5e"
+    :base01 "#383c3e"
+    :base02 "#53585b"
+    :base03 "#6f7579"
     :base04 "#cdcdcd"
     :base05 "#d5d5d5"
     :base06 "#dddddd"
