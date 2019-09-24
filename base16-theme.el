@@ -857,7 +857,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (telephone-line-evil-replace                  :foreground base01  :background base08 :weight bold)
      (telephone-line-evil-operator                 :foreground base0B  :background base01 :weight bold)
      (telephone-line-evil-motion                   :foreground base00  :background base0C :weight bold)
-     (telephone-line-evil-emacs                    :foreground base0E  :background base07 :weight bold)
+     (telephone-line-evil-emacs                    :foreground base07 :background base0E  :weight bold)
      (telephone-line-warning                       :foreground base09  :weight bold)
      (telephone-line-error                         :foreground base08  :weight bold)
 
