@@ -848,6 +848,19 @@ return the actual color value.  Otherwise return the value unchanged."
      (shm-current-face                             :inherit region)
      (shm-quarantine-face                          :underline (:style wave :color base08))
 
+;; telephone-line
+     (telephone-line-accent-active                 :foreground base00 :background base05)
+     (telephone-line-accent-inactive               :foreground base01 :background base03)
+     (telephone-line-evil-normal                   :foreground base01 :background base0B :weight bold)
+     (telephone-line-evil-insert                   :foreground base01 :background base0D :weight bold)
+     (telephone-line-evil-visual                   :foreground base06 :background base0E :weight bold)
+     (telephone-line-evil-replace                  :foreground base01 :background base08 :weight bold)
+     (telephone-line-evil-operator                 :foreground base0B :background base01 :weight bold)
+     (telephone-line-evil-motion                   :foreground base00 :background base0C :weight bold)
+     (telephone-line-evil-emacs                    :foreground base07 :background base0E :weight bold)
+     (telephone-line-warning                       :foreground base09 :weight bold)
+     (telephone-line-error                         :foreground base08 :weight bold)
+
 ;;;; term and ansi-term
      (term                                         :foreground base05 :background base00)
      (term-color-black                             :foreground base02 :background base00)
