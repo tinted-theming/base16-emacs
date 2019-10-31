@@ -590,6 +590,12 @@ return the actual color value.  Otherwise return the value unchanged."
      (idris-equals-face                            :inherit font-lock-keyword-face)
      (idris-operator-face                          :inherit font-lock-keyword-face)
 
+;;;; imenu-list
+     (imenu-list-entry-face-0                      :foreground base0A)
+     (imenu-list-entry-face-1                      :foreground base0B)
+     (imenu-list-entry-face-2                      :foreground base0D)
+     (imenu-list-entry-face-3                      :foreground base0F)
+
 ;;;; ivy-mode
      (ivy-current-match                            :foreground base09 :background base01)
      (ivy-minibuffer-match-face-1                  :foreground base0E)
