@@ -945,10 +945,16 @@ return the actual color value.  Otherwise return the value unchanged."
      theme-name
      `(ansi-color-names-vector
        ;; black, base08, base0B, base0A, base0D, magenta, cyan, white
-       [,base00 ,base08 ,base0B ,base0A ,base0D ,base0E ,base0D ,base05])
-     `(ansi-term-color-vector
-       ;; black, base08, base0B, base0A, base0D, magenta, cyan, white
-       [unspecified ,base00 ,base08 ,base0B ,base0A ,base0D ,base0E ,base0D ,base05]))))
+       [,base00 ,base08 ,base0B ,base0A ,base0D ,base0E ,base0D ,base05]))
+
+    ;; Emacs 24.3 changed ’ansi-term-color-vector’ from a vector of colors
+    ;; to a vector of faces.
+    (when (version< emacs-version "24.3")
+      (custom-theme-set-variables
+       theme-name
+       `(ansi-term-color-vector
+         ;; black, base08, base0B, base0A, base0D, magenta, cyan, white
+         [unspecified ,base00 ,base08 ,base0B ,base0A ,base0D ,base0E ,base0D ,base05])))))
 
 ;;;###autoload
 (and load-file-name
