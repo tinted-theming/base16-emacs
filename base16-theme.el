@@ -353,6 +353,9 @@ return the actual color value.  Otherwise return the value unchanged."
      (diff-file-header                             :background base02)
      (diff-hunk-header                             :foreground base0E :background base01)
 
+;;;; dired
+     (dired-filetype-plain                         :foreground base05 :background base00)
+     
 ;;;; dired+
      (diredp-compressed-file-suffix                :foreground base0D)
      (diredp-dir-heading                           :foreground nil :background nil :inherit heading)
