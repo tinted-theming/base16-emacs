@@ -377,6 +377,33 @@ return the actual color value.  Otherwise return the value unchanged."
      (diredp-symlink                               :foreground base0E)
      (diredp-write-priv                            :foreground base0A :background nil)
 
+;;;; diredfl
+     (diredfl-autofile-name                        :foreground base0E)
+     (diredfl-compressed-file-name                 :foreground base0A)
+     (diredfl-compressed-file-suffix               :foreground base0D)
+     (diredfl-date-time                            :foreground base0C :weight light)
+     (diredfl-deletion                             :foreground nil :background base08)
+     (diredfl-deletion-file-name                   :foreground base00 :background base08 :weight bold)
+     (diredfl-dir-heading                          :foreground nil :background nil :inherit heading :weight bold)
+     (diredfl-dir-name                             :foreground base0D)
+     (diredfl-dir-priv                             :foreground base0D :background nil)
+     (diredfl-exec-priv                            :foreground base08 :background nil)
+     (diredfl-executable-tag                       :foreground base08 :background nil)
+     (diredfl-file-name                            :foreground base0A)
+     (diredfl-file-suffix                          :foreground base0B)
+     (diredfl-flag-mark                            :foreground base09 :weight bold)
+     (diredfl-flag-mark-line                       :background nil :inherit highlight)
+     (diredfl-ignored-file-name                    :foreground base04)
+     (diredfl-link-priv                            :foreground base0E :background nil)
+     (diredfl-no-priv                              :background nil)
+     (diredfl-number                               :foreground base0A)
+     (diredfl-other-priv                           :foreground base0E :background nil)
+     (diredfl-rare-priv                            :foreground base0F :background nil)
+     (diredfl-read-priv                            :foreground base0B :background nil)
+     (diredfl-symlink                              :foreground base0E)
+     (diredfl-tagged-autofile-name                 :foreground base05)
+     (diredfl-write-priv                           :foreground base0A :background nil)
+
 ;;;; doom-modeline
      (doom-modeline-eldoc-bar                      :background base0B)
      (doom-modeline-inactive-bar                   :background nil) ; transparent
