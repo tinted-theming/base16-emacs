@@ -12,23 +12,23 @@
 (require 'base16-theme)
 
 (defvar base16-synth-midnight-dark-colors
-  '(:base00 "#040404"
-    :base01 "#141414"
-    :base02 "#242424"
-    :base03 "#61507a"
-    :base04 "#bfbbbf"
-    :base05 "#dfdbdf"
-    :base06 "#efebef"
-    :base07 "#fffbff"
+  '(:base00 "#050608"
+    :base01 "#1a1b1c"
+    :base02 "#28292a"
+    :base03 "#474849"
+    :base04 "#a3a5a6"
+    :base05 "#c1c3c4"
+    :base06 "#cfd1d2"
+    :base07 "#dddfe0"
     :base08 "#b53b50"
-    :base09 "#e4600e"
-    :base0A "#dae84d"
+    :base09 "#ea770d"
+    :base0A "#c9d364"
     :base0B "#06ea61"
-    :base0C "#7cede9"
+    :base0C "#42fff9"
     :base0D "#03aeff"
     :base0E "#ea5ce2"
-    :base0F "#9d4d0e")
-  "All colors for Base16 Synth Midnight Dark are defined here.")
+    :base0F "#cd6320")
+  "All colors for Base16 Synth Midnight Terminal Dark are defined here.")
 
 ;; Define the theme
 (deftheme base16-synth-midnight-dark)

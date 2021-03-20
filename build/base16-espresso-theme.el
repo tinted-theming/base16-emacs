@@ -4,7 +4,7 @@
 ;; Base16: (https://github.com/chriskempson/base16)
 
 ;;; Authors:
-;; Scheme: Alex Mirrington (https://github.com/alexmirrington)
+;; Scheme: Unknown. Maintained by Alex Mirrington (https://github.com/alexmirrington)
 ;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:

@@ -20,14 +20,14 @@
     :base05 "#e5e9f0"
     :base06 "#eceff4"
     :base07 "#8fbcbb"
-    :base08 "#88c0d0"
-    :base09 "#81a1c1"
-    :base0A "#5e81ac"
-    :base0B "#bf616a"
-    :base0C "#d08770"
-    :base0D "#ebcb8b"
-    :base0E "#a3be8c"
-    :base0F "#b48ead")
+    :base08 "#bf616a"
+    :base09 "#d08770"
+    :base0A "#ebcb8b"
+    :base0B "#a3be8c"
+    :base0C "#88c0d0"
+    :base0D "#81a1c1"
+    :base0E "#b48ead"
+    :base0F "#5e81ac")
   "All colors for Base16 Nord are defined here.")
 
 ;; Define the theme

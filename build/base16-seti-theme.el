@@ -4,7 +4,7 @@
 ;; Base16: (https://github.com/chriskempson/base16)
 
 ;;; Authors:
-;; Scheme: 
+;; Scheme: Unknown
 ;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
