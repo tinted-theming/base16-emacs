@@ -808,6 +808,9 @@ return the actual color value.  Otherwise return the value unchanged."
 ;;;; paren-face-mode
      (paren-face                                   :foreground base04 :background nil)
 
+;;;; perspective-mode
+     (persp-selected-face                          :foreground base0C)
+
 ;;;; popup
      (popup-face                                   :foreground base05 :background base02)
      (popup-isearch-match                          :foreground base00 :background base0B)
