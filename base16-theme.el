@@ -353,6 +353,14 @@ return the actual color value.  Otherwise return the value unchanged."
      (diff-file-header                             :background base02)
      (diff-hunk-header                             :foreground base0E :background base01)
 
+;;;; smerge-tool
+    (smerge-lower                                  :background base00)
+    (smerge-upper                                  :background base00)
+    (smerge-base                                   :background base00)
+    (smerge-markers                                :background base02 :weight bold)
+    (smerge-refined-added                          :inherit 'diff-added :inverse-video t)
+    (smerge-refined-removed                        :inherit 'diff-removed :inverse-video t)
+
 ;;;; dired
      (dired-filetype-plain                         :foreground base05 :background base00)
      
