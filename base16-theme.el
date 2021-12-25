@@ -223,7 +223,7 @@ return the actual color value.  Otherwise return the value unchanged."
 
 ;;;; font-lock
      (font-lock-builtin-face                       :foreground base0C)
-     (font-lock-comment-delimiter-face             :foreground base02)
+     (font-lock-comment-delimiter-face             :foreground base03)
      (font-lock-comment-face                       :foreground base03)
      (font-lock-constant-face                      :foreground base09)
      (font-lock-doc-face                           :foreground base04)
