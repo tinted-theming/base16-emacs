@@ -4,6 +4,7 @@
 ;;         Neil Bhakta
 ;; Maintainer: Kaleb Elwert <belak@coded.io>
 ;; Version: 1.1
+;; Package-Requires: ((emacs "24.1"))
 ;; Homepage: https://github.com/belak/base16-emacs
 
 ;;; Commentary:
@@ -13,6 +14,8 @@
 ;; which are included in this repo.
 
 ;;; Code:
+
+(require 'color)
 
 (defcustom base16-theme-256-color-source 'terminal
   "Where to get the colors in a 256-color terminal.
@@ -47,6 +50,12 @@ There are two choices for applying the emphasis:
                 (const :tag "Draw box around" box)
                 (const :tag "Contrast" contrast))
   :group 'base16)
+
+(defvar base16-color-modifiers
+  '(:darken   color-darken-name
+    :lighten  color-lighten-name
+    :saturate color-saturate-name)
+  "Modifier functions which can be used in spec declarations.")
 
 (defvar base16-shell-colors
   '(:base00 "black"
@@ -102,31 +111,41 @@ This function is meant for transforming symbols to valid colors.
 If the value refers to a setting then return whatever is appropriate.
 If not a setting but is found in the valid list of colors then
 return the actual color value.  Otherwise return the value unchanged."
-  (if (symbolp key)
-      (cond
+  (cond ((symbolp key)
+         (cond
+          ((string= (symbol-name key) "base16-settings-fringe-bg")
+           (if base16-distinct-fringe-background
+               (plist-get colors :base01)
+             (plist-get colors :base00)))
 
-       ((string= (symbol-name key) "base16-settings-fringe-bg")
-        (if base16-distinct-fringe-background
-            (plist-get colors :base01)
-		  (plist-get colors :base00)))
+          ((string= (symbol-name key) "base16-settings-mode-line-box")
+           (if (eq base16-highlight-mode-line 'box)
+               (list :line-width 1 :color (plist-get colors :base04))
+             nil))
 
-	   ((string= (symbol-name key) "base16-settings-mode-line-box")
-		(if (eq base16-highlight-mode-line 'box)
-			(list :line-width 1 :color (plist-get colors :base04))
-		  nil))
+          ((string= (symbol-name key) "base16-settings-mode-line-fg")
+           (if (eq base16-highlight-mode-line 'contrast)
+               (plist-get colors :base05)
+             (plist-get colors :base04)))
 
-	   ((string= (symbol-name key) "base16-settings-mode-line-fg")
-		(if (eq base16-highlight-mode-line 'contrast)
-			(plist-get colors :base05)
-		  (plist-get colors :base04)))
+          (t
+           (let ((maybe-color (plist-get colors (intern (concat ":" (symbol-name key))))))
+             (if maybe-color
+                 maybe-color
+               key)))))
 
-	   (t
-		(let ((maybe-color (plist-get colors (intern (concat ":" (symbol-name key))))))
-		  (if maybe-color
-			  maybe-color
-			key))))
-    key))
+        ;; If it's a list, there's a chance it's a call to one of our
+        ;; magical functions. In general, these will only work well in
+        ;; the gui version of the themes.
+        ((and (listp key) (plist-get base16-color-modifiers (car key)))
+         (base16-modify-hex
+          (plist-get base16-color-modifiers (car key))
+          (mapcar #'(lambda (x)
+                      (base16-transform-color-key x colors))
+                  (cdr key))))
 
+        ;; Fall back to passing through the key
+        (t key)))
 
 (defun base16-transform-spec (spec colors)
   "Transform a theme `SPEC' into a face spec using `COLORS'."
@@ -176,6 +195,11 @@ return the actual color value.  Otherwise return the value unchanged."
          (mapcar #'(lambda (face)
                      (base16-transform-face face colors))
                  faces)))
+
+(defun base16-modify-hex (modifier hexcolor &rest args)
+  (if (string= (substring hexcolor 0 1) "#")
+        (apply modifier hexcolor args)
+    hexcolor))
 
 (defun base16-theme-define (theme-name theme-colors)
   "Define the faces for a base16 colorscheme given a `THEME-NAME' and a plist of `THEME-COLORS'."
