@@ -933,7 +933,13 @@ return the actual color value.  Otherwise return the value unchanged."
      (whitespace-space-after-tab                   :foreground base08 :background base0A)
      (whitespace-space-before-tab                  :foreground base08 :background base09)
      (whitespace-tab                               :foreground base03 :background base01)
-     (whitespace-trailing                          :foreground base0A :background base08)))
+     (whitespace-trailing                          :foreground base0A :background base08)
+;;;; tab-line
+     (tab-line                                     :background base16-settings-fringe-bg)
+     (tab-line-tab                                 :background base16-settings-fringe-bg)
+     (tab-line-tab-inactive                        :background base16-settings-fringe-bg)
+     (tab-line-tab-current                         :foreground base05 :background base00)
+     (tab-line-highlight                           :foreground base05 :background base01)))
 
   ;; Anything leftover that doesn't fall neatly into a face goes here.
   (let ((base00 (plist-get theme-colors :base00))
