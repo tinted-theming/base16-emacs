@@ -939,7 +939,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (tab-line-tab                                 :background base16-settings-fringe-bg)
      (tab-line-tab-inactive                        :background base16-settings-fringe-bg)
      (tab-line-tab-current                         :foreground base05 :background base00)
-     (tab-line-highlight                           :foreground base05 :background base01)))
+     (tab-line-highlight                           :distant-foreground base05 :background base02)))
 
   ;; Anything leftover that doesn't fall neatly into a face goes here.
   (let ((base00 (plist-get theme-colors :base00))
