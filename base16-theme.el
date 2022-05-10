@@ -3,7 +3,7 @@
 ;; Author: Kaleb Elwert <belak@coded.io>
 ;;         Neil Bhakta
 ;; Maintainer: Kaleb Elwert <belak@coded.io>
-;; Version: 1.1
+;; Version: 2.4
 ;; Homepage: https://github.com/belak/base16-emacs
 
 ;;; Commentary:
@@ -355,7 +355,7 @@ return the actual color value.  Otherwise return the value unchanged."
 
 ;;;; dired
      (dired-filetype-plain                         :foreground base05 :background base00)
-     
+
 ;;;; dired+
      (diredp-compressed-file-suffix                :foreground base0D)
      (diredp-dir-heading                           :foreground nil :background nil :inherit heading)
