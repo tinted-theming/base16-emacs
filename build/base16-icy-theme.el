@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-icy-colors
+(defvar base16-icy-theme-colors
   '(:base00 "#021012"
     :base01 "#031619"
     :base02 "#041f23"
@@ -34,7 +34,7 @@
 (deftheme base16-icy)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-icy base16-icy-colors)
+(base16-theme-define 'base16-icy base16-icy-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-icy)

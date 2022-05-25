@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-phd-colors
+(defvar base16-phd-theme-colors
   '(:base00 "#061229"
     :base01 "#2a3448"
     :base02 "#4d5666"
@@ -34,7 +34,7 @@
 (deftheme base16-phd)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-phd base16-phd-colors)
+(base16-theme-define 'base16-phd base16-phd-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-phd)

@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-rose-pine-moon-colors
+(defvar base16-rose-pine-moon-theme-colors
   '(:base00 "#232136"
     :base01 "#2a273f"
     :base02 "#393552"
@@ -34,7 +34,7 @@
 (deftheme base16-rose-pine-moon)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-rose-pine-moon base16-rose-pine-moon-colors)
+(base16-theme-define 'base16-rose-pine-moon base16-rose-pine-moon-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-rose-pine-moon)

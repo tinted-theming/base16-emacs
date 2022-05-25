@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-woodland-colors
+(defvar base16-woodland-theme-colors
   '(:base00 "#231e18"
     :base01 "#302b25"
     :base02 "#48413a"
@@ -34,7 +34,7 @@
 (deftheme base16-woodland)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-woodland base16-woodland-colors)
+(base16-theme-define 'base16-woodland base16-woodland-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-woodland)

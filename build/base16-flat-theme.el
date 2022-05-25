@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-flat-colors
+(defvar base16-flat-theme-colors
   '(:base00 "#2c3e50"
     :base01 "#34495e"
     :base02 "#7f8c8d"
@@ -34,7 +34,7 @@
 (deftheme base16-flat)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-flat base16-flat-colors)
+(base16-theme-define 'base16-flat base16-flat-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-flat)

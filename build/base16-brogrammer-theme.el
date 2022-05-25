@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-brogrammer-colors
+(defvar base16-brogrammer-theme-colors
   '(:base00 "#1f1f1f"
     :base01 "#f81118"
     :base02 "#2dc55e"
@@ -34,7 +34,7 @@
 (deftheme base16-brogrammer)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-brogrammer base16-brogrammer-colors)
+(base16-theme-define 'base16-brogrammer base16-brogrammer-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-brogrammer)

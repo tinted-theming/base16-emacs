@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-atlas-colors
+(defvar base16-atlas-theme-colors
   '(:base00 "#002635"
     :base01 "#00384d"
     :base02 "#517f8d"
@@ -34,7 +34,7 @@
 (deftheme base16-atlas)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-atlas base16-atlas-colors)
+(base16-theme-define 'base16-atlas base16-atlas-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-atlas)

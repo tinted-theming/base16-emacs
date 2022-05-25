@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-atelier-savanna-colors
+(defvar base16-atelier-savanna-theme-colors
   '(:base00 "#171c19"
     :base01 "#232a25"
     :base02 "#526057"
@@ -34,7 +34,7 @@
 (deftheme base16-atelier-savanna)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-atelier-savanna base16-atelier-savanna-colors)
+(base16-theme-define 'base16-atelier-savanna base16-atelier-savanna-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-atelier-savanna)

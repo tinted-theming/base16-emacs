@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-apprentice-colors
+(defvar base16-apprentice-theme-colors
   '(:base00 "#262626"
     :base01 "#303030"
     :base02 "#333333"
@@ -34,7 +34,7 @@
 (deftheme base16-apprentice)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-apprentice base16-apprentice-colors)
+(base16-theme-define 'base16-apprentice base16-apprentice-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-apprentice)

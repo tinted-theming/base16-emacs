@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-solarflare-colors
+(defvar base16-solarflare-theme-colors
   '(:base00 "#18262f"
     :base01 "#222e38"
     :base02 "#586875"
@@ -34,7 +34,7 @@
 (deftheme base16-solarflare)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-solarflare base16-solarflare-colors)
+(base16-theme-define 'base16-solarflare base16-solarflare-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-solarflare)

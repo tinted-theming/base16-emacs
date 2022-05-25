@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-brewer-colors
+(defvar base16-brewer-theme-colors
   '(:base00 "#0c0d0e"
     :base01 "#2e2f30"
     :base02 "#515253"
@@ -34,7 +34,7 @@
 (deftheme base16-brewer)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-brewer base16-brewer-colors)
+(base16-theme-define 'base16-brewer base16-brewer-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-brewer)

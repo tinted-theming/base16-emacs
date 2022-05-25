@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-cupcake-colors
+(defvar base16-cupcake-theme-colors
   '(:base00 "#fbf1f2"
     :base01 "#f2f1f4"
     :base02 "#d8d5dd"
@@ -34,7 +34,7 @@
 (deftheme base16-cupcake)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-cupcake base16-cupcake-colors)
+(base16-theme-define 'base16-cupcake base16-cupcake-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-cupcake)

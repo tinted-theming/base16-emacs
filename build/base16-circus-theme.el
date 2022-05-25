@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-circus-colors
+(defvar base16-circus-theme-colors
   '(:base00 "#191919"
     :base01 "#202020"
     :base02 "#303030"
@@ -34,7 +34,7 @@
 (deftheme base16-circus)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-circus base16-circus-colors)
+(base16-theme-define 'base16-circus base16-circus-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-circus)

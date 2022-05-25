@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-helios-colors
+(defvar base16-helios-theme-colors
   '(:base00 "#1d2021"
     :base01 "#383c3e"
     :base02 "#53585b"
@@ -34,7 +34,7 @@
 (deftheme base16-helios)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-helios base16-helios-colors)
+(base16-theme-define 'base16-helios base16-helios-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-helios)

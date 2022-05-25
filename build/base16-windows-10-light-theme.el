@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-windows-10-light-colors
+(defvar base16-windows-10-light-theme-colors
   '(:base00 "#f2f2f2"
     :base01 "#e5e5e5"
     :base02 "#d9d9d9"
@@ -34,7 +34,7 @@
 (deftheme base16-windows-10-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-windows-10-light base16-windows-10-light-colors)
+(base16-theme-define 'base16-windows-10-light base16-windows-10-light-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-windows-10-light)

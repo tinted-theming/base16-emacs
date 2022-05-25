@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-porple-colors
+(defvar base16-porple-theme-colors
   '(:base00 "#292c36"
     :base01 "#333344"
     :base02 "#474160"
@@ -34,7 +34,7 @@
 (deftheme base16-porple)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-porple base16-porple-colors)
+(base16-theme-define 'base16-porple base16-porple-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-porple)

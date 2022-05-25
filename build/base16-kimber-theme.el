@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-kimber-colors
+(defvar base16-kimber-theme-colors
   '(:base00 "#222222"
     :base01 "#313131"
     :base02 "#555d55"
@@ -34,7 +34,7 @@
 (deftheme base16-kimber)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-kimber base16-kimber-colors)
+(base16-theme-define 'base16-kimber base16-kimber-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-kimber)

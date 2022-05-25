@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-classic-light-colors
+(defvar base16-classic-light-theme-colors
   '(:base00 "#f5f5f5"
     :base01 "#e0e0e0"
     :base02 "#d0d0d0"
@@ -34,7 +34,7 @@
 (deftheme base16-classic-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-classic-light base16-classic-light-colors)
+(base16-theme-define 'base16-classic-light base16-classic-light-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-classic-light)

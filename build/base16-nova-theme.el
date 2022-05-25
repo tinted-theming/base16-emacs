@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-nova-colors
+(defvar base16-nova-theme-colors
   '(:base00 "#3c4c55"
     :base01 "#556873"
     :base02 "#6a7d89"
@@ -34,7 +34,7 @@
 (deftheme base16-nova)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-nova base16-nova-colors)
+(base16-theme-define 'base16-nova base16-nova-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-nova)

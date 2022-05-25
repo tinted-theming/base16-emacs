@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-bespin-colors
+(defvar base16-bespin-theme-colors
   '(:base00 "#28211c"
     :base01 "#36312e"
     :base02 "#5e5d5c"
@@ -34,7 +34,7 @@
 (deftheme base16-bespin)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-bespin base16-bespin-colors)
+(base16-theme-define 'base16-bespin base16-bespin-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-bespin)

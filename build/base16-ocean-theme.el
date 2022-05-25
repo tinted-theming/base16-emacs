@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-ocean-colors
+(defvar base16-ocean-theme-colors
   '(:base00 "#2b303b"
     :base01 "#343d46"
     :base02 "#4f5b66"
@@ -34,7 +34,7 @@
 (deftheme base16-ocean)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-ocean base16-ocean-colors)
+(base16-theme-define 'base16-ocean base16-ocean-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-ocean)

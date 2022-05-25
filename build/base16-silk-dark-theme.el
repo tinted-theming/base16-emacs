@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-silk-dark-colors
+(defvar base16-silk-dark-theme-colors
   '(:base00 "#0e3c46"
     :base01 "#1d494e"
     :base02 "#2a5054"
@@ -34,7 +34,7 @@
 (deftheme base16-silk-dark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-silk-dark base16-silk-dark-colors)
+(base16-theme-define 'base16-silk-dark base16-silk-dark-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-silk-dark)

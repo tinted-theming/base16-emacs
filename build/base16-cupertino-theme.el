@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-cupertino-colors
+(defvar base16-cupertino-theme-colors
   '(:base00 "#ffffff"
     :base01 "#c0c0c0"
     :base02 "#c0c0c0"
@@ -34,7 +34,7 @@
 (deftheme base16-cupertino)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-cupertino base16-cupertino-colors)
+(base16-theme-define 'base16-cupertino base16-cupertino-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-cupertino)

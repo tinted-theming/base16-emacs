@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-sagelight-colors
+(defvar base16-sagelight-theme-colors
   '(:base00 "#f8f8f8"
     :base01 "#e8e8e8"
     :base02 "#d8d8d8"
@@ -34,7 +34,7 @@
 (deftheme base16-sagelight)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-sagelight base16-sagelight-colors)
+(base16-theme-define 'base16-sagelight base16-sagelight-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-sagelight)

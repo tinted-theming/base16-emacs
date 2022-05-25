@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-onedark-colors
+(defvar base16-onedark-theme-colors
   '(:base00 "#282c34"
     :base01 "#353b45"
     :base02 "#3e4451"
@@ -34,7 +34,7 @@
 (deftheme base16-onedark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-onedark base16-onedark-colors)
+(base16-theme-define 'base16-onedark base16-onedark-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-onedark)

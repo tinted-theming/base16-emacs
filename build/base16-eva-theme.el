@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-eva-colors
+(defvar base16-eva-theme-colors
   '(:base00 "#2a3b4d"
     :base01 "#3d566f"
     :base02 "#4b6988"
@@ -34,7 +34,7 @@
 (deftheme base16-eva)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-eva base16-eva-colors)
+(base16-theme-define 'base16-eva base16-eva-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-eva)

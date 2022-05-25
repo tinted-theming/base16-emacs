@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-atelier-heath-colors
+(defvar base16-atelier-heath-theme-colors
   '(:base00 "#1b181b"
     :base01 "#292329"
     :base02 "#695d69"
@@ -34,7 +34,7 @@
 (deftheme base16-atelier-heath)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-atelier-heath base16-atelier-heath-colors)
+(base16-theme-define 'base16-atelier-heath base16-atelier-heath-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-atelier-heath)

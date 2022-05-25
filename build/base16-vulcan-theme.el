@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-vulcan-colors
+(defvar base16-vulcan-theme-colors
   '(:base00 "#041523"
     :base01 "#122339"
     :base02 "#003552"
@@ -34,7 +34,7 @@
 (deftheme base16-vulcan)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-vulcan base16-vulcan-colors)
+(base16-theme-define 'base16-vulcan base16-vulcan-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-vulcan)

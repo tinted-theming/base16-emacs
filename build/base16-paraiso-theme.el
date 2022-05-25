@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-paraiso-colors
+(defvar base16-paraiso-theme-colors
   '(:base00 "#2f1e2e"
     :base01 "#41323f"
     :base02 "#4f424c"
@@ -34,7 +34,7 @@
 (deftheme base16-paraiso)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-paraiso base16-paraiso-colors)
+(base16-theme-define 'base16-paraiso base16-paraiso-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-paraiso)

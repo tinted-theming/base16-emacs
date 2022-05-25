@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-marrakesh-colors
+(defvar base16-marrakesh-theme-colors
   '(:base00 "#201602"
     :base01 "#302e00"
     :base02 "#5f5b17"
@@ -34,7 +34,7 @@
 (deftheme base16-marrakesh)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-marrakesh base16-marrakesh-colors)
+(base16-theme-define 'base16-marrakesh base16-marrakesh-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-marrakesh)

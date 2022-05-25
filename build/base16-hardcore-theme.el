@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-hardcore-colors
+(defvar base16-hardcore-theme-colors
   '(:base00 "#212121"
     :base01 "#303030"
     :base02 "#353535"
@@ -34,7 +34,7 @@
 (deftheme base16-hardcore)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-hardcore base16-hardcore-colors)
+(base16-theme-define 'base16-hardcore base16-hardcore-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-hardcore)

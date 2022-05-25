@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-black-metal-burzum-colors
+(defvar base16-black-metal-burzum-theme-colors
   '(:base00 "#000000"
     :base01 "#121212"
     :base02 "#222222"
@@ -34,7 +34,7 @@
 (deftheme base16-black-metal-burzum)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-black-metal-burzum base16-black-metal-burzum-colors)
+(base16-theme-define 'base16-black-metal-burzum base16-black-metal-burzum-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-black-metal-burzum)

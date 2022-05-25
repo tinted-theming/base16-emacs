@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-spacemacs-colors
+(defvar base16-spacemacs-theme-colors
   '(:base00 "#1f2022"
     :base01 "#282828"
     :base02 "#444155"
@@ -34,7 +34,7 @@
 (deftheme base16-spacemacs)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-spacemacs base16-spacemacs-colors)
+(base16-theme-define 'base16-spacemacs base16-spacemacs-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-spacemacs)

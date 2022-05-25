@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-material-vivid-colors
+(defvar base16-material-vivid-theme-colors
   '(:base00 "#202124"
     :base01 "#27292c"
     :base02 "#323639"
@@ -34,7 +34,7 @@
 (deftheme base16-material-vivid)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-material-vivid base16-material-vivid-colors)
+(base16-theme-define 'base16-material-vivid base16-material-vivid-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-material-vivid)

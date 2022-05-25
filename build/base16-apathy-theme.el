@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-apathy-colors
+(defvar base16-apathy-theme-colors
   '(:base00 "#031a16"
     :base01 "#0b342d"
     :base02 "#184e45"
@@ -34,7 +34,7 @@
 (deftheme base16-apathy)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-apathy base16-apathy-colors)
+(base16-theme-define 'base16-apathy base16-apathy-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-apathy)

@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-humanoid-dark-colors
+(defvar base16-humanoid-dark-theme-colors
   '(:base00 "#232629"
     :base01 "#333b3d"
     :base02 "#484e54"
@@ -34,7 +34,7 @@
 (deftheme base16-humanoid-dark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-humanoid-dark base16-humanoid-dark-colors)
+(base16-theme-define 'base16-humanoid-dark base16-humanoid-dark-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-humanoid-dark)

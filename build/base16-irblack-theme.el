@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-irblack-colors
+(defvar base16-irblack-theme-colors
   '(:base00 "#000000"
     :base01 "#242422"
     :base02 "#484844"
@@ -34,7 +34,7 @@
 (deftheme base16-irblack)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-irblack base16-irblack-colors)
+(base16-theme-define 'base16-irblack base16-irblack-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-irblack)

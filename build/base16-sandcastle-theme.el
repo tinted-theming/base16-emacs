@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-sandcastle-colors
+(defvar base16-sandcastle-theme-colors
   '(:base00 "#282c34"
     :base01 "#2c323b"
     :base02 "#3e4451"
@@ -34,7 +34,7 @@
 (deftheme base16-sandcastle)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-sandcastle base16-sandcastle-colors)
+(base16-theme-define 'base16-sandcastle base16-sandcastle-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-sandcastle)

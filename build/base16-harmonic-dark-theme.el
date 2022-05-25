@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-harmonic-dark-colors
+(defvar base16-harmonic-dark-theme-colors
   '(:base00 "#0b1c2c"
     :base01 "#223b54"
     :base02 "#405c79"
@@ -34,7 +34,7 @@
 (deftheme base16-harmonic-dark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-harmonic-dark base16-harmonic-dark-colors)
+(base16-theme-define 'base16-harmonic-dark base16-harmonic-dark-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-harmonic-dark)

@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-atelier-dune-light-colors
+(defvar base16-atelier-dune-light-theme-colors
   '(:base00 "#fefbec"
     :base01 "#e8e4cf"
     :base02 "#a6a28c"
@@ -34,7 +34,7 @@
 (deftheme base16-atelier-dune-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-atelier-dune-light base16-atelier-dune-light-colors)
+(base16-theme-define 'base16-atelier-dune-light base16-atelier-dune-light-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-atelier-dune-light)

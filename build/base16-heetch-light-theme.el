@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-heetch-light-colors
+(defvar base16-heetch-light-theme-colors
   '(:base00 "#feffff"
     :base01 "#392551"
     :base02 "#7b6d8b"
@@ -34,7 +34,7 @@
 (deftheme base16-heetch-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-heetch-light base16-heetch-light-colors)
+(base16-theme-define 'base16-heetch-light base16-heetch-light-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-heetch-light)

@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-equilibrium-gray-light-colors
+(defvar base16-equilibrium-gray-light-theme-colors
   '(:base00 "#f1f1f1"
     :base01 "#e2e2e2"
     :base02 "#d4d4d4"
@@ -34,7 +34,7 @@
 (deftheme base16-equilibrium-gray-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-equilibrium-gray-light base16-equilibrium-gray-light-colors)
+(base16-theme-define 'base16-equilibrium-gray-light base16-equilibrium-gray-light-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-equilibrium-gray-light)

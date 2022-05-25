@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-papercolor-light-colors
+(defvar base16-papercolor-light-theme-colors
   '(:base00 "#eeeeee"
     :base01 "#af0000"
     :base02 "#008700"
@@ -34,7 +34,7 @@
 (deftheme base16-papercolor-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-papercolor-light base16-papercolor-light-colors)
+(base16-theme-define 'base16-papercolor-light base16-papercolor-light-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-papercolor-light)

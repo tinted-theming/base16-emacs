@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-brushtrees-dark-colors
+(defvar base16-brushtrees-dark-theme-colors
   '(:base00 "#485867"
     :base01 "#5a6d7a"
     :base02 "#6d828e"
@@ -34,7 +34,7 @@
 (deftheme base16-brushtrees-dark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-brushtrees-dark base16-brushtrees-dark-colors)
+(base16-theme-define 'base16-brushtrees-dark base16-brushtrees-dark-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-brushtrees-dark)

@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-classic-dark-colors
+(defvar base16-classic-dark-theme-colors
   '(:base00 "#151515"
     :base01 "#202020"
     :base02 "#303030"
@@ -34,7 +34,7 @@
 (deftheme base16-classic-dark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-classic-dark base16-classic-dark-colors)
+(base16-theme-define 'base16-classic-dark base16-classic-dark-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-classic-dark)

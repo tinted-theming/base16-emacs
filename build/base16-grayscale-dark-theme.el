@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-grayscale-dark-colors
+(defvar base16-grayscale-dark-theme-colors
   '(:base00 "#101010"
     :base01 "#252525"
     :base02 "#464646"
@@ -34,7 +34,7 @@
 (deftheme base16-grayscale-dark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-grayscale-dark base16-grayscale-dark-colors)
+(base16-theme-define 'base16-grayscale-dark base16-grayscale-dark-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-grayscale-dark)

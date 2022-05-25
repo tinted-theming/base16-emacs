@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-darkviolet-colors
+(defvar base16-darkviolet-theme-colors
   '(:base00 "#000000"
     :base01 "#231a40"
     :base02 "#432d59"
@@ -34,7 +34,7 @@
 (deftheme base16-darkviolet)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-darkviolet base16-darkviolet-colors)
+(base16-theme-define 'base16-darkviolet base16-darkviolet-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-darkviolet)

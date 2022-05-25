@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-material-lighter-colors
+(defvar base16-material-lighter-theme-colors
   '(:base00 "#fafafa"
     :base01 "#e7eaec"
     :base02 "#cceae7"
@@ -34,7 +34,7 @@
 (deftheme base16-material-lighter)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-material-lighter base16-material-lighter-colors)
+(base16-theme-define 'base16-material-lighter base16-material-lighter-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-material-lighter)

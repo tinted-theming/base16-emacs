@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-gigavolt-colors
+(defvar base16-gigavolt-theme-colors
   '(:base00 "#202126"
     :base01 "#2d303d"
     :base02 "#5a576e"
@@ -34,7 +34,7 @@
 (deftheme base16-gigavolt)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-gigavolt base16-gigavolt-colors)
+(base16-theme-define 'base16-gigavolt base16-gigavolt-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-gigavolt)
