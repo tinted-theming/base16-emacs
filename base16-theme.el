@@ -1,14 +1,14 @@
-;; base16-theme.el -- base16 themes for emacs
+;;; base16-theme.el --- A set of base16 themes for your favorite editor
 
 ;; Author: Kaleb Elwert <belak@coded.io>
 ;;         Neil Bhakta
 ;; Maintainer: Kaleb Elwert <belak@coded.io>
-;; Version: 1.1
-;; Homepage: https://github.com/belak/base16-emacs
+;; Version: 2.0
+;; Homepage: https://github.com/base16-project/base16-emacs
 
 ;;; Commentary:
 ;; base16-theme is a collection of themes built around the base16
-;; concept (https://github.com/chriskempson/base16).  All themes are
+;; concept (https://github.com/base16-project/base16).  All themes are
 ;; generated from the official set of color schemes and the templates
 ;; which are included in this repo.
 
@@ -29,13 +29,13 @@ Note that this needs to be set before themes are loaded or it will not work."
                 (const :tag "Colors" colors))
   :group 'base16)
 
-(defcustom base16-distinct-fringe-background t
+(defcustom base16-theme-distinct-fringe-background t
   "Make the fringe background different from the normal background color.
 Also affects `linum-mode' background."
   :type 'boolean
   :group 'base16)
 
-(defcustom base16-highlight-mode-line nil
+(defcustom base16-theme-highlight-mode-line nil
   "Make the active mode line stand out more.
 
 There are two choices for applying the emphasis:
@@ -48,7 +48,7 @@ There are two choices for applying the emphasis:
                 (const :tag "Contrast" contrast))
   :group 'base16)
 
-(defvar base16-shell-colors
+(defvar base16-theme-shell-colors
   '(:base00 "black"
     :base01 "brightgreen"
     :base02 "brightyellow"
@@ -71,7 +71,7 @@ These mappings are based on the xresources themes.  If you're
 using a different terminal color scheme, you may want to look for
 an alternate theme for use in the terminal.")
 
-(defvar base16-shell-colors-256
+(defvar base16-theme-shell-colors-256
   '(:base00 "black"
     :base01 "color-18"
     :base02 "color-19"
@@ -95,7 +95,7 @@ the base16-shell code.  If you're using a different terminal
 color scheme, you may want to look for an alternate theme for use
 in the terminal.")
 
-(defun base16-transform-color-key (key colors)
+(defun base16-theme-transform-color-key (key colors)
   "Transform a given color `KEY' into a theme color using `COLORS'.
 
 This function is meant for transforming symbols to valid colors.
@@ -106,17 +106,17 @@ return the actual color value.  Otherwise return the value unchanged."
       (cond
 
        ((string= (symbol-name key) "base16-settings-fringe-bg")
-        (if base16-distinct-fringe-background
+        (if base16-theme-distinct-fringe-background
             (plist-get colors :base01)
 		  (plist-get colors :base00)))
 
 	   ((string= (symbol-name key) "base16-settings-mode-line-box")
-		(if (eq base16-highlight-mode-line 'box)
+		(if (eq base16-theme-highlight-mode-line 'box)
 			(list :line-width 1 :color (plist-get colors :base04))
 		  nil))
 
 	   ((string= (symbol-name key) "base16-settings-mode-line-fg")
-		(if (eq base16-highlight-mode-line 'contrast)
+		(if (eq base16-theme-highlight-mode-line 'contrast)
 			(plist-get colors :base05)
 		  (plist-get colors :base04)))
 
@@ -128,17 +128,17 @@ return the actual color value.  Otherwise return the value unchanged."
     key))
 
 
-(defun base16-transform-spec (spec colors)
+(defun base16-theme-transform-spec (spec colors)
   "Transform a theme `SPEC' into a face spec using `COLORS'."
   (let ((output))
     (while spec
       (let* ((key (car spec))
-             (value (base16-transform-color-key (cadr spec) colors)))
+             (value (base16-theme-transform-color-key (cadr spec) colors)))
 
         ;; Append the transformed element
         (cond
          ((and (memq key '(:box :underline)) (listp value))
-          (setq output (append output (list key (base16-transform-spec value colors)))))
+          (setq output (append output (list key (base16-theme-transform-spec value colors)))))
          (t
           (setq output (append output (list key value))))))
 
@@ -148,38 +148,38 @@ return the actual color value.  Otherwise return the value unchanged."
     ;; Return the transformed spec
     output))
 
-(defun base16-transform-face (spec colors)
+(defun base16-theme-transform-face (spec colors)
   "Transform a face `SPEC' into an Emacs theme face definition using `COLORS'."
   (let* ((face             (car spec))
          (definition       (cdr spec))
          (shell-colors-256 (pcase base16-theme-256-color-source
-                             ('terminal      base16-shell-colors)
-                             ("terminal"     base16-shell-colors)
-                             ('base16-shell  base16-shell-colors-256)
-                             ("base16-shell" base16-shell-colors-256)
+                             ('terminal      base16-theme-shell-colors)
+                             ("terminal"     base16-theme-shell-colors)
+                             ('base16-shell  base16-theme-shell-colors-256)
+                             ("base16-shell" base16-theme-shell-colors-256)
                              ('colors        colors)
                              ("colors"       colors)
-                             (_              base16-shell-colors))))
+                             (_              base16-theme-shell-colors))))
 
     ;; This is a list of fallbacks to make us select the sanest option possible.
     ;; If there's a graphical terminal, we use the actual colors. If it's not
     ;; graphical, the terminal supports 256 colors, and the user enables it, we
     ;; use the base16-shell colors. Otherwise, we fall back to the basic
     ;; xresources colors.
-    (list face `((((type graphic))   ,(base16-transform-spec definition colors))
-                 (((min-colors 256)) ,(base16-transform-spec definition shell-colors-256))
-                 (t                  ,(base16-transform-spec definition base16-shell-colors))))))
+    (list face `((((type graphic))   ,(base16-theme-transform-spec definition colors))
+                 (((min-colors 256)) ,(base16-theme-transform-spec definition shell-colors-256))
+                 (t                  ,(base16-theme-transform-spec definition base16-theme-shell-colors))))))
 
-(defun base16-set-faces (theme-name colors faces)
-  "Define the important part of `THEME-NAME' using `COLORS' to map the `FACES' to actual colors."
+(defun base16-theme-set-faces (theme-name colors faces)
+  "Define `THEME-NAME' using `COLORS' to map the `FACES' to actual colors."
   (apply 'custom-theme-set-faces theme-name
          (mapcar #'(lambda (face)
-                     (base16-transform-face face colors))
+                     (base16-theme-transform-face face colors))
                  faces)))
 
 (defun base16-theme-define (theme-name theme-colors)
-  "Define the faces for a base16 colorscheme given a `THEME-NAME' and a plist of `THEME-COLORS'."
-  (base16-set-faces
+  "Define colorscheme faces given a `THEME-NAME' and a plist of `THEME-COLORS'."
+  (base16-theme-set-faces
    theme-name
    theme-colors
 
@@ -355,7 +355,7 @@ return the actual color value.  Otherwise return the value unchanged."
 
 ;;;; dired
      (dired-filetype-plain                         :foreground base05 :background base00)
-     
+
 ;;;; dired+
      (diredp-compressed-file-suffix                :foreground base0D)
      (diredp-dir-heading                           :foreground nil :background nil :inherit heading)
