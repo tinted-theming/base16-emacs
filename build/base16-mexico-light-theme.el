@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-mexico-light-colors
+(defvar base16-mexico-light-theme-colors
   '(:base00 "#f8f8f8"
     :base01 "#e8e8e8"
     :base02 "#d8d8d8"
@@ -34,7 +34,7 @@
 (deftheme base16-mexico-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-mexico-light base16-mexico-light-colors)
+(base16-theme-define 'base16-mexico-light base16-mexico-light-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-mexico-light)

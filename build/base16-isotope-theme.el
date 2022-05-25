@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-isotope-colors
+(defvar base16-isotope-theme-colors
   '(:base00 "#000000"
     :base01 "#404040"
     :base02 "#606060"
@@ -34,7 +34,7 @@
 (deftheme base16-isotope)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-isotope base16-isotope-colors)
+(base16-theme-define 'base16-isotope base16-isotope-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-isotope)

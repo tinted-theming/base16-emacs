@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-framer-colors
+(defvar base16-framer-theme-colors
   '(:base00 "#181818"
     :base01 "#151515"
     :base02 "#464646"
@@ -34,7 +34,7 @@
 (deftheme base16-framer)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-framer base16-framer-colors)
+(base16-theme-define 'base16-framer base16-framer-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-framer)

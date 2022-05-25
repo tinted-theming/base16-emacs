@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-dracula-colors
+(defvar base16-dracula-theme-colors
   '(:base00 "#282936"
     :base01 "#3a3c4e"
     :base02 "#4d4f68"
@@ -34,7 +34,7 @@
 (deftheme base16-dracula)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-dracula base16-dracula-colors)
+(base16-theme-define 'base16-dracula base16-dracula-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-dracula)

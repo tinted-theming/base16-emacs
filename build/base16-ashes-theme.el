@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-ashes-colors
+(defvar base16-ashes-theme-colors
   '(:base00 "#1c2023"
     :base01 "#393f45"
     :base02 "#565e65"
@@ -34,7 +34,7 @@
 (deftheme base16-ashes)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-ashes base16-ashes-colors)
+(base16-theme-define 'base16-ashes base16-ashes-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-ashes)

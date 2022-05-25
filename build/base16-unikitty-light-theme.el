@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-unikitty-light-colors
+(defvar base16-unikitty-light-theme-colors
   '(:base00 "#ffffff"
     :base01 "#e1e1e2"
     :base02 "#c4c3c5"
@@ -34,7 +34,7 @@
 (deftheme base16-unikitty-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-unikitty-light base16-unikitty-light-colors)
+(base16-theme-define 'base16-unikitty-light base16-unikitty-light-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-unikitty-light)

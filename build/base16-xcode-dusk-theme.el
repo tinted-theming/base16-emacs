@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-xcode-dusk-colors
+(defvar base16-xcode-dusk-theme-colors
   '(:base00 "#282b35"
     :base01 "#3d4048"
     :base02 "#53555d"
@@ -34,7 +34,7 @@
 (deftheme base16-xcode-dusk)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-xcode-dusk base16-xcode-dusk-colors)
+(base16-theme-define 'base16-xcode-dusk base16-xcode-dusk-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-xcode-dusk)

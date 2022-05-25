@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-tube-colors
+(defvar base16-tube-theme-colors
   '(:base00 "#231f20"
     :base01 "#1c3f95"
     :base02 "#5a5758"
@@ -34,7 +34,7 @@
 (deftheme base16-tube)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-tube base16-tube-colors)
+(base16-theme-define 'base16-tube base16-tube-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-tube)

@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-material-darker-colors
+(defvar base16-material-darker-theme-colors
   '(:base00 "#212121"
     :base01 "#303030"
     :base02 "#353535"
@@ -34,7 +34,7 @@
 (deftheme base16-material-darker)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-material-darker base16-material-darker-colors)
+(base16-theme-define 'base16-material-darker base16-material-darker-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-material-darker)

@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-rose-pine-dawn-colors
+(defvar base16-rose-pine-dawn-theme-colors
   '(:base00 "#faf4ed"
     :base01 "#fffaf3"
     :base02 "#f2e9de"
@@ -34,7 +34,7 @@
 (deftheme base16-rose-pine-dawn)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-rose-pine-dawn base16-rose-pine-dawn-colors)
+(base16-theme-define 'base16-rose-pine-dawn base16-rose-pine-dawn-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-rose-pine-dawn)

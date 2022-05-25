@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-embers-colors
+(defvar base16-embers-theme-colors
   '(:base00 "#16130f"
     :base01 "#2c2620"
     :base02 "#433b32"
@@ -34,7 +34,7 @@
 (deftheme base16-embers)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-embers base16-embers-colors)
+(base16-theme-define 'base16-embers base16-embers-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-embers)

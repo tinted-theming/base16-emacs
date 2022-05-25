@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-railscasts-colors
+(defvar base16-railscasts-theme-colors
   '(:base00 "#2b2b2b"
     :base01 "#272935"
     :base02 "#3a4055"
@@ -34,7 +34,7 @@
 (deftheme base16-railscasts)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-railscasts base16-railscasts-colors)
+(base16-theme-define 'base16-railscasts base16-railscasts-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-railscasts)

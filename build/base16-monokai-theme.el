@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-monokai-colors
+(defvar base16-monokai-theme-colors
   '(:base00 "#272822"
     :base01 "#383830"
     :base02 "#49483e"
@@ -34,7 +34,7 @@
 (deftheme base16-monokai)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-monokai base16-monokai-colors)
+(base16-theme-define 'base16-monokai base16-monokai-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-monokai)

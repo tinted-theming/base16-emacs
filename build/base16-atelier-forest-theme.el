@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-atelier-forest-colors
+(defvar base16-atelier-forest-theme-colors
   '(:base00 "#1b1918"
     :base01 "#2c2421"
     :base02 "#68615e"
@@ -34,7 +34,7 @@
 (deftheme base16-atelier-forest)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-atelier-forest base16-atelier-forest-colors)
+(base16-theme-define 'base16-atelier-forest base16-atelier-forest-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-atelier-forest)

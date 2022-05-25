@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-{{scheme-slug}}-colors
+(defvar base16-{{scheme-slug}}-theme-colors
   '(:base00 "#{{base00-hex}}"
     :base01 "#{{base01-hex}}"
     :base02 "#{{base02-hex}}"
@@ -34,7 +34,7 @@
 (deftheme base16-{{scheme-slug}})
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-{{scheme-slug}} base16-{{scheme-slug}}-colors)
+(base16-theme-define 'base16-{{scheme-slug}} base16-{{scheme-slug}}-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-{{scheme-slug}})

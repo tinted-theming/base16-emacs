@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-gruvbox-dark-medium-colors
+(defvar base16-gruvbox-dark-medium-theme-colors
   '(:base00 "#282828"
     :base01 "#3c3836"
     :base02 "#504945"
@@ -34,7 +34,7 @@
 (deftheme base16-gruvbox-dark-medium)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-gruvbox-dark-medium base16-gruvbox-dark-medium-colors)
+(base16-theme-define 'base16-gruvbox-dark-medium base16-gruvbox-dark-medium-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-gruvbox-dark-medium)

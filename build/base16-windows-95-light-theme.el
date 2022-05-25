@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-windows-95-light-colors
+(defvar base16-windows-95-light-theme-colors
   '(:base00 "#fcfcfc"
     :base01 "#e0e0e0"
     :base02 "#c4c4c4"
@@ -34,7 +34,7 @@
 (deftheme base16-windows-95-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-windows-95-light base16-windows-95-light-colors)
+(base16-theme-define 'base16-windows-95-light base16-windows-95-light-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-windows-95-light)

@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-unikitty-dark-colors
+(defvar base16-unikitty-dark-theme-colors
   '(:base00 "#2e2a31"
     :base01 "#4a464d"
     :base02 "#666369"
@@ -34,7 +34,7 @@
 (deftheme base16-unikitty-dark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-unikitty-dark base16-unikitty-dark-colors)
+(base16-theme-define 'base16-unikitty-dark base16-unikitty-dark-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-unikitty-dark)

@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-windows-nt-colors
+(defvar base16-windows-nt-theme-colors
   '(:base00 "#000000"
     :base01 "#2a2a2a"
     :base02 "#555555"
@@ -34,7 +34,7 @@
 (deftheme base16-windows-nt)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-windows-nt base16-windows-nt-colors)
+(base16-theme-define 'base16-windows-nt base16-windows-nt-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-windows-nt)

@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-mocha-colors
+(defvar base16-mocha-theme-colors
   '(:base00 "#3b3228"
     :base01 "#534636"
     :base02 "#645240"
@@ -34,7 +34,7 @@
 (deftheme base16-mocha)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-mocha base16-mocha-colors)
+(base16-theme-define 'base16-mocha base16-mocha-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-mocha)

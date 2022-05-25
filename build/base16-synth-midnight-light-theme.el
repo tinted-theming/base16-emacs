@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-synth-midnight-light-colors
+(defvar base16-synth-midnight-light-theme-colors
   '(:base00 "#dddfe0"
     :base01 "#cfd1d2"
     :base02 "#c1c3c4"
@@ -34,7 +34,7 @@
 (deftheme base16-synth-midnight-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-synth-midnight-light base16-synth-midnight-light-colors)
+(base16-theme-define 'base16-synth-midnight-light base16-synth-midnight-light-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-synth-midnight-light)

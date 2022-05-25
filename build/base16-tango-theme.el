@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-tango-colors
+(defvar base16-tango-theme-colors
   '(:base00 "#2e3436"
     :base01 "#8ae234"
     :base02 "#fce94f"
@@ -34,7 +34,7 @@
 (deftheme base16-tango)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-tango base16-tango-colors)
+(base16-theme-define 'base16-tango base16-tango-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-tango)

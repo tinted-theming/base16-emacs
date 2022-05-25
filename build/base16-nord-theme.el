@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-nord-colors
+(defvar base16-nord-theme-colors
   '(:base00 "#2e3440"
     :base01 "#3b4252"
     :base02 "#434c5e"
@@ -34,7 +34,7 @@
 (deftheme base16-nord)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-nord base16-nord-colors)
+(base16-theme-define 'base16-nord base16-nord-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-nord)

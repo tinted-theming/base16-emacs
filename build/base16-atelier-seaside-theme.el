@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-atelier-seaside-colors
+(defvar base16-atelier-seaside-theme-colors
   '(:base00 "#131513"
     :base01 "#242924"
     :base02 "#5e6e5e"
@@ -34,7 +34,7 @@
 (deftheme base16-atelier-seaside)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-atelier-seaside base16-atelier-seaside-colors)
+(base16-theme-define 'base16-atelier-seaside base16-atelier-seaside-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-atelier-seaside)

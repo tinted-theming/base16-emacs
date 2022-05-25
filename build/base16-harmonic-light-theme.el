@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-harmonic-light-colors
+(defvar base16-harmonic-light-theme-colors
   '(:base00 "#f7f9fb"
     :base01 "#e5ebf1"
     :base02 "#cbd6e2"
@@ -34,7 +34,7 @@
 (deftheme base16-harmonic-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-harmonic-light base16-harmonic-light-colors)
+(base16-theme-define 'base16-harmonic-light base16-harmonic-light-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-harmonic-light)

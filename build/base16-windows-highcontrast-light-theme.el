@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-windows-highcontrast-light-colors
+(defvar base16-windows-highcontrast-light-theme-colors
   '(:base00 "#fcfcfc"
     :base01 "#e8e8e8"
     :base02 "#d4d4d4"
@@ -34,7 +34,7 @@
 (deftheme base16-windows-highcontrast-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-windows-highcontrast-light base16-windows-highcontrast-light-colors)
+(base16-theme-define 'base16-windows-highcontrast-light base16-windows-highcontrast-light-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-windows-highcontrast-light)

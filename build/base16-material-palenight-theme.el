@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-material-palenight-colors
+(defvar base16-material-palenight-theme-colors
   '(:base00 "#292d3e"
     :base01 "#444267"
     :base02 "#32374d"
@@ -34,7 +34,7 @@
 (deftheme base16-material-palenight)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-material-palenight base16-material-palenight-colors)
+(base16-theme-define 'base16-material-palenight base16-material-palenight-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-material-palenight)

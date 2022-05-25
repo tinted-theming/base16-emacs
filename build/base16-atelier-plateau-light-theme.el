@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-atelier-plateau-light-colors
+(defvar base16-atelier-plateau-light-theme-colors
   '(:base00 "#f4ecec"
     :base01 "#e7dfdf"
     :base02 "#8a8585"
@@ -34,7 +34,7 @@
 (deftheme base16-atelier-plateau-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-atelier-plateau-light base16-atelier-plateau-light-colors)
+(base16-theme-define 'base16-atelier-plateau-light base16-atelier-plateau-light-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-atelier-plateau-light)

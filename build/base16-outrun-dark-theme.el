@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-outrun-dark-colors
+(defvar base16-outrun-dark-theme-colors
   '(:base00 "#00002a"
     :base01 "#20204a"
     :base02 "#30305a"
@@ -34,7 +34,7 @@
 (deftheme base16-outrun-dark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-outrun-dark base16-outrun-dark-colors)
+(base16-theme-define 'base16-outrun-dark base16-outrun-dark-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-outrun-dark)

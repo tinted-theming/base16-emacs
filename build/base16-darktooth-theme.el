@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-darktooth-colors
+(defvar base16-darktooth-theme-colors
   '(:base00 "#1d2021"
     :base01 "#32302f"
     :base02 "#504945"
@@ -34,7 +34,7 @@
 (deftheme base16-darktooth)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-darktooth base16-darktooth-colors)
+(base16-theme-define 'base16-darktooth base16-darktooth-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-darktooth)

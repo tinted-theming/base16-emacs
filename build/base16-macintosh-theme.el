@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-macintosh-colors
+(defvar base16-macintosh-theme-colors
   '(:base00 "#000000"
     :base01 "#404040"
     :base02 "#404040"
@@ -34,7 +34,7 @@
 (deftheme base16-macintosh)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-macintosh base16-macintosh-colors)
+(base16-theme-define 'base16-macintosh base16-macintosh-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-macintosh)

@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-horizon-terminal-dark-colors
+(defvar base16-horizon-terminal-dark-theme-colors
   '(:base00 "#1c1e26"
     :base01 "#232530"
     :base02 "#2e303e"
@@ -34,7 +34,7 @@
 (deftheme base16-horizon-terminal-dark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-horizon-terminal-dark base16-horizon-terminal-dark-colors)
+(base16-theme-define 'base16-horizon-terminal-dark base16-horizon-terminal-dark-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-horizon-terminal-dark)

@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-solarized-dark-colors
+(defvar base16-solarized-dark-theme-colors
   '(:base00 "#002b36"
     :base01 "#073642"
     :base02 "#586e75"
@@ -34,7 +34,7 @@
 (deftheme base16-solarized-dark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-solarized-dark base16-solarized-dark-colors)
+(base16-theme-define 'base16-solarized-dark base16-solarized-dark-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-solarized-dark)

@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-fruit-soda-colors
+(defvar base16-fruit-soda-theme-colors
   '(:base00 "#f1ecf1"
     :base01 "#e0dee0"
     :base02 "#d8d5d5"
@@ -34,7 +34,7 @@
 (deftheme base16-fruit-soda)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-fruit-soda base16-fruit-soda-colors)
+(base16-theme-define 'base16-fruit-soda base16-fruit-soda-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-fruit-soda)

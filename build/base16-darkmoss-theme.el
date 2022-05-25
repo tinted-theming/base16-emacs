@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-darkmoss-colors
+(defvar base16-darkmoss-theme-colors
   '(:base00 "#171e1f"
     :base01 "#252c2d"
     :base02 "#373c3d"
@@ -34,7 +34,7 @@
 (deftheme base16-darkmoss)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-darkmoss base16-darkmoss-colors)
+(base16-theme-define 'base16-darkmoss base16-darkmoss-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-darkmoss)

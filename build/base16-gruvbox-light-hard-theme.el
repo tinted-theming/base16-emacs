@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-gruvbox-light-hard-colors
+(defvar base16-gruvbox-light-hard-theme-colors
   '(:base00 "#f9f5d7"
     :base01 "#ebdbb2"
     :base02 "#d5c4a1"
@@ -34,7 +34,7 @@
 (deftheme base16-gruvbox-light-hard)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-gruvbox-light-hard base16-gruvbox-light-hard-colors)
+(base16-theme-define 'base16-gruvbox-light-hard base16-gruvbox-light-hard-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-gruvbox-light-hard)

@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-ia-light-colors
+(defvar base16-ia-light-theme-colors
   '(:base00 "#f6f6f6"
     :base01 "#dedede"
     :base02 "#bde5f2"
@@ -34,7 +34,7 @@
 (deftheme base16-ia-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-ia-light base16-ia-light-colors)
+(base16-theme-define 'base16-ia-light base16-ia-light-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-ia-light)

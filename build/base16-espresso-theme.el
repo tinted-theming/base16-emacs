@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-espresso-colors
+(defvar base16-espresso-theme-colors
   '(:base00 "#2d2d2d"
     :base01 "#393939"
     :base02 "#515151"
@@ -34,7 +34,7 @@
 (deftheme base16-espresso)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-espresso base16-espresso-colors)
+(base16-theme-define 'base16-espresso base16-espresso-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-espresso)
