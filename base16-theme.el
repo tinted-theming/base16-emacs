@@ -1,4 +1,4 @@
-;; base16-theme.el -- base16 themes for emacs
+;;; base16-theme.el --- base16 themes for emacs
 
 ;; Author: Kaleb Elwert <belak@coded.io>
 ;;         Neil Bhakta
