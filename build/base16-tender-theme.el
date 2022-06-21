@@ -1,7 +1,7 @@
 ;; base16-tender-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/chriskempson/base16)
+;; Base16: (https://github.com/base16-project/base16)
 
 ;;; Authors:
 ;; Scheme: Jacobo Tabernero (https://github/com/jacoborus/tender.vim)

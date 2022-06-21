@@ -1,7 +1,7 @@
 ;; base16-brushtrees-dark-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/chriskempson/base16)
+;; Base16: (https://github.com/base16-project/base16)
 
 ;;; Authors:
 ;; Scheme: Abraham White &lt;abelincoln.white@gmail.com&gt;

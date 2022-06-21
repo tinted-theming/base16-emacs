@@ -1,7 +1,7 @@
 ;; base16-papercolor-light-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/chriskempson/base16)
+;; Base16: (https://github.com/base16-project/base16)
 
 ;;; Authors:
 ;; Scheme: Jon Leopard (http://github.com/jonleopard) based on PaperColor Theme (https://github.com/NLKNguyen/papercolor-theme)

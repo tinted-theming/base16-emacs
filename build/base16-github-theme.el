@@ -1,7 +1,7 @@
 ;; base16-github-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/chriskempson/base16)
+;; Base16: (https://github.com/base16-project/base16)
 
 ;;; Authors:
 ;; Scheme: Defman21
@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-github-colors
+(defvar base16-github-theme-colors
   '(:base00 "#ffffff"
     :base01 "#f5f5f5"
     :base02 "#c8c8fa"
@@ -34,7 +34,7 @@
 (deftheme base16-github)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-github base16-github-colors)
+(base16-theme-define 'base16-github base16-github-theme-colors)
 
 ;; Mark the theme as provided
 (provide-theme 'base16-github)
