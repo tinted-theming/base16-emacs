@@ -12,12 +12,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.BOT_ACCESS_TOKEN }}
-      - name: Fetch the schemes repository
-        uses: actions/checkout@v3
-        with:
-          repository: base16-project/base16-schemes
-          path: schemes
-          token: ${{ secrets.BOT_ACCESS_TOKEN }}
       - name: Update schemes
         uses: base16-project/base16-builder-go@latest
       - name: Commit the changes, if any
