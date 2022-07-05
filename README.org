@@ -89,7 +89,7 @@ Similar to other config values, make sure this is set before calling
 
 ** Previews
 
-Theme previews can be found [[https://belak.github.io/base16-emacs/][here]].
+Theme previews can be found [[https://base16-project.github.io/base16-emacs/][here]].
 
 It is recommended to generate screenshots by adding the gh-pages branch as a
 subtree (=git worktree add -B gh-pages gh-pages origin/gh-pages=) then
