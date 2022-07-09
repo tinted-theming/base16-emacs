@@ -28,7 +28,7 @@
     :base0D "#26bbd9"
     :base0E "#ee64ac"
     :base0F "#f9cbbe")
-  "All colors for Base16 Horizon Light are defined here.")
+  "All colors for Base16 Horizon Terminal Light are defined here.")
 
 ;; Define the theme
 (deftheme base16-horizon-terminal-light)

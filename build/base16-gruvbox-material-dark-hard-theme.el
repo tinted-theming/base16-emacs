@@ -28,7 +28,7 @@
     :base0D "#7daea3"
     :base0E "#d3869b"
     :base0F "#bd6f3e")
-  "All colors for Base16 Gruvbox Material Dark, Medium are defined here.")
+  "All colors for Base16 Gruvbox Material Dark, Hard are defined here.")
 
 ;; Define the theme
 (deftheme base16-gruvbox-material-dark-hard)

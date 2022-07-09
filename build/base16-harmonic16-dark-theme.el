@@ -1,4 +1,4 @@
-;; base16-harmonic-dark-theme.el -- A base16 colorscheme
+;; base16-harmonic16-dark-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
 ;; Base16: (https://github.com/base16-project/base16)
@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-harmonic-dark-theme-colors
+(defvar base16-harmonic16-dark-theme-colors
   '(:base00 "#0b1c2c"
     :base01 "#223b54"
     :base02 "#405c79"
@@ -31,14 +31,14 @@
   "All colors for Base16 Harmonic16 Dark are defined here.")
 
 ;; Define the theme
-(deftheme base16-harmonic-dark)
+(deftheme base16-harmonic16-dark)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-harmonic-dark base16-harmonic-dark-theme-colors)
+(base16-theme-define 'base16-harmonic16-dark base16-harmonic16-dark-theme-colors)
 
 ;; Mark the theme as provided
-(provide-theme 'base16-harmonic-dark)
+(provide-theme 'base16-harmonic16-dark)
 
-(provide 'base16-harmonic-dark-theme)
+(provide 'base16-harmonic16-dark-theme)
 
-;;; base16-harmonic-dark-theme.el ends here
+;;; base16-harmonic16-dark-theme.el ends here

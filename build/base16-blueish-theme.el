@@ -28,7 +28,7 @@
     :base0D "#82aaff"
     :base0E "#ff84dd"
     :base0F "#bbd2e8")
-  "All colors for Base16 better-contrast are defined here.")
+  "All colors for Base16 Blueish are defined here.")
 
 ;; Define the theme
 (deftheme base16-blueish)

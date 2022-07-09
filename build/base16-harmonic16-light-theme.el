@@ -1,4 +1,4 @@
-;; base16-harmonic-light-theme.el -- A base16 colorscheme
+;; base16-harmonic16-light-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
 ;; Base16: (https://github.com/base16-project/base16)
@@ -11,7 +11,7 @@
 
 (require 'base16-theme)
 
-(defvar base16-harmonic-light-theme-colors
+(defvar base16-harmonic16-light-theme-colors
   '(:base00 "#f7f9fb"
     :base01 "#e5ebf1"
     :base02 "#cbd6e2"
@@ -31,14 +31,14 @@
   "All colors for Base16 Harmonic16 Light are defined here.")
 
 ;; Define the theme
-(deftheme base16-harmonic-light)
+(deftheme base16-harmonic16-light)
 
 ;; Add all the faces to the theme
-(base16-theme-define 'base16-harmonic-light base16-harmonic-light-theme-colors)
+(base16-theme-define 'base16-harmonic16-light base16-harmonic16-light-theme-colors)
 
 ;; Mark the theme as provided
-(provide-theme 'base16-harmonic-light)
+(provide-theme 'base16-harmonic16-light)
 
-(provide 'base16-harmonic-light-theme)
+(provide 'base16-harmonic16-light-theme)
 
-;;; base16-harmonic-light-theme.el ends here
+;;; base16-harmonic16-light-theme.el ends here

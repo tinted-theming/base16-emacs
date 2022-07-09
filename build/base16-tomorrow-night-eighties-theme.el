@@ -28,7 +28,7 @@
     :base0D "#6699cc"
     :base0E "#cc99cc"
     :base0F "#a3685a")
-  "All colors for Base16 Tomorrow Night are defined here.")
+  "All colors for Base16 Tomorrow Night Eighties are defined here.")
 
 ;; Define the theme
 (deftheme base16-tomorrow-night-eighties)
