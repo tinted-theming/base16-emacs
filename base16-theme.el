@@ -248,7 +248,7 @@ return the actual color value.  Otherwise return the value unchanged."
 
 ;;;; line-numbers
      (line-number                                  :foreground base03 :background base16-settings-fringe-bg)
-     (line-number-current-line                     :inherit fringe)
+     (line-number-current-line                     :inverse-video t)
 
 ;;;; mode-line
      (mode-line                                    :foreground base16-settings-mode-line-fg :background base02 :box base16-settings-mode-line-box)
