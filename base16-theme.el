@@ -257,6 +257,13 @@ return the actual color value.  Otherwise return the value unchanged."
      (mode-line-highlight                          :foreground base0E :box nil :weight bold)
      (mode-line-inactive                           :foreground base03 :background base01 :box nil)
 
+;;;; tab-line
+     (tab-line                                     :background base16-settings-fringe-bg)
+     (tab-line-tab                                 :background base16-settings-fringe-bg)
+     (tab-line-tab-inactive                        :background base16-settings-fringe-bg)
+     (tab-line-tab-current                         :foreground base05 :background base00)
+     (tab-line-highlight                           :distant-foreground base05 :background base02)
+
 ;;; Third-party
 
 ;;;; anzu-mode
