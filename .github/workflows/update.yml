@@ -1,4 +1,4 @@
-name: Update with the latest base16 colorschemes
+name: Update with the latest colorschemes
 on:
   workflow_dispatch:
   schedule:
@@ -13,12 +13,12 @@ jobs:
         with:
           token: ${{ secrets.BOT_ACCESS_TOKEN }}
       - name: Update schemes
-        uses: base16-project/base16-builder-go@latest
+        uses: tinted-theming/base16-builder-go@latest
       - name: Commit the changes, if any
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update with the latest base16-project colorschemes
+          commit_message: Update with the latest tinted-theming colorschemes
           branch: ${{ github.head_ref }}
-          commit_user_name: base16-project-bot
-          commit_user_email: base16themeproject@proton.me
-          commit_author: base16-project-bot <base16themeproject@proton.me>
+          commit_user_name: tinted-theming-bot
+          commit_user_email: tintedtheming@proton.me
+          commit_author: tinted-theming-bot <tintedtheming@proton.me>
