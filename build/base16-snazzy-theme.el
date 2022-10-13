@@ -1,7 +1,7 @@
 ;; base16-snazzy-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/base16-project/base16)
+;; Base16: (https://github.com/tinted-theming/base16)
 
 ;;; Authors:
 ;; Scheme: Chawye Hsu (https://github.com/chawyehsu) based on Hyper Snazzy Theme (https://github.com/sindresorhus/hyper-snazzy)

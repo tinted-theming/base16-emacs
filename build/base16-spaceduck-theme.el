@@ -1,7 +1,7 @@
 ;; base16-spaceduck-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/base16-project/base16)
+;; Base16: (https://github.com/tinted-theming/base16)
 
 ;;; Authors:
 ;; Scheme: Guillermo Rodriguez (https://github.com/pineapplegiant), packaged by Gabriel Fontes (https://github.com/Misterio77)

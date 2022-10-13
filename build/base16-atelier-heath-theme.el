@@ -1,7 +1,7 @@
 ;; base16-atelier-heath-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/base16-project/base16)
+;; Base16: (https://github.com/tinted-theming/base16)
 
 ;;; Authors:
 ;; Scheme: Bram de Haan (http://atelierbramdehaan.nl)

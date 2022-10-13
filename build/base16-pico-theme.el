@@ -1,7 +1,7 @@
 ;; base16-pico-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/base16-project/base16)
+;; Base16: (https://github.com/tinted-theming/base16)
 
 ;;; Authors:
 ;; Scheme: PICO-8 (http://www.lexaloffle.com/pico-8.php)
