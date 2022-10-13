@@ -3,13 +3,13 @@
 
 * Base16 themes for Emacs
 
-[[https://github.com/base16-project/base16][Base16]] provides carefully chosen syntax highlighting and a default set
-of sixteen colors suitable for a wide range of applications. Base16 is
-not a single theme but a set of guidelines with numerous
+[[https://github.com/tinted-theming/home][Tinted Theming]] provides carefully chosen syntax highlighting and a default set
+of sixteen colors suitable for a wide range of applications. Tinted
+Theming is not a single theme but a set of guidelines with numerous
 implementations.
 
 This repository contains the Emacs templates and [[http://melpa.org/#/base16-theme][MELPA]]. It can be built
-by using one of the builders listed on the main Base16 page.
+by using one of the builders listed on the main Tinted Theming page.
 
 If you notice anything that looks strange or if this repo is missing
 any scheme updates, please feel free to open an issue or submit a pull
@@ -89,7 +89,7 @@ Similar to other config values, make sure this is set before calling
 
 ** Previews
 
-Theme previews can be found [[https://base16-project.github.io/base16-emacs/][here]].
+Theme previews can be found [[https://tinted-theming.github.io/base16-emacs/][here]].
 
 It is recommended to generate screenshots by adding the gh-pages branch as a
 subtree (=git worktree add -B gh-pages gh-pages origin/gh-pages=) then
