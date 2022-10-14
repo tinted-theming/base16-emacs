@@ -1,7 +1,7 @@
 ;; base16-catppuccin-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/tinted-theming/base16)
+;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
 ;; Scheme: Pocco81 (https://github.com/pocco81)

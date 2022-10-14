@@ -1,7 +1,7 @@
 ;; base16-uwunicorn-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/tinted-theming/base16)
+;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
 ;; Scheme: Fernando Marques (https://github.com/RakkiUwU) and Gabriel Fontes (https://github.com/Misterio77)

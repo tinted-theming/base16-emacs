@@ -1,7 +1,7 @@
 ;; base16-circus-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/tinted-theming/base16)
+;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
 ;; Scheme: Stephan Boyer (https://github.com/stepchowfun) and Esther Wang (https://github.com/ewang12)

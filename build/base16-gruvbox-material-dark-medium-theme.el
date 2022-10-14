@@ -1,7 +1,7 @@
 ;; base16-gruvbox-material-dark-medium-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/tinted-theming/base16)
+;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
 ;; Scheme: Mayush Kumar (https://github.com/MayushKumar), sainnhe (https://github.com/sainnhe/gruvbox-material-vscode)

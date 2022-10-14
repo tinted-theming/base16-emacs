@@ -1,7 +1,7 @@
 ;; base16-ayu-mirage-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/tinted-theming/base16)
+;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
 ;; Scheme: Khue Nguyen &lt;Z5483Y@gmail.com&gt;

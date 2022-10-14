@@ -1,7 +1,7 @@
 ;; base16-shadesmear-light-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/tinted-theming/base16)
+;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
 ;; Scheme: Kyle Giammarco (http://kyle.giammar.co)

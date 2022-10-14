@@ -1,7 +1,7 @@
 ;; base16-everforest-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/tinted-theming/base16)
+;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
 ;; Scheme: Sainnhe Park (https://github.com/sainnhe)

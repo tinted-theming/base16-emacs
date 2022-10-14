@@ -1,7 +1,7 @@
 ;; base16-marrakesh-theme.el -- A base16 colorscheme
 
 ;;; Commentary:
-;; Base16: (https://github.com/tinted-theming/base16)
+;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
 ;; Scheme: Alexandre Gavioli (http://github.com/Alexx2/)
