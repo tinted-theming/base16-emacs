@@ -961,6 +961,16 @@ return the actual color value.  Otherwise return the value unchanged."
      (term-color-blue                              :foreground base0D :background base0D)
      (term-color-magenta                           :foreground base0E :background base0E)
 
+;;;; ansi-colors
+     (ansi-color-black                             :foreground base02 :background base00)
+     (ansi-color-white                             :foreground base05 :background base07)
+     (ansi-color-red                               :foreground base08 :background base08)
+     (ansi-color-yellow                            :foreground base0A :background base0A)
+     (ansi-color-green                             :foreground base0B :background base0B)
+     (ansi-color-cyan                              :foreground base0C :background base0C)
+     (ansi-color-blue                              :foreground base0D :background base0D)
+     (ansi-color-magenta                           :foreground base0E :background base0E)
+
 ;;;; tooltip
      (tooltip                                      :background base01 :inherit default)
 
