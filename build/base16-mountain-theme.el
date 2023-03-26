@@ -4,7 +4,7 @@
 ;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
-;; Scheme: gnsfujiwara (https://github.com/gnsfujiwara) based on Mountain Theme (https://github.com/mountain-theme/Mountain)
+;; Scheme: gnsfujiwara (https://github.com/gnsfujiwara)
 ;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
@@ -17,9 +17,9 @@
     :base02 "#262626"
     :base03 "#4c4c4c"
     :base04 "#ac8a8c"
-    :base05 "#f0f0f0"
+    :base05 "#cacaca"
     :base06 "#e7e7e7"
-    :base07 "#cacaca"
+    :base07 "#f0f0f0"
     :base08 "#ac8a8c"
     :base09 "#ceb188"
     :base0A "#aca98a"
