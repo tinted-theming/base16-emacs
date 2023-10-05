@@ -202,6 +202,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (vertical-border                              :foreground base02)
      (widget-button                                :underline t)
      (widget-field                                 :background base03 :box (:line-width 1 :color base06))
+     (completions-common-part                      :foreground base0C)
 
      (error                                        :foreground base08 :weight bold)
      (warning                                      :foreground base09 :weight bold)
