@@ -820,6 +820,12 @@ return the actual color value.  Otherwise return the value unchanged."
      (nxml-delimited-data-face                     :foreground unspecified :inherit font-lock-string-face)
      (rng-error-face                               :underline base08)
 
+;;;; orderless
+     (orderless-match-face-0                       :foreground base0E :weight bold)
+     (orderless-match-face-1                       :foreground base0A :weight bold)
+     (orderless-match-face-2                       :foreground base0C :weight bold)
+     (orderless-match-face-3                       :foreground base0D :weight bold)
+
 ;;;; org-mode
      (org-agenda-structure                         :foreground base0E)
      (org-agenda-date                              :foreground base0D :underline nil)
