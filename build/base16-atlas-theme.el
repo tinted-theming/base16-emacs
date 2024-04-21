@@ -24,8 +24,8 @@
     :base09 "#f08e48"
     :base0A "#ffcc1b"
     :base0B "#7fc06e"
-    :base0C "#14747e"
-    :base0D "#5dd7b9"
+    :base0C "#5dd7b9"
+    :base0D "#14747e"
     :base0E "#9a70a4"
     :base0F "#c43060")
   "All colors for Base16 Atlas are defined here.")
