@@ -853,6 +853,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (org-table                                    :foreground base0E)
      (org-todo                                     :foreground base08 :background base01)
      (org-upcoming-deadline                        :foreground base09)
+     (org-verbatim                                 :foreground base0A)
      (org-warning                                  :foreground base08 :weight bold)
 
 ;;;; paren-face-mode
