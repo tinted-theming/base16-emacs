@@ -12,22 +12,22 @@
 (require 'base16-theme)
 
 (defvar base16-everforest-theme-colors
-  '(:base00 "#2f383e"
-    :base01 "#374247"
-    :base02 "#4a555b"
+  '(:base00 "#2d353b"
+    :base01 "#343f44"
+    :base02 "#475258"
     :base03 "#859289"
     :base04 "#9da9a0"
     :base05 "#d3c6aa"
-    :base06 "#e4e1cd"
+    :base06 "#e6e2cc"
     :base07 "#fdf6e3"
-    :base08 "#7fbbb3"
-    :base09 "#d699b6"
+    :base08 "#e67e80"
+    :base09 "#e69875"
     :base0A "#dbbc7f"
-    :base0B "#83c092"
-    :base0C "#e69875"
-    :base0D "#a7c080"
-    :base0E "#e67e80"
-    :base0F "#eaedc8")
+    :base0B "#a7c080"
+    :base0C "#83c092"
+    :base0D "#7fbbb3"
+    :base0E "#d699b6"
+    :base0F "#9da9a0")
   "All colors for Base16 Everforest are defined here.")
 
 ;; Define the theme

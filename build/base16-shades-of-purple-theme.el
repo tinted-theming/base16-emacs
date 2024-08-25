@@ -4,7 +4,7 @@
 ;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
-;; Scheme: Iolar Demartini Junior (http://github.com/demartini) based on Shades of Purple Theme (https://github.com/ahmadawais/shades-of-purple-vscode).
+;; Scheme: Iolar Demartini Junior (http://github.com/demartini), based on Shades of Purple Theme (https://github.com/ahmadawais/shades-of-purple-vscode)
 ;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:

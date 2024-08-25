@@ -4,7 +4,7 @@
 ;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
-;; Scheme: Chawye Hsu (https://github.com/chawyehsu) based on Hyper Snazzy Theme (https://github.com/sindresorhus/hyper-snazzy)
+;; Scheme: Chawye Hsu (https://github.com/chawyehsu), based on Hyper Snazzy Theme (https://github.com/sindresorhus/hyper-snazzy)
 ;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:

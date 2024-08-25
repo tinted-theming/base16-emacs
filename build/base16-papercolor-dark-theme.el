@@ -4,7 +4,7 @@
 ;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
-;; Scheme: Jon Leopard (http://github.com/jonleopard) based on PaperColor Theme (https://github.com/NLKNguyen/papercolor-theme)
+;; Scheme: Jon Leopard (http://github.com/jonleopard), based on PaperColor Theme (https://github.com/NLKNguyen/papercolor-theme)
 ;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
