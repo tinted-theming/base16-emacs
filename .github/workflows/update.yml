@@ -1,24 +1,13 @@
-name: Update with the latest colorschemes
+name: "Update with the latest tinted-theming colorschemes"
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * 0" # https://crontab.guru/every-week
 
 jobs:
-  run:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Fetch the repository code
-        uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.BOT_ACCESS_TOKEN }}
-      - name: Update schemes
-        uses: tinted-theming/base16-builder-go@latest
-      - name: Commit the changes, if any
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update with the latest tinted-theming colorschemes
-          branch: ${{ github.head_ref }}
-          commit_user_name: tinted-theming-bot
-          commit_user_email: tintedtheming@proton.me
-          commit_author: tinted-theming-bot <tintedtheming@proton.me>
+  build-and-commit:
+    uses: "tinted-theming/home/.github/workflows/shared-build-template-and-commit-themes.yml@main"
+    secrets:
+      token: ${{ secrets.BOT_ACCESS_TOKEN }}
+    with:
+      ref: ${{ github.head_ref }}
