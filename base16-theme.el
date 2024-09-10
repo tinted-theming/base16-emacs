@@ -230,14 +230,14 @@ return the actual color value.  Otherwise return the value unchanged."
      (font-lock-doc-face                           :foreground base04)
      (font-lock-doc-string-face                    :foreground base03)
      (font-lock-function-name-face                 :foreground base0D)
-     (font-lock-keyword-face                       :foreground base0E)
+     (font-lock-keyword-face                       :foreground base08)
      (font-lock-negation-char-face                 :foreground base0B)
      (font-lock-preprocessor-face                  :foreground base0D)
      (font-lock-regexp-grouping-backslash          :foreground base0A)
      (font-lock-regexp-grouping-construct          :foreground base0E)
      (font-lock-string-face                        :foreground base0B)
      (font-lock-type-face                          :foreground base0A)
-     (font-lock-variable-name-face                 :foreground base08)
+     (font-lock-variable-name-face                 :foreground base0E)
      (font-lock-warning-face                       :foreground base08)
 
 ;;;; isearch
@@ -253,7 +253,7 @@ return the actual color value.  Otherwise return the value unchanged."
 
 ;;;; mode-line
      (mode-line                                    :foreground base16-settings-mode-line-fg :background base02 :box base16-settings-mode-line-box)
-     (mode-line-buffer-id                          :foreground base0B :background unspecified)
+     (mode-line-buffer-id                          :foreground base05 :background unspecified)
      (mode-line-emphasis                           :foreground base06 :slant italic)
      (mode-line-highlight                          :foreground base0E :box nil :weight bold)
      (mode-line-inactive                           :foreground base03 :background base01 :box nil)
@@ -330,7 +330,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (company-tooltip                              :inherit tooltip)
      (company-scrollbar-bg                         :background base07)
      (company-scrollbar-fg                         :background base04)
-     (company-tooltip-annotation                   :foreground base08)
+     (company-tooltip-annotation                   :foreground base03)
      (company-tooltip-common                       :inherit font-lock-constant-face)
      (company-tooltip-selection                    :background base02 :inherit font-lock-function-name-face)
      (company-tooltip-search                       :inherit match)
