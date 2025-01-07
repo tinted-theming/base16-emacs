@@ -340,6 +340,12 @@ return the actual color value.  Otherwise return the value unchanged."
      (company-preview-search                       :inherit match)
      (company-echo-common                          :inherit secondary-selection)
 
+;;;; corfu
+     (corfu-default                                :inherit tooltip)
+     (corfu-current                                :background base02 :inherit font-lock-function-name-face)
+     (corfu-bar                                    :background base05)
+     (corfu-border                                 :background base04)
+
 ;;;; cperl-mode
      (cperl-array-face                             :weight bold :inherit font-lock-variable-name-face)
      (cperl-hash-face                              :weight bold :slant italic :inherit font-lock-variable-name-face)
