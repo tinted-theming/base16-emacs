@@ -1049,6 +1049,27 @@ return the actual color value.  Otherwise return the value unchanged."
         (base0D (plist-get theme-colors :base0D))
         (base0E (plist-get theme-colors :base0E))
         (base0F (plist-get theme-colors :base0F)))
+
+    ;; These are all the evil states I'm aware of. This included a
+    ;; number of evil states which are spacemacs specific. Note that
+    ;; there are a number of known caviats with this:
+    ;;
+    ;; * When a base16 theme is unloaded, these will not revert to
+    ;;   their default values.
+    ;; * When using enable-theme, these colors will not be set. They
+    ;;   will only take effect when `load-theme' is used.
+    (setq evil-emacs-state-cursor        `(,base00 box)
+          evil-evilified-state-cursr     `(,base0A box)
+          evil-hybrid-state-cursor       `(,base0D bar)
+          evil-iedit-state-cursor        `(,base08 box)
+          evil-iedir-insert-state-cursor `(,base08 bar)
+          evil-insert-state-cursor       `(,base0D bar)
+          evil-lisp-state-cursor         `(,base0E box)
+          evil-motion-state-cursor       `(,base0E box)
+          evil-normal-state-cursor       `(,base0B box)
+          evil-replace-state-cursor      `(,base08 hbar)
+          evil-visual-state-cursor       `(,base09 hbar))
+
     (custom-theme-set-variables
      theme-name
      `(ansi-color-names-vector
