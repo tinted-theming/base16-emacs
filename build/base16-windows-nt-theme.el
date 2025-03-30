@@ -4,7 +4,7 @@
 ;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
-;; Scheme: Fergus Collins (https://github.com/C-Fergus)
+;; Scheme: Fergus Collins (https://github.com/ferguscollins)
 ;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
