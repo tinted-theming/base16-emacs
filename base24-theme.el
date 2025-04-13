@@ -1,4 +1,4 @@
-;;; base16-theme.el --- A set of base16 themes for your favorite editor
+;;; base24-theme.el --- A set of base24 themes for your favorite editor
 
 ;; Author: Kaleb Elwert <belak@coded.io>
 ;;         Neil Bhakta
@@ -7,7 +7,7 @@
 ;; Homepage: https://github.com/tinted-theming/tinted-emacs
 
 ;;; Commentary:
-;; tinted-theme is a collection of themes built around the base16
+;; tinted-theme is a collection of themes built around the base24
 ;; concept (https://github.com/tinted-theming/home).  All themes are
 ;; generated from the official set of color schemes and the templates
 ;; which are included in this repo.
@@ -103,29 +103,29 @@ If the value refers to a setting then return whatever is appropriate.
 If not a setting but is found in the valid list of colors then
 return the actual color value.  Otherwise return the value unchanged."
   (if (symbolp key)
-    (cond
+      (cond
 
-      ((string= (symbol-name key) "tinted-settings-fringe-bg")
-      (if tinted-theme-distinct-fringe-background
-        (plist-get colors :base01)
+       ((string= (symbol-name key) "tinted-settings-fringe-bg")
+        (if tinted-theme-distinct-fringe-background
+            (plist-get colors :base01)
       (plist-get colors :base00)))
 
-      ((string= (symbol-name key) "tinted-settings-mode-line-box")
-      (if (eq tinted-theme-highlight-mode-line 'box)
-        (list :line-width 1 :color (plist-get colors :base04))
+     ((string= (symbol-name key) "tinted-settings-mode-line-box")
+    (if (eq tinted-theme-highlight-mode-line 'box)
+      (list :line-width 1 :color (plist-get colors :base04))
       nil))
 
-      ((string= (symbol-name key) "tinted-settings-mode-line-fg")
-      (if (eq tinted-theme-highlight-mode-line 'contrast)
-        (plist-get colors :base05)
-        (plist-get colors :base04)))
+     ((string= (symbol-name key) "tinted-settings-mode-line-fg")
+    (if (eq tinted-theme-highlight-mode-line 'contrast)
+      (plist-get colors :base05)
+      (plist-get colors :base04)))
 
-    (t
-      (let ((maybe-color (plist-get colors (intern (concat ":" (symbol-name key))))))
+     (t
+    (let ((maybe-color (plist-get colors (intern (concat ":" (symbol-name key))))))
       (if maybe-color
         maybe-color
       key))))
-  key))
+    key))
 
 
 (defun tinted-theme-transform-spec (spec colors)
@@ -153,13 +153,13 @@ return the actual color value.  Otherwise return the value unchanged."
   (let* ((face             (car spec))
          (definition       (cdr spec))
          (shell-colors-256 (pcase tinted-theme-256-color-source
-                           ('terminal      tinted-theme-shell-colors)
-                           ("terminal"     tinted-theme-shell-colors)
-                           ('tinted-shell  tinted-theme-shell-colors-256)
-                           ("tinted-shell" tinted-theme-shell-colors-256)
-                           ('colors        colors)
-                           ("colors"       colors)
-                           (_              tinted-theme-shell-colors))))
+                             ('terminal      tinted-theme-shell-colors)
+                             ("terminal"     tinted-theme-shell-colors)
+                             ('tinted-shell  tinted-theme-shell-colors-256)
+                             ("tinted-shell" tinted-theme-shell-colors-256)
+                             ('colors        colors)
+                             ("colors"       colors)
+                             (_              tinted-theme-shell-colors))))
 
     ;; This is a list of fallbacks to make us select the sanest option possible.
     ;; If there's a graphical terminal, we use the actual colors. If it's not
@@ -204,9 +204,9 @@ return the actual color value.  Otherwise return the value unchanged."
      (widget-field                                 :background base03 :box (:line-width 1 :color base06))
      (completions-common-part                      :foreground base0C)
 
-     (error                                        :foreground base08 :weight bold)
-     (warning                                      :foreground base09 :weight bold)
-     (success                                      :foreground base0B :weight bold)
+     (error                                        :foreground base12 :weight bold)
+     (warning                                      :foreground base13 :weight bold)
+     (success                                      :foreground base14 :weight bold)
      (shadow                                       :foreground base03)
 
 ;;;; compilation
@@ -242,8 +242,8 @@ return the actual color value.  Otherwise return the value unchanged."
 
 ;;;; isearch
      (match                                        :foreground base0D :background base01 :inverse-video t)
-     (isearch                                      :foreground base0A :background base01 :inverse-video t)
-     (lazy-highlight                               :foreground base0C :background base01 :inverse-video t)
+     (isearch                                      :foreground base13 :background base01 :inverse-video t)
+     (lazy-highlight                               :foreground base15 :background base01 :inverse-video t)
      (isearch-lazy-highlight-face                  :inherit lazy-highlight) ;; was replaced with 'lazy-highlight in emacs 22
      (isearch-fail                                 :background base01 :inverse-video t :inherit font-lock-warning-face)
 
@@ -260,7 +260,7 @@ return the actual color value.  Otherwise return the value unchanged."
 
 ;;;; tab-bar
     (tab-bar                                       :background tinted-settings-fringe-bg)
-    (tab-bar-tab                                   :foreground base09 :background base01)
+    (tab-bar-tab                                   :foreground base13 :background base01)
     (tab-bar-tab-inactive                          :foreground base06 :background base01)
     (tab-bar-tab-group-current                     :foreground base05 :background base00)
     (tab-bar-tab-group-inactive                    :background tinted-settings-fringe-bg)
@@ -749,7 +749,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (magit-reflog-remote                          :foreground base0C)
      (magit-reflog-reset                           :foreground base08)
      (magit-section-highlight                      :background base01)
-     (magit-signature-bad                          :foreground base08 :weight bold)
+     (magit-signature-bad                          :foreground base12 :weight bold)
      (magit-signature-error                        :foreground base08)
      (magit-signature-expired                      :foreground base09)
      (magit-signature-good                         :foreground base0B)
@@ -851,7 +851,7 @@ return the actual color value.  Otherwise return the value unchanged."
      (org-scheduled-today                          :foreground base0B)
      (org-special-keyword                          :foreground base09)
      (org-table                                    :foreground base0E)
-     (org-todo                                     :foreground base08 :background base01)
+     (org-todo                                     :foreground base12 :background base01)
      (org-upcoming-deadline                        :foreground base09)
      (org-verbatim                                 :foreground base0A)
      (org-warning                                  :foreground base08 :weight bold)

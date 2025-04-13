@@ -1,7 +1,7 @@
 [[https://stable.melpa.org/#/base16-theme][file:https://stable.melpa.org/packages/base16-theme-badge.svg]]
 [[http://melpa.org/#/base16-theme][file:http://melpa.org/packages/base16-theme-badge.svg]]
 
-* Base16 themes for Emacs
+* Tinted themes for Emacs
 
 [[https://github.com/tinted-theming/home][Tinted Theming]] provides carefully chosen syntax highlighting and a default set
 of sixteen colors suitable for a wide range of applications. Tinted
