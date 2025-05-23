@@ -277,6 +277,11 @@ return the actual color value.  Otherwise return the value unchanged."
 ;;;; anzu-mode
      (anzu-mode-line                               :foreground base0E)
 
+;;;; adoc-mode
+     (adoc-gen-face                                :foreground base0C)
+     (adoc-verbatim-face                           :foreground base0A)
+     (adoc-meta-face                               :foreground base03)
+
 ;;;; auctex
      (font-latex-bold-face                         :foreground base0B)
      (font-latex-doctex-documentation-face         :background base03)
