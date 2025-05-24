@@ -274,6 +274,11 @@ return the actual color value.  Otherwise return the value unchanged."
 
 ;;; Third-party
 
+;;;; adoc-mode
+     (adoc-gen-face                                :foreground base0C)
+     (adoc-verbatim-face                           :foreground base0A)
+     (adoc-meta-face                               :foreground base03)
+
 ;;;; anzu-mode
      (anzu-mode-line                               :foreground base0E)
 
