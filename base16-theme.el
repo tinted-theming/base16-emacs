@@ -1028,6 +1028,12 @@ return the actual color value.  Otherwise return the value unchanged."
      (w3m-tab-unselected-unseen                    :foreground base03 :background base01)
      (w3m-tab-unselected-retrieving                :foreground base03 :background base01)
 
+;;;; web-mode
+     (web-mode-doctype-face                        :inherit font-lock-doc-face)
+     (web-mode-html-attr-name-face                 :inherit font-lock-variable-name-face)
+     (web-mode-html-tag-bracket-face               :inherit default)
+     (web-mode-html-tag-face                       :inherit font-lock-function-name-face)
+
 ;;;; which-func-mode
      (which-func                                   :foreground base0D :background unspecified :weight bold)
 
