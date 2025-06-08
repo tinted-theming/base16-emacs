@@ -240,6 +240,9 @@ return the actual color value.  Otherwise return the value unchanged."
      (font-lock-variable-name-face                 :foreground base08)
      (font-lock-warning-face                       :foreground base08)
 
+;;;; help buffers
+     (help-key-binding                             :foreground base05 :background base01 :box (:line-width 1 :color base05) :inherit fixed-pitch)
+
 ;;;; isearch
      (match                                        :foreground base0D :background base01 :inverse-video t)
      (isearch                                      :foreground base0A :background base01 :inverse-video t)
