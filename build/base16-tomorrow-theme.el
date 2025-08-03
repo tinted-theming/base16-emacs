@@ -14,10 +14,10 @@
 (defvar base16-tomorrow-theme-colors
   '(:base00 "#ffffff"
     :base01 "#e0e0e0"
-    :base02 "#d6d6d6"
-    :base03 "#8e908c"
+    :base02 "#c5c8c6"
+    :base03 "#b4b7b4"
     :base04 "#969896"
-    :base05 "#4d4d4c"
+    :base05 "#373b41"
     :base06 "#282a2e"
     :base07 "#1d1f21"
     :base08 "#c82829"
