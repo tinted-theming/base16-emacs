@@ -4,7 +4,7 @@
 ;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
-;; Scheme: ed (https://codeberg.org/ed)
+;; Scheme: ed (https://codeberg.org/ed), Tinted Theming (https://github.com/tinted-theming)
 ;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
@@ -21,13 +21,13 @@
     :base06 "#7986c5"
     :base07 "#9aaae5"
     :base08 "#f768a3"
-    :base09 "#f768a3"
-    :base0A "#faaea2"
-    :base0B "#faaea2"
-    :base0C "#258fc4"
+    :base09 "#f78968"
+    :base0A "#f7d668"
+    :base0B "#a2faa8"
+    :base0C "#a2faf0"
     :base0D "#258fc4"
-    :base0E "#f768a3"
-    :base0F "#f768a3")
+    :base0E "#c368f7"
+    :base0F "#b85600")
   "All colors for Base16 eris are defined here.")
 
 ;; Define the theme
