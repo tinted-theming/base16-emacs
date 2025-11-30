@@ -4,7 +4,7 @@
 ;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
-;; Scheme: Jon Leopard (http://github.com/jonleopard), based on PaperColor Theme (https://github.com/NLKNguyen/papercolor-theme)
+;; Scheme: Jon Leopard (http://github.com/jonleopard), Tinted Theming (https://github.com/tinted-theming), based on PaperColor Theme (https://github.com/NLKNguyen/papercolor-theme)
 ;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
@@ -13,21 +13,21 @@
 
 (defvar base16-papercolor-dark-theme-colors
   '(:base00 "#1c1c1c"
-    :base01 "#af005f"
-    :base02 "#5faf00"
-    :base03 "#d7af5f"
-    :base04 "#5fafd7"
-    :base05 "#808080"
-    :base06 "#d7875f"
+    :base01 "#363636"
+    :base02 "#424242"
+    :base03 "#585858"
+    :base04 "#808080"
+    :base05 "#9e9e9e"
+    :base06 "#b8b8b8"
     :base07 "#d0d0d0"
-    :base08 "#585858"
-    :base09 "#5faf5f"
-    :base0A "#afd700"
-    :base0B "#af87d7"
-    :base0C "#ffaf00"
-    :base0D "#ff5faf"
-    :base0E "#00afaf"
-    :base0F "#5f8787")
+    :base08 "#ff5faf"
+    :base09 "#d7af5f"
+    :base0A "#ffaf00"
+    :base0B "#5faf5f"
+    :base0C "#00afaf"
+    :base0D "#5fafd7"
+    :base0E "#af87d7"
+    :base0F "#af005f")
   "All colors for Base16 PaperColor Dark are defined here.")
 
 ;; Define the theme
