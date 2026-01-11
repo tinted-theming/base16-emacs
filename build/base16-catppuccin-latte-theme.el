@@ -13,10 +13,10 @@
 
 (defvar base16-catppuccin-latte-theme-colors
   '(:base00 "#eff1f5"
-    :base01 "#e6e9ef"
-    :base02 "#ccd0da"
-    :base03 "#bcc0cc"
-    :base04 "#acb0be"
+    :base01 "#ccd0da"
+    :base02 "#bcc0cc"
+    :base03 "#9ca0b0"
+    :base04 "#6c6f85"
     :base05 "#4c4f69"
     :base06 "#dc8a78"
     :base07 "#7287fd"
