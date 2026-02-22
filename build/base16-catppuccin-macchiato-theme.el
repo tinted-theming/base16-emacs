@@ -13,10 +13,10 @@
 
 (defvar base16-catppuccin-macchiato-theme-colors
   '(:base00 "#24273a"
-    :base01 "#363a4f"
-    :base02 "#494d64"
-    :base03 "#6e738d"
-    :base04 "#a5adcb"
+    :base01 "#1e2030"
+    :base02 "#363a4f"
+    :base03 "#494d64"
+    :base04 "#5b6078"
     :base05 "#cad3f5"
     :base06 "#f4dbd6"
     :base07 "#b7bdf8"

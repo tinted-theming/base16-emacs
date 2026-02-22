@@ -13,10 +13,10 @@
 
 (defvar base16-catppuccin-mocha-theme-colors
   '(:base00 "#1e1e2e"
-    :base01 "#313244"
-    :base02 "#45475a"
-    :base03 "#6c7086"
-    :base04 "#a6adc8"
+    :base01 "#181825"
+    :base02 "#313244"
+    :base03 "#45475a"
+    :base04 "#585b70"
     :base05 "#cdd6f4"
     :base06 "#f5e0dc"
     :base07 "#b4befe"
