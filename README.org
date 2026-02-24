@@ -98,9 +98,17 @@ the screenshots dir).
 
 ** evil-mode
 
-=evil-mode= doesn't provide a way for themes to set the cursor color,
-so if you're interested in matching the base16 spaceline indicator,
-you can use the following snippet:
+Because =evil-mode= doesn't provide a standard way for themes to set the cursor
+color, we've worked around this with a fairly hacky solution. However, there
+are a number of caviats which come with this:
+
+- When unloading a base16 theme using =disable-theme=, the cursor colors will
+  not be reset to the default.
+- When re-enabling a theme with =enable-theme=, the cursor colors will not be
+  set. =load-theme= must be used each time.
+
+The code in the theme which does this is roughly based on the following
+snippet (just in case you want to modify it manually).
 
 #+begin_src emacs-lisp
   ;; Set the cursor color based on the evil state
