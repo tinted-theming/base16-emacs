@@ -4,7 +4,7 @@
 ;; Base16: (https://github.com/tinted-theming/home)
 
 ;;; Authors:
-;; Scheme: romainl
+;; Scheme: Romain Lafourcade (https://github.com/romainl)
 ;; Template: Kaleb Elwert <belak@coded.io>
 
 ;;; Code:
@@ -13,21 +13,21 @@
 
 (defvar base16-apprentice-theme-colors
   '(:base00 "#262626"
-    :base01 "#af5f5f"
-    :base02 "#5f875f"
-    :base03 "#87875f"
-    :base04 "#5f87af"
-    :base05 "#5f5f87"
-    :base06 "#5f8787"
-    :base07 "#6c6c6c"
-    :base08 "#444444"
+    :base01 "#303030"
+    :base02 "#3a3a3a"
+    :base03 "#444444"
+    :base04 "#6c6c6c"
+    :base05 "#bcbcbc"
+    :base06 "#dfdfdf"
+    :base07 "#ffffff"
+    :base08 "#af5f5f"
     :base09 "#ff8700"
-    :base0A "#87af87"
-    :base0B "#ffffaf"
-    :base0C "#87afd7"
-    :base0D "#8787af"
-    :base0E "#5fafaf"
-    :base0F "#bcbcbc")
+    :base0A "#87875f"
+    :base0B "#5f875f"
+    :base0C "#5f8787"
+    :base0D "#5f87af"
+    :base0E "#5f5f87"
+    :base0F "#af5f5f")
   "All colors for Base16 Apprentice are defined here.")
 
 ;; Define the theme
